@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+	Copyright (C) 2016 Pranav Pandey
+	
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+	
+	   http://www.apache.org/licenses/LICENSE-2.0
+	
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+-->
+
+<resources>
+    
+	<string name="sas_version">バージョン</string>
+	<string name="sas_extension_desc">小さなアプリの拡張機能</string>
+	<string name="sas_welcome_text">あなたのサポートをありがとう！</string>
+	<string name="sas_settings">設定</string>
+	<string name="sas_rate">評価する</string>
+	<string name="sas_buy">買う</string>
+	<string name="sas_about">約</string>
+	<string name="sas_options">オプション</string>
+	<string name="sas_keep_awake">明かします</string>
+	<string name="sas_reset">リセット</string>
+	
+	<string name="sas_share">共有</string>
+	<string name="sas_open">開く</string>
+	<string name="sas_error">エラー</string>
+	<string name="sas_error_no_apps">この操作を実行できるアプリケーションはありません。</string>
+	<string name="sas_always_use">常にこの操作で使用する</string>
+	<string name="sas_copy_clipboard">クリップボードにコピーしました。</string>
+	
+	<string name="sas_app_info">アプリ情報</string>
+	<string name="sas_developed_by">書かれによって設計</string>
+	<string name="sas_made_in">インド製</string>
+
+</resources>   

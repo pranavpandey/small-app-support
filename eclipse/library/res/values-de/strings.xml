@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+	Copyright (C) 2016 Pranav Pandey
+	
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+	
+	   http://www.apache.org/licenses/LICENSE-2.0
+	
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+-->
+
+<resources>
+    
+	<string name="sas_version">Version</string>
+	<string name="sas_extension_desc">Kleine Apps Erweiterung</string>
+	<string name="sas_welcome_text">Vielen Dank für Ihre Unterstützung!</string>
+	<string name="sas_settings">Einstellung.</string>
+	<string name="sas_rate">Bewerten</string>
+	<string name="sas_buy">Kaufen Light</string>
+	<string name="sas_about">Über</string>
+	<string name="sas_options">Options</string>
+	<string name="sas_keep_awake">Halten Sie wach</string>
+	<string name="sas_reset">Rücksetzen</string>
+	
+	<string name="sas_share">Freigeben</string>
+	<string name="sas_open">Öffnen</string>
+	<string name="sas_error">Fehler</string>
+	<string name="sas_error_no_apps">Diese Aktion kann von keiner Anwendung ausgeführt werden.</string>
+	<string name="sas_always_use">Als Standard für diese Aktion verwenden.</string>
+	<string name="sas_copy_clipboard">In die Zwischenablage kopiert</string>
+	
+	<string name="sas_app_info">App-Info</string>
+	<string name="sas_developed_by">Buch und Regie entwickelt</string>
+	<string name="sas_made_in">Hergestellt in Indien</string>
+    
+</resources>   

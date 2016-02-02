@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+	Copyright (C) 2016 Pranav Pandey
+	
+	Licensed under the Apache License, Version 2.0 (the "License");
+	you may not use this file except in compliance with the License.
+	You may obtain a copy of the License at
+	
+	   http://www.apache.org/licenses/LICENSE-2.0
+	
+	Unless required by applicable law or agreed to in writing, software
+	distributed under the License is distributed on an "AS IS" BASIS,
+	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	See the License for the specific language governing permissions and
+	limitations under the License.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent" 
+	android:layout_height="wrap_content" 
+	android:background="@android:color/transparent"
+	android:orientation="vertical">
+    
+	<ScrollView android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/sas_dialog_margin_top_material"
+		android:background="@android:color/transparent">
+		    
+		<LinearLayout 
+			android:layout_width="match_parent" 
+			android:layout_height="wrap_content" 
+			android:orientation="vertical"
+			android:layout_marginLeft="@dimen/sas_dialog_list_margin_start"
+			android:layout_marginStart="@dimen/sas_dialog_list_margin_start"
+			android:layout_marginRight="@dimen/sas_dialog_margin_end"
+			android:layout_marginEnd="@dimen/sas_dialog_margin_end">
+			        
+			<com.pranavpandey.smallapp.view.ColoredTextView
+				android:layout_marginTop="@dimen/sas_dialog_margin_top_pre_material"
+				android:text="@string/sas_app_info"
+				style="@style/TextAppearance.Dialog.SettingsHeading" />
+	
+			<TextView
+				android:text="@string/sas_made_in"
+				android:textAllCaps="false"
+				style="@style/SettingsValue" />
+		        
+			<RelativeLayout
+				android:layout_width="match_parent" 
+				android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/sas_dialog_settings_margin_small">
+					
+				<ImageView
+					android:id="@+id/img_app"
+					android:layout_marginRight="@dimen/sas_dialog_margin_top" 
+					android:layout_marginEnd="@dimen/sas_dialog_margin_top" 
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_centerVertical="true"
+					android:contentDescription="@string/sas_contentDescription_app" />
+				    
+				<LinearLayout
+					android:layout_width="wrap_content" 
+					android:layout_height="wrap_content"
+					android:layout_toRightOf="@+id/img_app"
+					android:layout_toEndOf="@+id/img_app"
+					android:layout_centerVertical="true"
+					android:orientation="vertical">    
+					  
+					<TextView
+						android:id="@+id/txt_name"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textColor="?android:textColorPrimary"
+						style="@style/TextAppearance.Small.Marquee" />
+					
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/sas_extension_desc"
+						style="@style/TextAppearance.Small.Marquee"
+						android:textColor="?android:textColorPrimary" />
+					
+					<TextView
+						android:id="@+id/txt_version"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						style="@style/TextAppearance.Small.Marquee"
+						android:textColor="?android:textColorSecondary" />
+				
+				</LinearLayout>	
+			
+			</RelativeLayout>
+	   	
+			<com.pranavpandey.smallapp.view.ColoredTextView
+				android:layout_marginTop="@dimen/sas_dialog_margin_top"
+				android:text="@string/sas_developed_by"
+				style="@style/TextAppearance.Dialog.SettingsHeading" />
+        
+			<TextView
+				android:text="@string/sas_me"
+				android:textAllCaps="false"
+				style="@style/SettingsValue" />
+	   	
+			<LinearLayout 
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="@dimen/sas_dialog_settings_margin_small"
+				android:layout_marginBottom="@dimen/sas_dialog_margin_bottom"
+				android:orientation="horizontal">
+				    
+				<com.pranavpandey.smallapp.view.PressedStateImageView
+					android:id="@+id/playstore_icon"
+					android:src="@drawable/sas_ic_about_gplay"
+					android:contentDescription="@string/sas_contentDescription_playstore"
+					style="@style/AboutLinkImage" />
+				
+				<com.pranavpandey.smallapp.view.PressedStateImageView
+					android:id="@+id/facebook_icon"
+					android:src="@drawable/sas_ic_about_facebook"
+					android:contentDescription="@string/sas_contentDescription_facebook"
+					style="@style/AboutLinkImage" />
+				
+				<com.pranavpandey.smallapp.view.PressedStateImageView
+					android:id="@+id/twitter_icon"
+					android:src="@drawable/sas_ic_about_twitter"
+					android:contentDescription="@string/sas_contentDescription_twitter"
+					style="@style/AboutLinkImage" />
+				
+				<com.pranavpandey.smallapp.view.PressedStateImageView
+					android:id="@+id/google_icon"
+					android:src="@drawable/sas_ic_about_gplus"
+					android:contentDescription="@string/sas_contentDescription_google"
+					style="@style/AboutLinkImage" />
+				
+				<com.pranavpandey.smallapp.view.PressedStateImageView
+					android:id="@+id/linkedin_icon"
+					android:src="@drawable/sas_ic_about_linkedin"
+					android:contentDescription="@string/sas_contentDescription_linkedin"
+					style="@style/AboutLinkImage" />
+				
+				<com.pranavpandey.smallapp.view.PressedStateImageView
+					android:id="@+id/github_icon"
+					android:src="@drawable/sas_ic_about_github"
+					android:contentDescription="@string/sas_contentDescription_github"
+					style="@style/AboutLinkImage" />
+				
+			</LinearLayout>
+		
+		</LinearLayout>
+	
+	</ScrollView>
+	
+</LinearLayout>
