@@ -31,7 +31,7 @@ import android.support.v4.content.ContextCompat;
 import android.view.View;
 
 /**
- * A class to detect Primary and accent color form the theme. Only for Xperia devices
+ * A class to detect Primary and Accent colors form the theme. Only for Xperia devices
  * with ICS support. In ICS, it will return the Theme accent color.
  */
 public class SmallTheme {
