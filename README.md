@@ -16,17 +16,23 @@ Small App Support is an easy to use library to build attractive small apps with 
 
 ---
 
-# Eclipse Setup
+## Setup
+
+### Eclipse
 
 Its an Eclipse project, import it in the eclipse and add the path of your Sony add-on SDK. Run the sample to see it working. Full documentation coming soon...
 
 I have divided it into different parts for easy understanding. First we have to initialize the `SmallTheme` to make things working properly.
 
-# Theme
+## Usage
+
+Read the documentation below to know how you can make attractive small apps by using this library. It will also simplify the development process and please don't rely only on this, keep exploring the different classes to find some hidden functions. If there is any mistake or some important features are missing then, feel free to update it and send me the pull request so that I can update it.
+
+### Theme
 
 There is a base `SmallApp` class which you can extend to initialize the `SmallTheme` and it also has some useful functions and can handle configuration changes. After that you can use it to extract different colors from the theme by getting its instance.
 
-## SmallTheme
+#### SmallTheme
 
 `SmallTheme` is a class to detect Primary and Accent colors from the theme. In ICS, it will return the Theme accent color. It also has some other functions like `showHint(view, string)`, `showHeaderHint(view, string)` to show hints for footer and header menu items respectively.
 
@@ -106,7 +112,7 @@ public class SmallAppSample extends SmallApplication {
 }
 ```
 
-## DynamicTheme
+#### DynamicTheme
 
 In theme, there is another useful class `DynamicTheme`. It is mostly used internally but you can also use its `static` functions to generate colors dynamically. 
 
@@ -138,7 +144,126 @@ DynamicTheme.highlightQueryTextColorRes(query, textView, colorId);
 
 ---
 
-# Apps using Small App Support
+### View
+
+It consists of different views by which you can easily change `TextView` color or can apply filter on a `ImageView` according to the colors extracted from the theme. Make sure to initialize `SmallTheme` first if you are not extending `SmallApp` class. You can make these views background aware so that their color will always be visible on the supplied background. If no background is supplied then, it will use the default background color i.e; `#FF1A1A1A`
+
+Following color attributes are available which you can use in the layout to colorize these views.
+
+#### ColorAttributes
+
+1. `colorType` - applies filter on image view or changes text color according to the following values.
+
+    0. `none` - no color will be appled to the view.
+    1. `primary` - extracted `colorPrimary` from the current theme.
+    2. `primary_dark` - extracted `colorPrimaryDark` from the current theme.
+    3. `accent` - extracted `colorAccent` from the current theme.
+    4. `accent_dark` - extracted `colorAccentDark` from the current theme.
+    5. `tint_primary` - calculated tint color based on the `colorPrimary`.
+    6. `tint_primary_dark` - calculated tint color based on the `colorPrimaryDark`.
+    7. `tint_accent` - calculated tint color based on the `colorAccent`.
+    8. `tint_accent_dark` - calculated tint color based on the `colorAccentDark`.
+    
+2. `backgroundAware` - `true` if this view will change its color according to the background. It was introduced to provide better legibility for colored images and to avoid dark image on dark background like situations. If this boolean is set then, it will check for the contrast color and do color calculations according to that color so that this image view will always be visible on that background. If no contrast color is found then, it will take default background color.
+
+3. `contrastWith` - background color for this view so that it will remain in contrast with this color.
+
+4. `colorAlpha` - background alpha for this view ranging from 0 - 255.
+
+#### ColoredImageView
+
+An `ImageView` to apply color filter according to the supplied color `colorType`.
+
+```xml
+<com.pranavpandey.smallapp.view.ColoredImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:colorType="primary" 
+    app:backgroundAware="true"
+    app:contrastWith="#FF2A2A2A" />
+```
+
+In the above example, it will automatically apply `colorPrimary` filter on the `ImageView`. As `backgroundAware` set to `true` and a `contrastWith` color is also supplied so, it will check that the applied filter will be visible on `#FF2A2A2A` background or not. If not or both the colors are dark then, it will calculate the tint or light version of the `colorPrimary` which will always be visible on that background and changes the color filter.
+
+#### PressedStateImageView
+
+An ImageView which changes alpha on touch to show pressed state. It is extended from `ColoredImageView` to provide colorizing abilities whenever is required.
+
+```xml
+<com.pranavpandey.smallapp.view.PressedStateImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/icon" />
+```
+    
+#### ColoredTextView
+
+A TextView to change its color according to the supplied `colorType`.
+
+```xml
+<com.pranavpandey.smallapp.view.ColoredTextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:colorType="primary" 
+    app:backgroundAware="true"
+    app:contrastWith="#FF2A2A2A" />
+```
+
+In the above example, it will automatically set the text color to `colorPrimary`. As `backgroundAware` set to `true` and a `contrastWith` color is also supplied so, it will check that the applied color will be visible on `#FF2A2A2A` background or not. If not or both the colors are dark then, it will calculate the tint or light version of the `colorPrimary` which will always be visible on that background and changes the text color.
+
+#### ColoredLinearLayout
+
+A LinearLayout to change background according to the supplied `colorType`.
+
+```xml
+<com.pranavpandey.smallapp.view.ColoredLinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:colorType="primary" 
+    app:colorAlpha="200" />
+```
+
+In the above example, it will automatically set the background color to `colorPrimary`. As `colorAlpha` is set to 200 so, it will also change the `argb` color alpha component to 200.
+
+All the views has getters and setters for these attributes to change them at runtime.
+
+```java
+// Setters
+
+// ColoredImageView
+ColoredImageView.setColorType(colorType);
+ColoredImageView.setBackgroundAware(boolean);
+ColoredImageView.setContrastWith(color);
+
+// ColoredTextView
+ColoredTextView.setColorType(colorType);
+ColoredTextView.setBackgroundAware(boolean);
+ColoredTextView.setContrastWith(color);
+
+// ColoredLinearLayout
+ColoredLinearLayout.setColorType(colorType);
+ColoredLinearLayout.setColorAlpha(int);
+
+// Getters
+
+// ColoredImageView
+ColoredImageView.getColorType();
+ColoredImageView.isBackgroundAware();
+ColoredImageView.getContrastWith();
+
+// ColoredTextView
+ColoredTextView.getColorType();
+ColoredTextView.isBackgroundAware();
+ColoredTextView.getContrastWith();
+
+// ColoredLinearLayout
+ColoredLinearLayout.getColorType();
+ColoredLinearLayout.getColorAlpha();
+```
+---
+
+## Apps using Small App Support
 
 All of my small apps are built with this library. You can download them from Google Play. Please email me if you are using this library and  want to feature your small app here.
 
