@@ -16,17 +16,19 @@ Small App Support is an easy to use library to build attractive small apps with 
 
 ---
 
-# Usage
+# Eclipse Setup
 
 Its an Eclipse project, import it in the eclipse and add the path of your Sony add-on SDK. Run the sample to see it working. Full documentation coming soon...
 
 I have divided it into different parts for easy understanding. First we have to initialize the `SmallTheme` to make things working properly.
 
-## Theme
+# Theme
 
-There is a base `SmallApp` class which you can extend to initialize the `SmallTheme` and it also has some useful functions and can handle configuration changes. Now, you can use it to extract different colors from the theme by getting its instance.
+There is a base `SmallApp` class which you can extend to initialize the `SmallTheme` and it also has some useful functions and can handle configuration changes. After that you can use it to extract different colors from the theme by getting its instance.
 
-`SmallTheme` is a class to detect Primary and Accent colors form the theme. In ICS, it will return the Theme accent color. It also has some other functions like `showHint(View, String)`, `showHeaderHint(View, String)` to show hints for footer and header menu items respectively.
+## SmallTheme
+
+`SmallTheme` is a class to detect Primary and Accent colors from the theme. In ICS, it will return the Theme accent color. It also has some other functions like `showHint(view, string)`, `showHeaderHint(view, string)` to show hints for footer and header menu items respectively.
 
 ```java
 public class SmallAppSample extends SmallApp {
@@ -102,6 +104,36 @@ public class SmallAppSample extends SmallApplication {
         ...
     }
 }
+```
+
+## DynamicTheme
+
+In theme, there is another useful class `DynamicTheme`. It is mostly used internally but you can also use its `static` functions to generate colors dynamically. 
+
+```java
+// Calculate tint based on a given color for better readability
+DynamicTheme.getTintColor(color);
+
+// Calculate accent based on a given color for dynamic theme generation.
+// Still in beta so, sometimes may be inaccurate color
+DynamicTheme.getAccentColor(color);
+
+// Calculate contrast of a color based on the give base color so
+// that it will be visible always on top of the base color.
+DynamicTheme.getContrastColor(color, contrastWith);
+
+// Colorize and return the mutated drawable so that, all other references 
+// do not change.
+DynamicTheme.colorizeDrawable(drawable, color);
+// OR
+DynamicTheme.colorizeDrawableRes(context, drawable, color);
+
+// Highlight the query text within a TextView. Suitable for notifying user about the 
+// searched query found in the adapter. TextView should not be empty. Please set your 
+// default text first then, highlight the query text by using this function.
+DynamicTheme.highlightQueryTextColor(query, textView, color);
+// OR
+DynamicTheme.highlightQueryTextColorRes(query, textView, colorId);
 ```
 
 ---
