@@ -263,6 +263,38 @@ ColoredLinearLayout.getColorAlpha();
 ```
 ---
 
+### Launcher
+
+A set of classs with collection of helper functions and constants to make launching of small app easier and from anywhere.
+
+#### ShortcutLauncher
+
+An abstract activity to launch small app shortcuts form anywhere. Extend it in your project and override `getShortcutPackage()` method to pass a package name. You can also start the activity with an intent extra contating the package name and can extract that package name in this method. Rest of the things will be handle by the `SmallLauncher`.
+
+```java
+// Start activity with an intent extra.
+Intent intent = new Intent(context, ShortcutActivity.class);
+intent.putExtra(ShortcutLauncher.PACKAGE_NAME, "com.pranavpandey.smallapp.sample");
+startActivity(intent);
+
+...
+
+// Extend ShortcutLauncher to launch small app.
+public class ShortcutActivity extends ShortcutLauncher {
+
+    // Override this function and pass a package name or 
+    // start this activity with the intent.
+	@Override
+	protected String getShortcutPackage() {
+		return "com.pranavpandey.smallapp.sample";
+        
+		// OR
+        return getIntent().getStringExtra(ShortcutLauncher.PACKAGE_NAME);
+	}
+}
+```
+---
+
 ## Apps using Small App Support
 
 All of my small apps are built with this library. You can download them from Google Play. Please email me if you are using this library and  want to feature your small app here.
