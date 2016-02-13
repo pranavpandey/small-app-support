@@ -245,6 +245,7 @@ ColoredTextView.setContrastWith(color);
 ColoredLinearLayout.setColorType(colorType);
 ColoredLinearLayout.setColorAlpha(int);
 
+
 // Getters
 
 // ColoredImageView
@@ -292,6 +293,42 @@ public class ShortcutActivity extends ShortcutLauncher {
         return getIntent().getStringExtra(ShortcutLauncher.PACKAGE_NAME);
 	}
 }
+```
+---
+
+### SmallUtils
+
+There were always be a problem while displaying dialog from a small app as it is derived from the `Service`. But by doing some midifications we can do it easily. `SmallUtils` is a collection of such useful functions. It also has other functions to save settings in `SharedPreferences`.
+
+```java
+// Create simple alert dialog .
+AlertDialog.Builder builder = new AlertDialog.Builder(context);
+builder.setTitle(R.string.sas_about);
+builder.setPositiveButton(android.R.string.ok, null);
+
+// Use SmallUtils to display it from a small app.
+// Pass the window token of your root view. A parent view of which you want to 
+// attach the dialog.
+SmallUtils.createDialog(builder.create(), getRootView().getWindowToken());
+
+// Save values in SharedPreferences.
+
+// Save integer value
+SmallUtils.savePrefs(context, "Key", int);
+// Save booelan value
+SmallUtils.savePrefs(context, "Key", boolean);
+// Save String value
+SmallUtils.savePrefs(context, "Key", String);
+
+
+// Load values from SharedPreferences.
+
+// Load integer preference. If not found then, return defaultInt.
+SmallUtils.loadPrefs(context, "Key", defaultInt);
+// Load boolean preference. If not found then, return defaultBoolean.
+SmallUtils.loadPrefs(context, "Key", defaultBooelan);
+// Load String preference. If not found then, return defaultString.
+SmallUtils.loadPrefs(context, "Key", defaultString);
 ```
 ---
 
