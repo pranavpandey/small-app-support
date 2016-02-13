@@ -92,13 +92,13 @@ public class OpenIntentDialog extends ActionDialog {
 	private Intent mIntent;    
 	
 	/** 
-	 * <code>true</code> If auto open when there is only
+	 * <code>true</code> if auto open when there is only
 	 * <code>one</code> activity in the list.
 	 */
 	private boolean mOpenSingleApp = false;
 	
 	/** 
-	 * <code>true</code> If remember user selection to open same
+	 * <code>true</code> if remember user selection to open same
 	 * intent with the same app next time.
 	 */
 	private boolean mRememberSelection = false;
@@ -328,7 +328,7 @@ public class OpenIntentDialog extends ActionDialog {
 	 * Set a callback to be invoked when there will be no activity 
 	 * to handle the supplied intent.
 	 * 
-	 * @param noActivityListener Listener to dispatch event when there will 
+	 * @param noActivityListener to dispatch event when there will 
 	 * be no activity to handle this intent.
 	 * 
 	 * @return OpenIntentDialog object to allow for chaining of calls 
@@ -343,7 +343,7 @@ public class OpenIntentDialog extends ActionDialog {
 	 * Set a callback to be invoked when when an activity has been 
 	 * opened to with the supplied intent.
 	 * 
-	 * @param activityOpenListener Listener to dispatch event when an 
+	 * @param activityOpenListener to dispatch event when an 
 	 * activity has been opened to with the supplied intent.
 	 * 
 	 * @return OpenIntentDialog object to allow for chaining of calls 

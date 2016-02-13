@@ -214,19 +214,19 @@ public class ActionDialog {
 	private CharSequence mCheckButtonText;
 	
 	/** 
-	 * <code>true</code> If extra info is set to display as header of
+	 * <code>true</code> if extra info is set to display as header of
 	 * {@link Type#LIST} or {@link Type#GRID}.
 	 */
 	private boolean mExtraInfo = false;
 	
 	/** 
-	 * <code>true</code> If auto dismiss dialog when an action item 
+	 * <code>true</code> if auto dismiss dialog when an action item 
 	 * is clicked.
 	 */
 	private boolean mAutoDismiss = true;
 	
 	/** 
-	 * <code>true</code> If a custom dialog will be displayed from
+	 * <code>true</code> ff a custom dialog will be displayed from
 	 * the extended class. It extends the functionality of this
 	 * dialog. It is well implemented in {@link OpenIntentDialog}.
 	 * 
@@ -235,7 +235,7 @@ public class ActionDialog {
 	private boolean mCustomDialog = false;
 	
 	/** 
-	 * <code>true</code> If check button layout is enabled. Enable it to
+	 * <code>true</code> if check button layout is enabled. Enable it to
 	 * remember user selection for later use. It is well implemented in 
 	 * {@link OpenIntentDialog}.
 	 * 
@@ -245,7 +245,7 @@ public class ActionDialog {
 	
 	/** 
 	 * Checked state of the button in check button layout. 
-	 * <code>true</code> If it is checked.
+	 * <code>true</code> if it is checked.
 	 */
 	private boolean mCheckButtonState = false;
 	
@@ -667,7 +667,7 @@ public class ActionDialog {
 	}
 	
 	/**
-	 * @return <code>true</code> If a custom dialog will be displayed by using
+	 * @return <code>true</code> if a custom dialog will be displayed by using
 	 * the values of this dialog.
 	 */
 	public boolean isCustomDialog() {
@@ -675,7 +675,7 @@ public class ActionDialog {
 	}
 	
 	/**
-	 * @return <code>true</code> If extra info is set to display as header of
+	 * @return <code>true</code> if extra info is set to display as header of
 	 * {@link Type#LIST} or {@link Type#GRID}.
 	 */
 	public boolean isExtraInfo() {

@@ -262,6 +262,7 @@ ColoredTextView.getContrastWith();
 ColoredLinearLayout.getColorType();
 ColoredLinearLayout.getColorAlpha();
 ```
+
 ---
 
 ### Launcher
@@ -294,6 +295,7 @@ public class ShortcutActivity extends ShortcutLauncher {
 	}
 }
 ```
+
 ---
 
 ### SmallUtils
@@ -318,7 +320,7 @@ SmallUtils.savePrefs(context, "Key", int);
 // Save booelan value
 SmallUtils.savePrefs(context, "Key", boolean);
 // Save String value
-SmallUtils.savePrefs(context, "Key", String);
+SmallUtils.savePrefs(context, "Key", string);
 
 
 // Load values from SharedPreferences.
@@ -330,6 +332,101 @@ SmallUtils.loadPrefs(context, "Key", defaultBooelan);
 // Load String preference. If not found then, return defaultString.
 SmallUtils.loadPrefs(context, "Key", defaultString);
 ```
+
+---
+
+### Dialog
+
+There are some in-built `Dialogs` so you don't have to write your own. You can use them to show options on long press or if you want to open some links, files, etc. It has an intent app picker which can also remeber the user's choices so they don't need to choose the app next time. Read below to know about their usage.
+
+#### ActionDialog
+
+A class which creates a dialog to show different actions to perform various operations by using an adapter containing all the actions which will be displayed either in a `List`or `Grid`. You can use `BaseActionItemAdapter` or any other custom adapter according to your need. Set a click listener to dispatch click events so that you can perform actions.
+
+You can also set extra info to display as header of `List` or `Grid` which is also clickable.
+
+```java
+// Initalize list
+ArrayList<BaseActionItem> actionList  = new ArrayList<BaseActionItem>();
+
+// Add actions into the list.
+actionList.add(new BaseActionItem(actionId, nameId, drawableId, isColorizable));
+actionList.add(new BaseActionItem(actionId, nameId, drawableId, isColorizable));
+
+// Configure dialog builder.
+AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
+alertDialogBuilder.setTitle(string);
+alertDialogBuilder.setNegativeButton(android.R.string.cancel, null);
+        
+// Initialize ActionDialog and pass the builder.
+ActionDialog actionDialog = new ActionDialog(context, alertDialogBuilder, Type.GRID);
+
+// Set actions adapter.
+actionDialog.setAdapter(new BaseActionItemAdapter(context, actionList, R.layout.sas_item_grid_action), 
+    new OnActionItemClickListener() {
+        public void onActionItemClick(DialogInterface dialog, Adapter adapter, AdapterView<?> parent,
+                View view, int position, long id) {
+            int actionId =  ((BaseActionItem) adapter.getItem(position)).getActionId();
+            switch (actionId) {
+                // handle action item click events.
+            }
+        }
+    }
+)
+// Set extra info to be displayed in the header of list or grid.
+.setExtraInfo(drawableId, textString, new OnExtraInfoClickListener() {
+    public void onExtraInfoClick(View v) {
+        // handle click event.
+    }	
+})
+// Show the action dialog.
+.show(getRootView());
+```
+
+#### OpenIntentDialog
+
+A class which creates a dialog to show all the activities available to handle the supplied intent. It is a solution to handle no activity found exception and you can also do some other work if this exception occurs. It extends the `ActionDialog` class so that you can use its functions also.
+
+```java
+// Create intent.
+Intent intent = new Intent(Intent.ACTION_SEND);
+intent.setType("application/*");
+intent.putExtra(Intent.EXTRA_SUBJECT, appName);
+intent.putExtra(Intent.EXTRA_BCC, "");
+intent.putExtra(Intent.EXTRA_TEXT, appName + "\n" 
+        + "http://play.google.com/store/apps/details?id=" + packageName);
+
+// Configure dialog builder.
+AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context)
+.setTitle(R.string.share)
+.setNegativeButton(android.R.string.cancel, null);
+
+// Show opent intent dialog.
+new OpenIntentDialog(context, intent, alertDialogBuilder, Type.GRID)
+.setActivityOpenListener(new OnActivityOpenListener() {
+    public void onActivityOpen(ComponentName componentName) {
+        // handle activity opent event.
+    }	
+})
+// true if remember user selection to open same intent 
+// with the same app next time.
+.setRememberSelection(boolean)
+// Set extra info to be displayed in the header of list or grid.
+// Pass null to make header not clickable.
+.setExtraInfo(drawableId, shareString, null)
+.show(getRootView());
+```
+
+It will show a list of all the apps that can handle this intent. Select one of them, to open the intent. If `setRememberSelection(true)` then, it will show a checkbox to the users so that they can remember their selection for this intent.
+
+You can also clear the user selection and all the associated apps by using the `Associations` class.
+
+```java
+// Clear all the associated apps.
+// Pass true to show a toast message and notify user.
+new Associations(context).getHelper().clearAll(true);
+```
+
 ---
 
 ## Apps using Small App Support
