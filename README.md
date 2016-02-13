@@ -18,15 +18,17 @@ Small App Support is an easy to use library to build attractive small apps with 
 
 ## Setup
 
-### Eclipse
+[![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg?)](https://www.apache.org/licenses/LICENSE-2.0.html)
 
-Its an Eclipse project, import it in the eclipse and add the path of your Sony add-on SDK. Run the sample to see it working. Full documentation coming soon...
+### Eclipse with ADT
 
-I have divided it into different parts for easy understanding. First we have to initialize the `SmallTheme` to make things working properly.
+Its an Eclipse project, import it in eclipse and add the path of your Sony add-on SDK. Run the sample to see it working.
 
 ## Usage
 
 Read the documentation below to know how you can make attractive small apps by using this library. It will also simplify the development process and please don't rely only on this, keep exploring the different classes to find some hidden functions. If there is any mistake or some important features are missing then, feel free to update it and send me the pull request so that I can update it.
+
+I have divided it into different parts for easy understanding. First we have to initialize the `SmallTheme` to make things working properly.
 
 ### Theme
 
