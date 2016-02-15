@@ -4,7 +4,7 @@
 
 *A simple library to build apps for Sony Small Apps Extension.*
 
-Small App Support is an easy to use library to build attractive small apps with native apps like functionality. I have divided it into different parts for easy understanding. As small app is a service there was a problem displaying a dialog from the small app. So, I have wrote a function to easily display a dialog from a small app. This library is a collection of such type of functions and classes to provide a good interface.
+Small App Support is an easy to use library to build attractive small apps with native apps like functionality. I have divided it into different parts for easy understanding. As small app is a service, there were issues while displaying dialog from the small app. So, I have wrote a function to easily display dialog from a small app. This library is a collection of such type of functions and classes to provide a better interface.
 
 <img src="https://raw.githubusercontent.com/pranavpandey/small-app-support/master/graphics/sas_screen_1.png" width="280" height="486">
 <img src="https://raw.githubusercontent.com/pranavpandey/small-app-support/master/graphics/sas_screen_2.png" width="280" height="486">
