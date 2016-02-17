@@ -122,23 +122,31 @@ In theme, there is another useful class `DynamicTheme`. It is mostly used intern
 // Calculate tint based on a given color for better readability
 DynamicTheme.getTintColor(color);
 
-// Calculate accent based on a given color for dynamic theme generation.
-// Still in beta so, sometimes may be inaccurate color
+/*
+ * Calculate accent based on a given color for dynamic theme generation.
+ * Still in beta so, sometimes may be inaccurate color.
+ */
 DynamicTheme.getAccentColor(color);
 
-// Calculate contrast of a color based on the give base color so
-// that it will be visible always on top of the base color.
+/* 
+ * Calculate contrast of a color based on the give base color so
+ * that it will be visible always on top of the base color.
+ */
 DynamicTheme.getContrastColor(color, contrastWith);
 
-// Colorize and return the mutated drawable so that, all other references 
-// do not change.
+/* 
+ * Colorize and return the mutated drawable so that, all other references 
+ * do not change.
+ */
 DynamicTheme.colorizeDrawable(drawable, color);
 // OR
 DynamicTheme.colorizeDrawableRes(context, drawable, color);
 
-// Highlight the query text within a TextView. Suitable for notifying user about the 
-// searched query found in the adapter. TextView should not be empty. Please set your 
-// default text first then, highlight the query text by using this function.
+/* 
+ * Highlight the query text within a TextView. Suitable for notifying user about the 
+ * searched query found in the adapter. TextView should not be empty. Please set your 
+ * default text first then, highlight the query text by using this function.
+ */
 DynamicTheme.highlightQueryTextColor(query, textView, color);
 // OR
 DynamicTheme.highlightQueryTextColorRes(query, textView, colorId);
@@ -310,9 +318,10 @@ AlertDialog.Builder builder = new AlertDialog.Builder(context);
 builder.setTitle(R.string.sas_about);
 builder.setPositiveButton(android.R.string.ok, null);
 
-// Use SmallUtils to display it from a small app.
-// Pass the window token of your root view. A parent view of which you want to 
-// attach the dialog.
+/* Use SmallUtils to display it from a small app.
+ * Pass the window token of your root view. A parent view of which you 
+ * want to attach the dialog.
+ */
 SmallUtils.createDialog(builder.create(), getRootView().getWindowToken());
 
 // Save values in SharedPreferences.
@@ -410,11 +419,15 @@ new OpenIntentDialog(context, intent, alertDialogBuilder, Type.GRID)
         // handle activity opent event.
     }	
 })
-// true if remember user selection to open same intent 
-// with the same app next time.
+/* 
+ * true if remember user selection to open same intent 
+ * with the same app next time.
+ */
 .setRememberSelection(boolean)
-// Set extra info to be displayed in the header of list or grid.
-// Pass null to make header not clickable.
+/* 
+ * Set extra info to be displayed in the header of list or grid.
+ * Pass null to make header not clickable.
+ */
 .setExtraInfo(drawableId, shareString, null)
 .show(getRootView());
 ```
@@ -424,8 +437,10 @@ It will show a list of all the apps that can handle this intent. Select one of t
 You can also clear the user selection and all the associated apps by using the `Associations` class.
 
 ```java
-// Clear all the associated apps.
-// Pass true to show a toast message and notify user.
+/* 
+ * Clear all the associated apps.
+ * Pass true to show a toast message and notify user.
+ */
 new Associations(context).getHelper().clearAll(true);
 ```
 
