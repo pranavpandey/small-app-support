@@ -294,8 +294,10 @@ startActivity(intent);
 // Extend ShortcutLauncher to launch small app.
 public class ShortcutActivity extends ShortcutLauncher {
 
-    // Override this function and pass a package name or 
-    // start this activity with the intent.
+    /* 
+     * Override this function and pass a package name or 
+     * start this activity with the intent.
+     */
 	@Override
 	protected String getShortcutPackage() {
 		return "com.pranavpandey.smallapp.sample";
@@ -318,7 +320,8 @@ AlertDialog.Builder builder = new AlertDialog.Builder(context);
 builder.setTitle(R.string.sas_about);
 builder.setPositiveButton(android.R.string.ok, null);
 
-/* Use SmallUtils to display it from a small app.
+/* 
+ * Use SmallUtils to display it from a small app.
  * Pass the window token of your root view. A parent view of which you 
  * want to attach the dialog.
  */
