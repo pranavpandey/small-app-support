@@ -106,8 +106,19 @@ public class SmallAppSample extends SmallApplication {
     @Override
     protected void onCreate() {
         super.onCreate();
-        // Initialize SmallTheme instance
+        
+        // Initialize SmallTheme instance.
         SmallTheme.initializeInstance(getApplicationContext());
+        
+        ...
+    }
+    
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        
+        // To avoid memory leaks and to initialize it properly next time.
+        SmallTheme.getInstance().onDestroy();
         
         ...
     }

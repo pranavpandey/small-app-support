@@ -105,13 +105,16 @@ public class Associations {
 		
 		@Override 
 		public void onCreate(SQLiteDatabase db) {
-			db.execSQL("CREATE TABLE " + TABLE_NAME +
+			db.execSQL("CREATE TABLE IF NOT EXIST " + TABLE_NAME +
 			    " ( " + COL_KEY + " text primary key not null, " +
 			    COL_VALUE + " text null);");
 		}
 		
 		@Override 
-		public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) { }
+		public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) { 
+            db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
+            onCreate(db);
+        }
 		
 		/**
 		 * Insert a <key, value> pair into the database.
