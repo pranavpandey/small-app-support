@@ -3,8 +3,8 @@
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry kind="lib" path="/Users/pranav/Library/Android/sdk/add-ons/addon-sony_add-on_sdk_3_0-sony-19/libs/com.sony.smallapp.jar"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
-	<classpathentry kind="lib" path="/Users/pranav/Library/Android/sdk/add-ons/addon-sony_add-on_sdk_3_0-sony-19/libs/com.sony.smallapp.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

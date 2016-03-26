@@ -54,6 +54,16 @@ import android.widget.Toast;
 public class SmallUtils {
 
 	/**
+	 * To detect if the current Android version is JellyBean or below.
+	 *
+	 * @return <code>true</code> If current version is greater than or equal to
+	 * {@link Build.VERSION_CODES#JELLY_BEAN}.
+	 */
+	public static boolean isJellyBean() {
+		return Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN;
+	}
+
+	/**
 	 * To detect if the current Android version is Lollipop or below.
 	 *
 	 * @return <code>true</code> If current version is greater than or equal to
@@ -61,6 +71,16 @@ public class SmallUtils {
 	 */
 	public static boolean isLollipop() {
 		return Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP;
+	}
+
+	/**
+	 * To detect if the current Android version is M or below.
+	 *
+	 * @return <code>true</code> If current version is greater than or equal to
+	 * {@link Build.VERSION_CODES#M}.
+	 */
+	public static boolean isMarshmallow() {
+		return Build.VERSION.SDK_INT >= Build.VERSION_CODES.M;
 	}
 
 	/**
@@ -212,7 +232,7 @@ public class SmallUtils {
 	public static String getDate(Context context, long milliSeconds) {
 		DateFormat df = android.text.format.DateFormat.getDateFormat(context);
 		DateFormat tf = android.text.format.DateFormat.getTimeFormat(context);
-		
+
 		return String.format(context.getResources().getString(R.string.sas_format_blank_space),
 				df.format(milliSeconds), tf.format(milliSeconds));
 	}

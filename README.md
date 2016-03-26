@@ -22,7 +22,17 @@ Small App Support is an easy to use library to build attractive small apps with 
 
 ### Eclipse with ADT
 
-Its an Eclipse project, import it in eclipse and add the path of your Sony add-on SDK. Run the sample to see it working.
+It is an Eclipse project, import it in eclipse and add the Sony small app library. To do this, follow the steps below for both `library` and `sample`.
+
+1. Right click on the the `project` and select `Properties`.
+2. On left pane, select `Java Build Path`.
+3. Click on `Libraries` tab and select `Add External JARs`.
+4. Navigate to the Sony `Sony Small App SDK directory` and select `com.sony.smallapp.jar` (under `libs` folder).
+5. Clean and rebuild project.
+
+Run the sample to see it in action.
+
+---
 
 ## Usage
 
@@ -61,31 +71,31 @@ public class SmallAppSample extends SmallApp {
 
         attr.flags |= SmallAppWindow.Attributes.FLAG_RESIZABLE;
         getWindow().setAttributes(attr);
-        
+
         // Get base colors
         @ColorInt int primaryColor = SmallTheme.getInstance().getPrimaryColor();
         @ColorInt int accentColor = SmallTheme.getInstance().getAccentColor();
-        
+
         // Get tint colors so that it will always be visible on the base color
         @ColorInt int tintPrimaryColor = SmallTheme.getInstance().getTintPrimaryColor();
         @ColorInt int tintAccentColor = SmallTheme.getInstance().getTintAccentColor();
-        
-        // Use other SmallApp funtions
-        
+
+        // Use other SmallApp functions
+
         // Minimize the small app window
         windowMinimize();
-        
+
         // Set small app window fitted to the screen
         windowFitted();
-        
+
         // Set small app window to its general state
         windowNormal();
-        
+
         // Setup header with option menu
         View header = LayoutInflater.from(this).inflate(R.layout.header, new LinearLayout(this), false);
-		
+
 		final View optionMenu = header.findViewById(R.id.option_menu);
-		
+
         // Show header hint
 		optionMenu.setOnLongClickListener(new View.OnLongClickListener() {
 			@Override
@@ -106,20 +116,20 @@ public class SmallAppSample extends SmallApplication {
     @Override
     protected void onCreate() {
         super.onCreate();
-        
+
         // Initialize SmallTheme instance.
         SmallTheme.initializeInstance(getApplicationContext());
-        
+
         ...
     }
-    
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        
+
         // To avoid memory leaks and to initialize it properly next time.
         SmallTheme.getInstance().onDestroy();
-        
+
         ...
     }
 }
@@ -127,7 +137,7 @@ public class SmallAppSample extends SmallApplication {
 
 #### DynamicTheme
 
-In theme, there is another useful class `DynamicTheme`. It is mostly used internally but you can also use its `static` functions to generate colors dynamically. 
+In theme, there is another useful class `DynamicTheme`. It is mostly used internally but you can also use its `static` functions to generate colors dynamically.
 
 ```java
 // Calculate tint based on a given color for better readability
@@ -139,23 +149,23 @@ DynamicTheme.getTintColor(color);
  */
 DynamicTheme.getAccentColor(color);
 
-/* 
+/*
  * Calculate contrast of a color based on the give base color so
  * that it will be visible always on top of the base color.
  */
 DynamicTheme.getContrastColor(color, contrastWith);
 
-/* 
- * Colorize and return the mutated drawable so that, all other references 
+/*
+ * Colorize and return the mutated drawable so that, all other references
  * do not change.
  */
 DynamicTheme.colorizeDrawable(drawable, color);
 // OR
 DynamicTheme.colorizeDrawableRes(context, drawable, color);
 
-/* 
- * Highlight the query text within a TextView. Suitable for notifying user about the 
- * searched query found in the adapter. TextView should not be empty. Please set your 
+/*
+ * Highlight the query text within a TextView. Suitable for notifying user about the
+ * searched query found in the adapter. TextView should not be empty. Please set your
  * default text first then, highlight the query text by using this function.
  */
 DynamicTheme.highlightQueryTextColor(query, textView, color);
@@ -175,7 +185,7 @@ Following color attributes are available which you can use in the layout to colo
 
 1. `colorType` - applies filter on image view or changes text color according to the following values.
 
-    0. `none` - no color will be appled to the view.
+    0. `none` - no color will be applied to the view.
     1. `primary` - extracted `colorPrimary` from the current theme.
     2. `primary_dark` - extracted `colorPrimaryDark` from the current theme.
     3. `accent` - extracted `colorAccent` from the current theme.
@@ -184,7 +194,7 @@ Following color attributes are available which you can use in the layout to colo
     6. `tint_primary_dark` - calculated tint color based on the `colorPrimaryDark`.
     7. `tint_accent` - calculated tint color based on the `colorAccent`.
     8. `tint_accent_dark` - calculated tint color based on the `colorAccentDark`.
-    
+
 2. `backgroundAware` - `true` if this view will change its color according to the background. It was introduced to provide better legibility for colored images and to avoid dark image on dark background like situations. If this boolean is set then, it will check for the contrast color and do color calculations according to that color so that this image view will always be visible on that background. If no contrast color is found then, it will take default background color.
 
 3. `contrastWith` - background color for this view so that it will remain in contrast with this color.
@@ -199,7 +209,7 @@ An `ImageView` to apply color filter according to the supplied color `colorType`
 <com.pranavpandey.smallapp.view.ColoredImageView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    app:colorType="primary" 
+    app:colorType="primary"
     app:backgroundAware="true"
     app:contrastWith="#FF2A2A2A" />
 ```
@@ -216,7 +226,7 @@ An ImageView which changes alpha on touch to show pressed state. It is extended 
     android:layout_height="wrap_content"
     android:src="@drawable/icon" />
 ```
-    
+
 #### ColoredTextView
 
 A TextView to change its color according to the supplied `colorType`.
@@ -225,7 +235,7 @@ A TextView to change its color according to the supplied `colorType`.
 <com.pranavpandey.smallapp.view.ColoredTextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    app:colorType="primary" 
+    app:colorType="primary"
     app:backgroundAware="true"
     app:contrastWith="#FF2A2A2A" />
 ```
@@ -241,7 +251,7 @@ A LinearLayout to change background according to the supplied `colorType`.
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    app:colorType="primary" 
+    app:colorType="primary"
     app:colorAlpha="200" />
 ```
 
@@ -288,11 +298,11 @@ ColoredLinearLayout.getColorAlpha();
 
 ### Launcher
 
-A set of classs with collection of helper functions and constants to make launching of small app easier and from anywhere.
+A set of class with collection of helper functions and constants to make launching of small app easier and from anywhere.
 
 #### ShortcutLauncher
 
-An abstract activity to launch small app shortcuts form anywhere. Extend it in your project and override `getShortcutPackage()` method to pass a package name. You can also start the activity with an intent extra contating the package name and can extract that package name in this method. Rest of the things will be handle by the `SmallLauncher`.
+An abstract activity to launch small app shortcuts form anywhere. Extend it in your project and override `getShortcutPackage()` method to pass a package name. You can also start the activity with an intent extra containing the package name and can extract that package name in this method. Rest of the things will be handle by the `SmallLauncher`.
 
 ```java
 // Start activity with an intent extra.
@@ -305,14 +315,14 @@ startActivity(intent);
 // Extend ShortcutLauncher to launch small app.
 public class ShortcutActivity extends ShortcutLauncher {
 
-    /* 
-     * Override this function and pass a package name or 
+    /*
+     * Override this function and pass a package name or
      * start this activity with the intent.
      */
 	@Override
 	protected String getShortcutPackage() {
 		return "com.pranavpandey.smallapp.sample";
-        
+
 		// OR
         return getIntent().getStringExtra(ShortcutLauncher.PACKAGE_NAME);
 	}
@@ -323,7 +333,7 @@ public class ShortcutActivity extends ShortcutLauncher {
 
 ### SmallUtils
 
-There were always be a problem while displaying dialog from a small app as it is derived from the `Service`. But by doing some midifications we can do it easily. `SmallUtils` is a collection of such useful functions. It also has other functions to save settings in `SharedPreferences`.
+There were always be a problem while displaying dialog from a small app as it is derived from the `Service`. But by doing some modifications we can do it easily. `SmallUtils` is a collection of such useful functions. It also has other functions to save settings in `SharedPreferences`.
 
 ```java
 // Create simple alert dialog .
@@ -331,9 +341,9 @@ AlertDialog.Builder builder = new AlertDialog.Builder(context);
 builder.setTitle(R.string.sas_about);
 builder.setPositiveButton(android.R.string.ok, null);
 
-/* 
+/*
  * Use SmallUtils to display it from a small app.
- * Pass the window token of your root view. A parent view of which you 
+ * Pass the window token of your root view. A parent view of which you
  * want to attach the dialog.
  */
 SmallUtils.createDialog(builder.create(), getRootView().getWindowToken());
@@ -362,7 +372,7 @@ SmallUtils.loadPrefs(context, "Key", defaultString);
 
 ### Dialog
 
-There are some in-built `Dialogs` so you don't have to write your own. You can use them to show options on long press or if you want to open some links, files, etc. It has an intent app picker which can also remeber the user's choices so they don't need to choose the app next time. Read below to know about their usage.
+There are some in-built `Dialogs` so you don't have to write your own. You can use them to show options on long press or if you want to open some links, files, etc. It has an intent app picker which can also remember the user's choices so they don't need to choose the app next time. Read below to know about their usage.
 
 #### ActionDialog
 
@@ -371,7 +381,7 @@ A class which creates a dialog to show different actions to perform various oper
 You can also set extra info to display as header of `List` or `Grid` which is also clickable.
 
 ```java
-// Initalize list
+// Initialize list
 ArrayList<BaseActionItem> actionList  = new ArrayList<BaseActionItem>();
 
 // Add actions into the list.
@@ -382,12 +392,12 @@ actionList.add(new BaseActionItem(actionId, nameId, drawableId, isColorizable));
 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
 alertDialogBuilder.setTitle(string);
 alertDialogBuilder.setNegativeButton(android.R.string.cancel, null);
-        
+
 // Initialize ActionDialog and pass the builder.
 ActionDialog actionDialog = new ActionDialog(context, alertDialogBuilder, Type.GRID);
 
 // Set actions adapter.
-actionDialog.setAdapter(new BaseActionItemAdapter(context, actionList, R.layout.sas_item_grid_action), 
+actionDialog.setAdapter(new BaseActionItemAdapter(context, actionList, R.layout.sas_item_grid_action),
     new OnActionItemClickListener() {
         public void onActionItemClick(DialogInterface dialog, Adapter adapter, AdapterView<?> parent,
                 View view, int position, long id) {
@@ -402,7 +412,7 @@ actionDialog.setAdapter(new BaseActionItemAdapter(context, actionList, R.layout.
 .setExtraInfo(drawableId, textString, new OnExtraInfoClickListener() {
     public void onExtraInfoClick(View v) {
         // handle click event.
-    }	
+    }
 })
 // Show the action dialog.
 .show(getRootView());
@@ -418,7 +428,7 @@ Intent intent = new Intent(Intent.ACTION_SEND);
 intent.setType("application/*");
 intent.putExtra(Intent.EXTRA_SUBJECT, appName);
 intent.putExtra(Intent.EXTRA_BCC, "");
-intent.putExtra(Intent.EXTRA_TEXT, appName + "\n" 
+intent.putExtra(Intent.EXTRA_TEXT, appName + "\n"
         + "http://play.google.com/store/apps/details?id=" + packageName);
 
 // Configure dialog builder.
@@ -426,19 +436,19 @@ AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context)
 .setTitle(R.string.share)
 .setNegativeButton(android.R.string.cancel, null);
 
-// Show opent intent dialog.
+// Show open intent dialog.
 new OpenIntentDialog(context, intent, alertDialogBuilder, Type.GRID)
 .setActivityOpenListener(new OnActivityOpenListener() {
     public void onActivityOpen(ComponentName componentName) {
-        // handle activity opent event.
-    }	
+        // handle activity open event.
+    }
 })
-/* 
- * true if remember user selection to open same intent 
+/*
+ * true if remember user selection to open same intent
  * with the same app next time.
  */
 .setRememberSelection(boolean)
-/* 
+/*
  * Set extra info to be displayed in the header of list or grid.
  * Pass null to make header not clickable.
  */
@@ -451,7 +461,7 @@ It will show a list of all the apps that can handle this intent. Select one of t
 You can also clear the user selection and all the associated apps by using the `Associations` class.
 
 ```java
-/* 
+/*
  * Clear all the associated apps.
  * Pass true to show a toast message and notify user.
  */
