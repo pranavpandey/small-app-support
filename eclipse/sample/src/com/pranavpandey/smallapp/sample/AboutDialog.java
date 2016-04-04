@@ -106,7 +106,7 @@ public class AboutDialog {
      * @param rootView Root view to which the dialog should attach.
      */
 	public void show(@NonNull View rootView) {
-		mDialog = SmallUtils.createDialog(createDialog(rootView), rootView.getWindowToken());
+		createDialog(rootView);
 		mDialog.show();
 	}
 	
@@ -116,10 +116,8 @@ public class AboutDialog {
      * default links.
      * 
      * @param rootView Root view to which the dialog should attach.
-     * 
-     * @return An {@link android.app.AlertDialog} with app and developer info.
      */
-	private AlertDialog createDialog(@NonNull final View rootView) {
+	private void createDialog(@NonNull final View rootView) {
 		final AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
 		View view = LayoutInflater.from(mContext).inflate(R.layout.sas_dialog_about, 
 				new LinearLayout(mContext), false);
@@ -188,7 +186,6 @@ public class AboutDialog {
 		});
 		
 		builder.setTitle(R.string.sas_about);
-		builder.setView(view);
 		if (mDialogIcon != null) {
 		   	builder.setIcon(DynamicTheme.colorizeDrawable(mDialogIcon, 
 		   			SmallTheme.getInstance().getPrimaryColor()));
@@ -196,7 +193,8 @@ public class AboutDialog {
 		
 		builder.setPositiveButton(android.R.string.ok, null);
 		
-		return builder.create();
+		mDialog = SmallUtils.createDialog(builder.create(), 
+				rootView.getWindowToken(), view);
 	}
 	
 	/** 

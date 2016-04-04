@@ -296,18 +296,20 @@ public class ActionDialog {
 					});
 				}
 
+				mView.findViewById(R.id.extra_info_layout).setVisibility(View.VISIBLE);
+
 				final ScrollView scrollView = (ScrollView) mView.findViewById(R.id.action_grid_scroll);
 				scrollView.post(new Runnable() {
+					@Override
 	                public void run() {
 	                	scrollView.smoothScrollTo(0, 0);
 	                }
 	            });
-
-				mView.findViewById(R.id.extra_info_layout).setVisibility(View.VISIBLE);
 			}
 
 			mActionGridView.setAdapter(mAdapter);
 			mActionGridView.setOnItemClickListener(new OnItemClickListener() {
+				@Override
 				public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 					if (mActionItemListener != null) {
 						mActionItemListener.onActionItemClick(mDialog, mAdapter, parent, view, position, id);
@@ -330,6 +332,7 @@ public class ActionDialog {
 
 			mActionListView.setAdapter(mAdapter);
 			mActionListView.setOnItemClickListener(new OnItemClickListener() {
+				@Override
 				public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 					if (mExtraInfo) {
 						position--;
@@ -376,8 +379,8 @@ public class ActionDialog {
 			chkButton.setChecked(mCheckButtonState);
 		}
 
-		mDialogBuilder.setView(mView);
-		mDialog = SmallUtils.createDialog(mDialogBuilder.create(), rootView.getWindowToken());
+		mDialog = SmallUtils.createDialog(mDialogBuilder.create(),
+				rootView.getWindowToken(), mView);
 	}
 
 	/**
@@ -536,8 +539,8 @@ public class ActionDialog {
 	 */
 	public ActionDialog setCheckButtonLayout(@StringRes int textId, boolean defaultState,
 			@Nullable OnCheckButtonChangedListener checkButtonListener) {
-			return setCheckButtonLayout(mContext.getText(textId).toString(), defaultState,
-					checkButtonListener);
+		return setCheckButtonLayout(mContext.getText(textId).toString(), defaultState,
+				checkButtonListener);
 	}
 
 	/**

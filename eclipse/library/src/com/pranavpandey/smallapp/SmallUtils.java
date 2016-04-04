@@ -105,6 +105,29 @@ public class SmallUtils {
 	}
 
 	/**
+	 * Set token manually for an AlertDialog so that we can display it
+	 * from a non-UI ContextWrapper class (like service etc.). It also sets
+	 * a custom view for the dialog and handles top padding on Android L and
+	 * above devices.
+	 *
+	 * @param alertDialog to modify.
+	 * @param windowToken Token of the ROOT_VIEW.
+	 * @param view Custom view for alert dialog.
+	 *
+	 * @return Modified AlertDialog and is ready to call
+	 * {@link android.app.AlertDialog#show()} from a {@link android.view.View}.
+	 *
+	 * @see {@link android.content.ContextWrapper}.
+	 */
+	public static AlertDialog createDialog(@NonNull AlertDialog alertDialog,
+			@NonNull IBinder windowToken, View view) {
+		alertDialog.setView(view, 0, SmallUtils
+				.getDialogTopPadding(alertDialog.getContext()), 0, 0);
+
+		return createDialog(alertDialog, windowToken);
+	}
+
+	/**
 	 * Set a boolean value in the Default SharedPreferences editor and call
 	 * {@link android.content.SharedPreferences#commit()} to commit changes
 	 * back from this editor.
@@ -348,5 +371,20 @@ public class SmallUtils {
 			}
 		})
 		.show(rootView);
+	}
+
+	/**
+	 * Get padding between dialog and content in Lollipop
+	 * and above devices.
+	 *
+	 * @param context to retrieve resources.
+	 *
+	 * @return Padding between dialog and content in based
+	 * on the display matrics.
+	 */
+	public static int getDialogTopPadding(Context context) {
+		return isLollipop() ?
+				(int) (14 * context.getResources().getDisplayMetrics().density)
+				: 0;
 	}
 }
