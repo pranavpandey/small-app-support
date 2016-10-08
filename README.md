@@ -439,6 +439,7 @@ AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context)
 // Show open intent dialog.
 new OpenIntentDialog(context, intent, alertDialogBuilder, Type.GRID)
 .setActivityOpenListener(new OnActivityOpenListener() {
+    @Override
     public void onActivityOpen(ComponentName componentName) {
         // handle activity open event.
     }
