@@ -138,7 +138,8 @@ public class PagerSlidingTabStrip extends HorizontalScrollView {
         this(context, attrs, 0);
     }
 
-    public PagerSlidingTabStrip(Context context, AttributeSet attrs, int defStyle) {
+    @SuppressWarnings("deprecation")
+	public PagerSlidingTabStrip(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         setFillViewport(true);
         setWillNotDraw(false);

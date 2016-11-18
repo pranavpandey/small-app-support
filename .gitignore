@@ -4,7 +4,7 @@
 #Eclipse temp files
 .metadata/
 .recommenders/
-.settings/
+#.settings/
 RemoteSystemsTempFiles/
 
 ### Android ###
@@ -15,9 +15,9 @@ RemoteSystemsTempFiles/
 *.dex
 
 # Java class files
-*.class
-*.classpath
-*.project
+#*.class
+#*.classpath
+#*.project
 
 # Generated files
 bin/
