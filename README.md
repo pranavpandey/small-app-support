@@ -1,5 +1,8 @@
 # Small App Support
 
+[![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg?)](https://www.apache.org/licenses/LICENSE-2.0.html)
+[![Build Status](https://travis-ci.org/pranavpandey/small-app-support.svg?branch=master)](https://travis-ci.org/pranavpandey/small-app-support)
+
 <img src="https://raw.githubusercontent.com/pranavpandey/small-app-support/master/graphics/sas_512x512.png" width="160" height="160" align="right" hspace="20">
 
 *A simple library to build apps for Sony Small Apps Extension.*
@@ -18,17 +21,13 @@ Small App Support is an easy to use library to build attractive small apps with 
 
 ## Setup
 
-[![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg?)](https://www.apache.org/licenses/LICENSE-2.0.html)
-
 ### Eclipse with ADT
 
-It is an Eclipse project, import it in eclipse and add the Sony small app library. To do this, follow the steps below for both `library` and `sample`.
+It is an Eclipse project, import both `library` and `sample` in eclipse. After that, follow the steps below: -
 
-1. Right click on the the `project` and select `Properties`.
-2. On left pane, select `Java Build Path`.
-3. Click on `Libraries` tab and select `Add External JARs`.
-4. Navigate to the Sony `Sony Small App SDK directory` and select `com.sony.smallapp.jar` (under `libs` folder).
-5. Clean and rebuild project.
+1. Project > Clean > Clean all projects.
+2. Right-click on `sample` > Run As > Android Application.
+3. Select emulator or connect the device with usb debugging on.
 
 Run the sample to see it in action.
 
