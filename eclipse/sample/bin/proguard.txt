@@ -1,0 +1,50 @@
+# view res/layout/main.xml #generated:30
+-keep class android.support.v4.view.ViewPager { <init>(...); }
+
+# view AndroidManifest.xml #generated:39
+-keep class com.pranavpandey.smallapp.sample.SmallAppSample { <init>(...); }
+
+# view res/layout/sas_dialog_extra_info.xml #generated:39
+# view res/layout/sas_dialog_extra_info_grid.xml #generated:39
+# view res/layout/sas_dialog_extra_info_list.xml #generated:38
+# view res/layout/sas_item_grid_action.xml #generated:38
+# view res/layout/sas_row_list_action.xml #generated:38
+-keep class com.pranavpandey.smallapp.view.ColoredImageView { <init>(...); }
+
+# view res/layout/page_two.xml #generated:39
+-keep class com.pranavpandey.smallapp.view.ColoredLinearLayout { <init>(...); }
+
+# view res/layout/page_one.xml #generated:29
+# view res/layout/page_one.xml #generated:36
+# view res/layout/page_one.xml #generated:43
+# view res/layout/page_one.xml #generated:49
+# view res/layout/page_one.xml #generated:55
+# view res/layout/page_one.xml #generated:61
+# view res/layout/page_one.xml #generated:67
+# view res/layout/page_one.xml #generated:72
+# view res/layout/page_one.xml #generated:77
+# view res/layout/sas_dialog_about.xml #generated:39
+# view res/layout/sas_dialog_about.xml #generated:96
+# view res/layout/sas_dialog_extra_info.xml #generated:49
+# view res/layout/sas_dialog_extra_info_grid.xml #generated:49
+# view res/layout/sas_dialog_extra_info_list.xml #generated:48
+# view res/layout/sas_include_clear_defaults.xml #generated:33
+# view res/layout/sas_include_search.xml #generated:30
+# view res/layout/sas_item_grid_action.xml #generated:47
+# view res/layout/sas_row_list_action.xml #generated:47
+-keep class com.pranavpandey.smallapp.view.ColoredTextView { <init>(...); }
+
+# view res/layout/sas_dialog_action_grid.xml #generated:40
+-keep class com.pranavpandey.smallapp.view.HeaderGridView { <init>(...); }
+
+# view res/layout/main.xml #generated:24
+-keep class com.pranavpandey.smallapp.view.PagerSlidingTabStrip { <init>(...); }
+
+# view res/layout/sas_dialog_about.xml #generated:113
+# view res/layout/sas_dialog_about.xml #generated:119
+# view res/layout/sas_dialog_about.xml #generated:125
+# view res/layout/sas_dialog_about.xml #generated:131
+# view res/layout/sas_dialog_about.xml #generated:137
+# view res/layout/sas_dialog_about.xml #generated:143
+-keep class com.pranavpandey.smallapp.view.PressedStateImageView { <init>(...); }
+
