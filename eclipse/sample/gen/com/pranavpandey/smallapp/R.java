@@ -119,18 +119,18 @@ public final class R {
 		public static final int sas_edittext_background = 0x7f020004;
 		public static final int sas_edittext_background_disabled = 0x7f020005;
 		public static final int sas_edittext_background_normal = 0x7f020006;
-		public static final int sas_ic_action_link = 0x7f02000d;
-		public static final int sas_ic_action_open = 0x7f02000e;
-		public static final int sas_ic_action_search = 0x7f02000f;
-		public static final int sas_ic_dialog_error = 0x7f020010;
-		public static final int sas_ic_keep_awake = 0x7f020011;
-		public static final int sas_ic_menu_about = 0x7f020012;
-		public static final int sas_ic_menu_buy = 0x7f020013;
-		public static final int sas_ic_menu_more = 0x7f020014;
-		public static final int sas_ic_menu_rate = 0x7f020015;
-		public static final int sas_ic_menu_settings = 0x7f020016;
-		public static final int sas_ic_select_storage = 0x7f020017;
-		public static final int sas_tab_indicator = 0x7f020018;
+		public static final int sas_ic_action_link = 0x7f02000e;
+		public static final int sas_ic_action_open = 0x7f02000f;
+		public static final int sas_ic_action_search = 0x7f020010;
+		public static final int sas_ic_dialog_error = 0x7f020011;
+		public static final int sas_ic_keep_awake = 0x7f020012;
+		public static final int sas_ic_menu_about = 0x7f020013;
+		public static final int sas_ic_menu_buy = 0x7f020014;
+		public static final int sas_ic_menu_more = 0x7f020015;
+		public static final int sas_ic_menu_rate = 0x7f020016;
+		public static final int sas_ic_menu_settings = 0x7f020017;
+		public static final int sas_ic_select_storage = 0x7f020018;
+		public static final int sas_tab_indicator = 0x7f020019;
 	}
 	public static final class id {
 		public static final int accent = 0x7f0b0000;

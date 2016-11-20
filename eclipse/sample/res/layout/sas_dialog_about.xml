@@ -111,21 +111,21 @@
 				android:orientation="horizontal">
 				    
 				<com.pranavpandey.smallapp.view.PressedStateImageView
-					android:id="@+id/playstore_icon"
-					android:src="@drawable/sas_ic_about_gplay"
+					android:id="@+id/web_icon"
+					android:src="@drawable/sas_ic_about_web"
 					android:contentDescription="@string/sas_contentDescription_playstore"
-					style="@style/AboutLinkImage" />
-				
-				<com.pranavpandey.smallapp.view.PressedStateImageView
-					android:id="@+id/facebook_icon"
-					android:src="@drawable/sas_ic_about_facebook"
-					android:contentDescription="@string/sas_contentDescription_facebook"
 					style="@style/AboutLinkImage" />
 				
 				<com.pranavpandey.smallapp.view.PressedStateImageView
 					android:id="@+id/twitter_icon"
 					android:src="@drawable/sas_ic_about_twitter"
 					android:contentDescription="@string/sas_contentDescription_twitter"
+					style="@style/AboutLinkImage" />
+				
+				<com.pranavpandey.smallapp.view.PressedStateImageView
+					android:id="@+id/facebook_icon"
+					android:src="@drawable/sas_ic_about_facebook"
+					android:contentDescription="@string/sas_contentDescription_facebook"
 					style="@style/AboutLinkImage" />
 				
 				<com.pranavpandey.smallapp.view.PressedStateImageView

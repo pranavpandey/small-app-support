@@ -399,18 +399,19 @@ containing a value of this type.
         public static final int sas_ic_about_gplus=0x7f02000a;
         public static final int sas_ic_about_linkedin=0x7f02000b;
         public static final int sas_ic_about_twitter=0x7f02000c;
-        public static final int sas_ic_action_link=0x7f02000d;
-        public static final int sas_ic_action_open=0x7f02000e;
-        public static final int sas_ic_action_search=0x7f02000f;
-        public static final int sas_ic_dialog_error=0x7f020010;
-        public static final int sas_ic_keep_awake=0x7f020011;
-        public static final int sas_ic_menu_about=0x7f020012;
-        public static final int sas_ic_menu_buy=0x7f020013;
-        public static final int sas_ic_menu_more=0x7f020014;
-        public static final int sas_ic_menu_rate=0x7f020015;
-        public static final int sas_ic_menu_settings=0x7f020016;
-        public static final int sas_ic_select_storage=0x7f020017;
-        public static final int sas_tab_indicator=0x7f020018;
+        public static final int sas_ic_about_web=0x7f02000d;
+        public static final int sas_ic_action_link=0x7f02000e;
+        public static final int sas_ic_action_open=0x7f02000f;
+        public static final int sas_ic_action_search=0x7f020010;
+        public static final int sas_ic_dialog_error=0x7f020011;
+        public static final int sas_ic_keep_awake=0x7f020012;
+        public static final int sas_ic_menu_about=0x7f020013;
+        public static final int sas_ic_menu_buy=0x7f020014;
+        public static final int sas_ic_menu_more=0x7f020015;
+        public static final int sas_ic_menu_rate=0x7f020016;
+        public static final int sas_ic_menu_settings=0x7f020017;
+        public static final int sas_ic_select_storage=0x7f020018;
+        public static final int sas_tab_indicator=0x7f020019;
     }
     public static final class id {
         public static final int accent=0x7f0b0000;
@@ -433,7 +434,7 @@ containing a value of this type.
         public static final int extra_info_desc=0x7f0b0024;
         public static final int extra_info_icon=0x7f0b0023;
         public static final int extra_info_layout=0x7f0b0022;
-        public static final int facebook_icon=0x7f0b0016;
+        public static final int facebook_icon=0x7f0b0017;
         public static final int footer=0x7f0b0010;
         public static final int frame_container=0x7f0b0034;
         public static final int frame_search=0x7f0b002c;
@@ -454,7 +455,6 @@ containing a value of this type.
         public static final int perm_info_layout=0x7f0b0025;
         public static final int permission_frame=0x7f0b0029;
         public static final int permission_message=0x7f0b0028;
-        public static final int playstore_icon=0x7f0b0015;
         public static final int primary=0x7f0b0003;
         public static final int primary_dark=0x7f0b0004;
         public static final int search_include=0x7f0b000f;
@@ -464,12 +464,13 @@ containing a value of this type.
         public static final int tint_accent_dark=0x7f0b0006;
         public static final int tint_primary=0x7f0b0007;
         public static final int tint_primary_dark=0x7f0b0008;
-        public static final int twitter_icon=0x7f0b0017;
+        public static final int twitter_icon=0x7f0b0016;
         public static final int txt_name=0x7f0b0013;
         public static final int txt_no_results=0x7f0b002e;
         public static final int txt_version=0x7f0b0014;
         public static final int view_clear_defaults=0x7f0b002b;
         public static final int warning_message=0x7f0b002a;
+        public static final int web_icon=0x7f0b0015;
     }
     public static final class integer {
         public static final int sas_action_item_max_lines=0x7f070002;

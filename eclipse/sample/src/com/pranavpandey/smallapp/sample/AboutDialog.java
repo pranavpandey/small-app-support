@@ -16,6 +16,7 @@
 
 package com.pranavpandey.smallapp.sample;
 
+import com.pranavpandey.smallapp.sample.R;
 import com.pranavpandey.smallapp.SmallUtils;
 import com.pranavpandey.smallapp.dialog.ActionDialog.Type;
 import com.pranavpandey.smallapp.theme.DynamicTheme;
@@ -24,6 +25,7 @@ import com.pranavpandey.smallapp.theme.SmallTheme;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.DrawableRes;
@@ -80,7 +82,8 @@ public class AboutDialog {
 	 * Constructor using a context, app icon (drawableId) and app name to display an 
 	 * About dialog which shows information about app and developer. 
 	 */
-	public AboutDialog(Context context, @DrawableRes int appIcon, @NonNull String appName, Type type) {
+	public AboutDialog(Context context, @DrawableRes int appIcon, 
+			@NonNull String appName, Type type) {
 		this.mContext = context;
 		this.mAppIcon = appIcon;
 		this.mAppName = appName;
@@ -92,7 +95,8 @@ public class AboutDialog {
 	 * Constructor using a context, app icon (drawableId) and app name (stringRes) to 
 	 * display an About dialog which shows information about app and developer. 
 	 */
-	public AboutDialog(Context context, @DrawableRes int appIcon, @StringRes int appNameId, Type type) {
+	public AboutDialog(Context context, @DrawableRes int appIcon, 
+			@StringRes int appNameId, Type type) {
 		this.mContext = context;
 		this.mAppIcon = appIcon;
 		this.mAppName = context.getResources().getString(appNameId);
@@ -116,6 +120,8 @@ public class AboutDialog {
      * default links.
      * 
      * @param rootView Root view to which the dialog should attach.
+     * 
+     * @return An {@link android.app.AlertDialog} with app and developer info.
      */
 	private void createDialog(@NonNull final View rootView) {
 		final AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
@@ -127,32 +133,35 @@ public class AboutDialog {
 		String version;
 		
 		try {
-			version = mContext.getPackageManager().getPackageInfo(mContext.getPackageName(), 0).versionName;
+			version = mContext.getPackageManager()
+					.getPackageInfo(mContext.getPackageName(), 0).versionName;
 		} catch (NameNotFoundException e) {
 			version = new String();
 		}
 		((TextView) view.findViewById(R.id.txt_version)).setText(String.format(
 				mContext.getString(R.string.sas_version), version));
 		
-		view.findViewById(R.id.playstore_icon).setOnClickListener(new OnClickListener() {
+		view.findViewById(R.id.web_icon).setOnClickListener(new OnClickListener() {
+			@Override
 			public void onClick(View v) {
 				SmallUtils.openLink(mContext, rootView,
-						"market://search?q=pub:Pranav+Pandey",
-					"http://play.google.com/store/apps/dev?id=6608630615059087491", mType);
+						"http://www.pranavpandey.com", null, mType);
 				dismissDialog();
 			}   		
 		});
 		
 		view.findViewById(R.id.facebook_icon).setOnClickListener(new OnClickListener() {
+			@Override
 			public void onClick(View v) {
 				SmallUtils.openLink(mContext, rootView, 
 						"fb://facewebmodal/f?href=" + "https://www.facebook.com/PranavPandeDev", 
-					"https://www.facebook.com/PranavPandeDev", mType); 
+					"https://www.facebook.com/pranavpandedev", mType); 
 				dismissDialog();
 			}   		
 		});
 		
 		view.findViewById(R.id.twitter_icon).setOnClickListener(new OnClickListener() {
+			@Override
 			public void onClick(View v) {
 				SmallUtils.openLink(mContext, rootView, 
 						"twitter://user?user_id=630336695",
@@ -162,6 +171,7 @@ public class AboutDialog {
 		});
 		
 		view.findViewById(R.id.google_icon).setOnClickListener(new OnClickListener() {
+			@Override
 			public void onClick(View v) {
 				SmallUtils.openLink(mContext, rootView, 
 						"https://plus.google.com/+pranavpandeydev", null, mType); 
@@ -170,14 +180,16 @@ public class AboutDialog {
 		});
 		
 		view.findViewById(R.id.linkedin_icon).setOnClickListener(new OnClickListener() {
+			@Override
 			public void onClick(View v) {
 				SmallUtils.openLink(mContext, rootView, 
-						"http://www.linkedin.com/pub/pranav-pandey-09032974", null, mType); 
+						"https://in.linkedin.com/in/pranav-pandey-09032974", null, mType); 
 				dismissDialog();
 			}   		
 		});
 		
 		view.findViewById(R.id.github_icon).setOnClickListener(new OnClickListener() {
+			@Override
 			public void onClick(View v) {
 				SmallUtils.openLink(mContext, rootView, 
 						"https://github.com/pranavpandey", null, mType); 
@@ -186,12 +198,23 @@ public class AboutDialog {
 		});
 		
 		builder.setTitle(R.string.sas_about);
+		builder.setView(view);
 		if (mDialogIcon != null) {
 		   	builder.setIcon(DynamicTheme.colorizeDrawable(mDialogIcon, 
 		   			SmallTheme.getInstance().getPrimaryColor()));
 		}
 		
-		builder.setPositiveButton(android.R.string.ok, null);
+		builder.setNegativeButton(android.R.string.cancel, null)
+			.setPositiveButton(R.string.sas_more_apps, 
+					new DialogInterface.OnClickListener() {				
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						SmallUtils.openLink(mContext, rootView,
+								"market://search?q=pub:Pranav+Pandey",
+							"http://play.google.com/store/apps/dev?id=6608630615059087491", mType);
+						dismissDialog();
+					}
+				});
 		
 		mDialog = SmallUtils.createDialog(builder.create(), 
 				rootView.getWindowToken(), view);
