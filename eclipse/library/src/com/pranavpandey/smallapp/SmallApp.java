@@ -16,14 +16,25 @@
 
 package com.pranavpandey.smallapp;
 
+import java.util.ArrayList;
+
+import com.pranavpandey.smallapp.permission.PermissionDangerous;
+import com.pranavpandey.smallapp.permission.PermissionSelectExternalStorage;
+import com.pranavpandey.smallapp.permission.PermissionWriteSystemSettings;
 import com.pranavpandey.smallapp.theme.SmallTheme;
 import com.sony.smallapp.SmallAppWindow;
 import com.sony.smallapp.SmallApplication;
 
+import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
 import android.content.res.Configuration;
+import android.os.Handler;
+import android.provider.Settings;
 import android.support.annotation.LayoutRes;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,6 +44,7 @@ import android.view.ViewGroup;
  * SmallApplication to inherit all of its features. FOr now, it has
  * very basic functionality but we can add more features later.
  */
+@TargetApi(23)
 public abstract class SmallApp extends SmallApplication {
 
 	/**
@@ -49,14 +61,44 @@ public abstract class SmallApp extends SmallApplication {
 	 * Root view to show dialogs.
 	 */
 	private ViewGroup mRootView;
+	
+	private static final int PERMISSIONS_CHECK_DELAY = 150;
+	private static final int PERMISSIONS_CHECK_DELAY_NO_UI = 200;
 
 	@Override
 	protected void onCreate() {
 		super.onCreate();
+		
 		mContext = getApplicationContext();
 		SmallTheme.initializeInstance(getContext());
 		mConfig = new Configuration(getResources().getConfiguration());
-
+		
+		// Request runtime permissions if available.
+		if (SmallUtils.isMarshmallow()) {
+			final ArrayList<String> permissionsToGrant = new ArrayList<String>();
+			if (getPermissions() != null) {
+				for (int i = 0; i < getPermissions().length; i++) {
+					if (ContextCompat.checkSelfPermission(mContext, 
+							getPermissions()[i]) != PackageManager.PERMISSION_GRANTED) {
+						permissionsToGrant.add(getPermissions()[i]);
+					}
+				}
+			}
+				
+			if (!permissionsToGrant.isEmpty()) {
+				Intent intent = new Intent(mContext, PermissionDangerous.class);
+				intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+				intent.putExtra(PermissionDangerous.PERMISSIONS, 
+						permissionsToGrant.toArray(new String[permissionsToGrant.size()]));			
+				openDelayedActivity(intent);
+			} else if (writeSystemSettings() && 
+					!Settings.System.canWrite(getContext())) {
+				Intent intent = new Intent(mContext, PermissionWriteSystemSettings.class);
+				intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);					
+				openDelayedActivity(intent);
+			}
+		}
+		
 		setContentView(R.layout.sas_main);
 		mRootView = (ViewGroup) findViewById(R.id.frame_container);
 
@@ -64,6 +106,19 @@ public abstract class SmallApp extends SmallApplication {
 		    View layoutView = LayoutInflater.from(SmallApp.this).inflate(getLayoutId(), null);
 		    mRootView.addView(layoutView);
 		}
+	}
+	
+	private void openDelayedActivity(final Intent intent) {
+		(new Handler()).postDelayed(new Runnable() {
+			@Override
+			public void run() {					
+				finish();
+				startActivity(intent);
+			}
+		}, getLayoutId() != 0 ? PERMISSIONS_CHECK_DELAY 
+				: PERMISSIONS_CHECK_DELAY_NO_UI);
+		
+		return;
 	}
 
 	/**
@@ -126,5 +181,20 @@ public abstract class SmallApp extends SmallApplication {
 	 */
 	public View getRootView() {
 		return mRootView;
+	}
+	
+	protected String[] getPermissions() {
+		return null;
+	}
+	
+	protected boolean writeSystemSettings() {
+		return false;
+	}
+	
+	protected void requestSelectExternalStorage() {
+		Intent intent = new Intent(getContext(), PermissionSelectExternalStorage.class);
+		intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);					
+		getContext().startActivity(intent);
+		windowMinimize();
 	}
 }

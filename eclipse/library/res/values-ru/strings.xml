@@ -38,5 +38,14 @@
 	<string name="sas_app_info">О приложении</string>
 	<string name="sas_developed_by">Письменные и разработан</string>
 	<string name="sas_made_in">Сделано в Индии</string>
+	<string name="sas_more_apps">Больше приложений</string>
+	
+	<string name="sas_perm_request_desc">Чтобы выполнить это действие, приложению необходимо предоставить следующие разрешения.</string>
+	<string name="sas_perm_request_info">\nЧтобы предоставить разрешения, перейдите в раздел \"Сведения о приложении\" > \"Разрешения\". Нажмите кнопку \"Продолжить\", чтобы перейти к разделу \"Сведения о приложении\".</string>
+	<string name="sas_perm_write_system_settings_info">\nЧтобы предоставить разрешения, перейдите в раздел \"Приложения\" > \"Дополнительные настройки\" > \"Запись системных настроек\". Нажмите кнопку \"Продолжить\", чтобы перейти к разделу \"Запись системных настроек\" > \"%1$s\".</string>
+	<string name="sas_perm_write_system_settings">Запись системных настроек</string>
+	<string name="sas_perm_write_system_settings_desc">запись изменение системных настроек</string>
+	<string name="sas_perm_request">Запрос</string>
+	<string name="sas_perm_continue">Продолжить</string>
 
 </resources>   

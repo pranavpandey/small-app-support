@@ -38,5 +38,14 @@
 	<string name="sas_app_info">Informations sur l\'application</string>
 	<string name="sas_developed_by">Écrit et conçu par</string>
 	<string name="sas_made_in">Fabriqué en Inde</string>
+	<string name="sas_more_apps">Plus d\'apps</string>
+	
+	<string name="sas_perm_request_desc">"Pour que cette action soit réalisable, l'appli exige les autorisations suivantes."</string>
+	<string name="sas_perm_request_info">\n"Pour accorder des autorisations, sélectionnez Infos sur l'appli > Autorisations. Tapez sur Continuer pour obtenir les Infos sur l'appli."</string>
+	<string name="sas_perm_write_system_settings_info">\n"Pour accorder des autorisations, sélectionnez Applications > Paramètres avancés > Modifier paramètres système. Tapez sur Continuer pour obtenir les Modifier paramètres système > %1$s."</string>
+	<string name="sas_perm_write_system_settings">Modifier paramètres système</string>
+	<string name="sas_perm_write_system_settings_desc">modifier paramètres système</string>
+	<string name="sas_perm_request">Demande</string>
+	<string name="sas_perm_continue">Continuer</string>
     
 </resources>   

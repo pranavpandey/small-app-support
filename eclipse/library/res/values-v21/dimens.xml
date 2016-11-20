@@ -18,11 +18,17 @@
 <resources>
     
 	<!-- Dialog -->
-	<dimen name="dialog_margin_top_material">16dp</dimen>
+	<dimen name="sas_dialog_margin_top_material">0dp</dimen>
 	<dimen name="sas_dialog_list_margin_start">24dp</dimen>
 	<dimen name="sas_dialog_list_margin_end">24dp</dimen>
 	<dimen name="sas_dialog_list_margin_end_small">18dp</dimen>
 	<dimen name="sas_dialog_margin_start">24dp</dimen>
 	<dimen name="sas_dialog_margin_end">24dp</dimen>
+	
+	<!-- FAB -->
+	<dimen name="sas_fab_margin">10dp</dimen>
+	
+	<!-- Footer -->
+    <dimen name="sas_footer_margin">10dp</dimen>
     
 </resources>

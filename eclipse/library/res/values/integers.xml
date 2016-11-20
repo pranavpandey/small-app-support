@@ -21,5 +21,6 @@
 	<integer name="sas_extra_info_max_lines">3</integer>
 	<integer name="sas_action_item_max_lines">2</integer>
 	<integer name="sas_settings_heading_max_lines">2</integer>
+	<integer name="sas_empty_view_alpha">100</integer>
 	
 </resources>

@@ -38,5 +38,14 @@
 	<string name="sas_app_info">Información de la aplicación</string>
 	<string name="sas_developed_by">Escrito y diseñado por</string>
 	<string name="sas_made_in">Hecho en India</string>
+	<string name="sas_more_apps">Más aplicaciones</string>
+	
+	<string name="sas_perm_request_desc">La aplicación requiere los siguientes permisos para realizar esta acción.</string>
+	<string name="sas_perm_request_info">\nPara otorgar permisos, vaya a Información de la aplicación > Permisos. Toque suavemente en Continuar para ir a la Información de la aplicación.</string>
+	<string name="sas_perm_write_system_settings_info">\nPara otorgar permisos, vaya a Aplicaciones > Avanzada > Editar configuración sistema. Toque suavemente en Continuar para ir a la Editar configuración sistema > %1$s.</string>
+	<string name="sas_perm_write_system_settings">Editar configuración sistema</string>
+	<string name="sas_perm_write_system_settings_desc">editar, modificar, sistema, configuración</string>
+	<string name="sas_perm_request">Solicitud</string>
+	<string name="sas_perm_continue">Continuar</string>
     
 </resources>   

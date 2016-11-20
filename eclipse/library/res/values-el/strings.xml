@@ -38,5 +38,14 @@
 	<string name="sas_app_info">Πληροφορίες εφαρμογής</string>
 	<string name="sas_developed_by">Γράφει και σχεδιάστηκε από τον</string>
 	<string name="sas_made_in">Φτιαγμένο στην Ινδία</string>
+	<string name="sas_more_apps">Περισσότερες εφαρμογές</string>
+	
+	<string name="sas_perm_request_desc">Η εφαρμογή απαιτεί τις ακόλουθες άδειες για την εκτέλεση αυτής της ενέργειας.</string>
+	<string name="sas_perm_request_info">\nΓια την εκχώρηση των δικαιωμάτων, μεταβείτε στη διαδρομή Πληροφορίες εφαρμογής > Δικαιώματα. Πατήστε \"Συνέχεια\" για να μεταβείτε στις πληροφορίες της εφαρμογής.</string>
+	<string name="sas_perm_write_system_settings_info">\nΓια την εκχώρηση των δικαιωμάτων, go to Εφαρμογές > Σύνθετες ρυθμίσεις > Εγγραφή ρυθμίσεων συστήματος. Δικαιώματα. Πατήστε \"Συνέχεια\" για να μεταβείτε στις πληροφορίες της Εγγραφή ρυθμίσεων συστήματος > %1$s.</string>
+	<string name="sas_perm_write_system_settings">Εγγραφή ρυθμίσεων συστήματος</string>
+	<string name="sas_perm_write_system_settings_desc">εγγραφή ρυθμίσεων τροποποίησης συστήματος</string>
+	<string name="sas_perm_request">Αίτημα</string>
+	<string name="sas_perm_continue">Συνέχεια</string>
     
 </resources>   

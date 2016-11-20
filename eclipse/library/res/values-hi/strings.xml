@@ -17,7 +17,7 @@
 
 <resources>
     
-	<string name="sas_me">प्रणव पाण्डे</string>
+	<string name="sas_me">&#169; प्रणव पाण्डे</string>
 	<string name="sas_version">संस्करण</string>
 	<string name="sas_extension_desc">स्मॉल एप्स विस्तार</string>
 	<string name="sas_welcome_text">आपके समर्थन के लिए धन्यवाद!</string>
@@ -39,5 +39,14 @@
 	<string name="sas_app_info">ऐप की जानकारी</string>
 	<string name="sas_developed_by">लिखित और डिजाइन द्वारा</string>
 	<string name="sas_made_in">भारत में निर्मित</string>
+	<string name="sas_more_apps">और ऐप्स</string>
+	
+	<string name="sas_perm_request_desc">ऐप को यह कार्रवाई करने के लिए निम्न अनुमति(यों) की आवश्यकता है।</string>
+	<string name="sas_perm_request_info">\nअनुमतियां देने के लिए, अनुप्रयोग जानकारी > अनुमतियां पर जाएं। अनुप्रयोग जानकारी पर जाने के लिए जारी रखें टैप करें।</string>
+	<string name="sas_perm_write_system_settings_info">\nअनुमतियां देने के लिए, एप्लिकेशन > अतिरिक्‍त सेटिंग > सिस्‍टम सेटिंग लिखे पर जाएं। सिस्‍टम सेटिंग लिखे > %1$s पर जाने के लिए जारी रखें टैप करें।</string>
+	<string name="sas_perm_write_system_settings">सिस्‍टम सेटिंग लिखे</string>
+	<string name="sas_perm_write_system_settings_desc">सिस्‍टम सेटिंग में बदलाव करें लिखें</string>
+	<string name="sas_perm_request">अनुरोध करें</string>
+	<string name="sas_perm_continue">जारी रखें</string>
 
 </resources>   

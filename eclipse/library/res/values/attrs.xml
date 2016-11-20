@@ -33,11 +33,15 @@
 			<enum name="tint_primary_dark" value="6" />
 			<enum name="tint_accent" value="7" />
 			<enum name="tint_accent_dark" value="8" />
-		</attr>
-	   
+		</attr>	   
 		<attr name="colorAlpha" format="integer" />
 		<attr name="backgroundAware" format="boolean" />
 		<attr name="contrastWith" format="color" />
+	</declare-styleable> 
+	
+	<declare-styleable name="EmptyView">
+		<attr name="emptyViewText" format="reference" />
+		<attr name="emptViewImage" format="reference" />
 	</declare-styleable> 
     
 	<declare-styleable name="PagerSlidingTabStrip">
@@ -67,6 +71,12 @@
 		</attr>
 		<attr name="pstsTextAlpha" format="float" />
 		<attr name="pstsTextSelectedAlpha" format="float" />
+	</declare-styleable>
+	
+	<declare-styleable name="CircleImageView">
+	    <attr name="border_width" format="dimension" />
+	    <attr name="border_color" format="color" />
+	    <attr name="border_overlay" format="boolean" />
 	</declare-styleable>
     
 </resources>

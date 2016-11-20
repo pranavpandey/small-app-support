@@ -38,5 +38,14 @@
 	<string name="sas_app_info">Informaţii despre aplicație</string>
 	<string name="sas_developed_by">Scris si conceput de</string>
 	<string name="sas_made_in">Fabricat in India</string>
+	<string name="sas_more_apps">Mai multe aplicatii</string>
+	
+	<string name="sas_perm_request_desc">Aplicaţia are nevoie de permisiunile următoare pentru a efectua această acţiune.</string>
+	<string name="sas_perm_request_info">\nPentru a acorda permisiuni, mergeți la Informații aplicație > Permisiuni. Atingeți ușor Continuare pentru a merge la Informații aplicație.</string>
+	<string name="sas_perm_write_system_settings_info">\nPentru a acorda permisiuni, mergeți la Aplicaţii > Avansate > Scrie setări de sistem. Atingeți ușor Continuare pentru a merge la Scrie setări de sistem > %1$s.</string>
+	<string name="sas_perm_write_system_settings">Scrie setări de sistem</string>
+	<string name="sas_perm_write_system_settings_desc">scrie modifică setări de sistem</string>
+	<string name="sas_perm_request">Cerere</string>
+	<string name="sas_perm_continue">Continuare</string>
     
 </resources>

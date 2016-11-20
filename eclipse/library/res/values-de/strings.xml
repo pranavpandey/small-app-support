@@ -38,5 +38,14 @@
 	<string name="sas_app_info">App-Info</string>
 	<string name="sas_developed_by">Buch und Regie entwickelt</string>
 	<string name="sas_made_in">Hergestellt in Indien</string>
+	<string name="sas_more_apps">Mehr apps</string>
+	
+	<string name="sas_perm_request_desc">Die App benötigt die folgenden Berechtigungen, um diese Aktion durchzuführen.</string>
+	<string name="sas_perm_request_info">\n"Um Berechtigungen zu gewähren, gehen Sie zu 'App-Info > Berechtigungen'. Tippen Sie auf Fortfahren, um zu 'App-Info' zu gehen."</string>
+	<string name="sas_perm_write_system_settings_info">\n"Um Berechtigungen zu gewähren, gehen Sie zu 'Apps > Erweitert > Systemeinstellungen schreiben'. Tippen Sie auf Fortfahren, um zu 'Systemeinstellungen schreiben > %1$s' zu gehen."</string>
+	<string name="sas_perm_write_system_settings">Systemeinstellungen schreiben</string>
+	<string name="sas_perm_write_system_settings_desc">systemeinstellungen schreiben ändern</string>
+	<string name="sas_perm_request">Anfordern</string>
+	<string name="sas_perm_continue">Fortsetzen</string>
     
 </resources>   

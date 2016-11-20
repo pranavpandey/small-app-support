@@ -38,5 +38,14 @@
 	<string name="sas_app_info">App-info</string>
 	<string name="sas_developed_by">Geschreven en ontworpen door</string>
 	<string name="sas_made_in">Gemaakt in India</string>
+	<string name="sas_more_apps">Meer apps</string>
+	
+	<string name="sas_perm_request_desc">De app vereist de volgende machtigingen om deze actie uit te voeren.</string>
+	<string name="sas_perm_request_info">\nAls je rechten wilt verlenen, ga je naar App-info > Rechten. Tik op Doorgaan om naar App-info te gaan.</string>
+	<string name="sas_perm_write_system_settings_info">\nAls je rechten wilt verlenen, ga je naar Apps > Geavanceerd > Systeeminstellingen schrijven. Tik op Doorgaan om naar Systeeminstellingen schrijven > %1$s te gaan.</string>
+	<string name="sas_perm_write_system_settings">Systeeminstellingen schrijven</string>
+	<string name="sas_perm_write_system_settings_desc">schrijven aanpassen systeeminstellingen</string>
+	<string name="sas_perm_request">Rekue st</string>
+	<string name="sas_perm_continue">Doorgaan</string>
 
 </resources>   

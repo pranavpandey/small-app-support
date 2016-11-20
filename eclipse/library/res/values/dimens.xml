@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
+<!-- 
 	Copyright (C) 2016 Pranav Pandey
-
+	
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
 	You may obtain a copy of the License at
-
+	
 	   http://www.apache.org/licenses/LICENSE-2.0
-
+	
 	Unless required by applicable law or agreed to in writing, software
 	distributed under the License is distributed on an "AS IS" BASIS,
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -16,7 +16,7 @@
 -->
 
 <resources>
-
+    
 	<!-- Main -->
 	<dimen name="sas_main_margin">10dp</dimen>
 	<dimen name="sas_hint_margin_left_right">5dp</dimen>
@@ -29,7 +29,7 @@
 	<dimen name="sas_text_size_medium">14sp</dimen>
 	<dimen name="sas_text_size_large">16sp</dimen>
 	<dimen name="sas_text_size_extra_large">18sp</dimen>
-
+    
 	<!-- List -->
 	<dimen name="sas_list_min_height">64dp</dimen>
 	<dimen name="sas_list_margin_start">12dp</dimen>
@@ -45,7 +45,7 @@
 	<dimen name="sas_list_avatar_text_margin_start_small">8dp</dimen>
 	<dimen name="sas_list_avatar_height_medium">32dp</dimen>
 	<dimen name="sas_list_avatar_width_medium">32dp</dimen>
-
+	
 	<!-- Grid -->
 	<dimen name="sas_grid_min_width">72dp</dimen>
 	<dimen name="sas_grid_icon_width">40dp</dimen>
@@ -56,31 +56,40 @@
 	<dimen name="sas_grid_margin_end">12dp</dimen>
 	<dimen name="sas_list_avatar_height_small">28dp</dimen>
 	<dimen name="sas_list_avatar_width_small">28dp</dimen>
-
+	
 	<!-- Settings -->
 	<dimen name="sas_settings_heading_text_size">13sp</dimen>
 	<dimen name="sas_settings_subheading_text_size">@dimen/sas_text_size_small</dimen>
-
+	
 	<!-- Dialog -->
 	<dimen name="sas_dialog_min_height">200dp</dimen>
-	<dimen name="sas_dialog_icon_size">40dp</dimen>
+	<dimen name="sas_dialog_icon_size">40dp</dimen>    
 	<dimen name="sas_dialog_text_size">14sp</dimen>
 	<dimen name="sas_dialog_action_text_size">13sp</dimen>
-	<dimen name="sas_dialog_extra_info_text_size">14sp</dimen>
+	<dimen name="sas_dialog_extra_info_text_size">14sp</dimen>    
 	<dimen name="sas_dialog_list_margin_start">16dp</dimen>
 	<dimen name="sas_dialog_list_margin_end">16dp</dimen>
-	<dimen name="sas_dialog_list_margin_end_small">10dp</dimen>
+	<dimen name="sas_dialog_list_margin_end_small">10dp</dimen>    
 	<dimen name="sas_dialog_margin_start">16dp</dimen>
 	<dimen name="sas_dialog_margin_end">16dp</dimen>
-	<dimen name="sas_dialog_margin_top">16dp</dimen>
-	<dimen name="sas_dialog_margin_bottom">16dp</dimen>
-	<dimen name="sas_dialog_margin_top_pre_material">16dp</dimen>
+	<dimen name="sas_dialog_margin_top">12dp</dimen>
+	<dimen name="sas_dialog_margin_bottom">12dp</dimen>
+	<dimen name="sas_dialog_margin_top_pre_material">12dp</dimen>
 	<dimen name="sas_dialog_margin_top_material">0dp</dimen>
 	<dimen name="sas_dialog_edittext_min_height">40dp</dimen>
 	<dimen name="sas_dialog_settings_margin">8dp</dimen>
 	<dimen name="sas_dialog_settings_margin_small">4dp</dimen>
-
-  <!-- Footer -->
-  <dimen name="sas_footer_margin">30dp</dimen>
-
+	
+	<!-- FAB -->
+    <dimen name="sas_fab_size">48dp</dimen>
+    <dimen name="sas_fab_padding">12dp</dimen>
+    <dimen name="sas_fab_margin">20dp</dimen>
+    
+    <!-- Empty View -->
+    <dimen name="sas_empty_image_size">40dp</dimen>
+    <dimen name="sas_empty_text_size">@dimen/sas_text_size_large</dimen>
+    
+    <!-- Footer -->
+    <dimen name="sas_footer_margin">30dp</dimen>
+    
 </resources>

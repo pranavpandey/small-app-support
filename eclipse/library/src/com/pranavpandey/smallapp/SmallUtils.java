@@ -62,7 +62,7 @@ public class SmallUtils {
 	public static boolean isJellyBean() {
 		return Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN;
 	}
-
+	
 	/**
 	 * To detect if the current Android version is Lollipop or below.
 	 *
@@ -72,7 +72,7 @@ public class SmallUtils {
 	public static boolean isLollipop() {
 		return Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP;
 	}
-
+	
 	/**
 	 * To detect if the current Android version is M or below.
 	 *
@@ -103,11 +103,11 @@ public class SmallUtils {
 		window.setAttributes(lp);
 		return alertDialog;
 	}
-
+	
 	/**
 	 * Set token manually for an AlertDialog so that we can display it
 	 * from a non-UI ContextWrapper class (like service etc.). It also sets
-	 * a custom view for the dialog and handles top padding on Android L and
+	 * a custom view for the dialog and handles top padding on Android L and 
 	 * above devices.
 	 *
 	 * @param alertDialog to modify.
@@ -119,11 +119,11 @@ public class SmallUtils {
 	 *
 	 * @see {@link android.content.ContextWrapper}.
 	 */
-	public static AlertDialog createDialog(@NonNull AlertDialog alertDialog,
+	public static AlertDialog createDialog(@NonNull AlertDialog alertDialog, 
 			@NonNull IBinder windowToken, View view) {
 		alertDialog.setView(view, 0, SmallUtils
 				.getDialogTopPadding(alertDialog.getContext()), 0, 0);
-
+		
 		return createDialog(alertDialog, windowToken);
 	}
 
@@ -255,7 +255,7 @@ public class SmallUtils {
 	public static String getDate(Context context, long milliSeconds) {
 		DateFormat df = android.text.format.DateFormat.getDateFormat(context);
 		DateFormat tf = android.text.format.DateFormat.getTimeFormat(context);
-
+		
 		return String.format(context.getResources().getString(R.string.sas_format_blank_space),
 				df.format(milliSeconds), tf.format(milliSeconds));
 	}
@@ -348,6 +348,7 @@ public class SmallUtils {
 
 		new OpenIntentDialog(context, intent, alertDialogBuilder, type)
 		.setActivityOpenListener(new OnActivityOpenListener() {
+			@Override
 			public void onActivityOpen(ComponentName componentName) {
 				((SmallApp) context).windowMinimize();
 			}
@@ -364,7 +365,8 @@ public class SmallUtils {
 		.setExtraInfo(R.drawable.sas_ic_action_link, link, new OnExtraInfoClickListener() {
 			@Override
 			public void onExtraInfoClick(View view) {
-				ClipboardManager clipboard = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
+				ClipboardManager clipboard = (ClipboardManager) 
+						context.getSystemService(Context.CLIPBOARD_SERVICE);
 		        ClipData clip = ClipData.newPlainText("Copied Text", link);
 		        clipboard.setPrimaryClip(clip);
 		        Toast.makeText(context, R.string.sas_copy_clipboard, Toast.LENGTH_SHORT).show();
@@ -372,19 +374,11 @@ public class SmallUtils {
 		})
 		.show(rootView);
 	}
-
-	/**
-	 * Get padding between dialog and content in Lollipop
-	 * and above devices.
-	 *
-	 * @param context to retrieve resources.
-	 *
-	 * @return Padding between dialog and content in based
-	 * on the display matrics.
-	 */
+	
 	public static int getDialogTopPadding(Context context) {
-		return isLollipop() ?
-				(int) (14 * context.getResources().getDisplayMetrics().density)
+		return isLollipop() ? 
+				(int) (14 * context.getResources()
+						.getDisplayMetrics().density)
 				: 0;
 	}
 }

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
+<!-- 
 	Copyright (C) 2016 Pranav Pandey
-
+	
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
 	You may obtain a copy of the License at
-
+	
 	   http://www.apache.org/licenses/LICENSE-2.0
-
+	
 	Unless required by applicable law or agreed to in writing, software
 	distributed under the License is distributed on an "AS IS" BASIS,
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -15,8 +15,8 @@
 	limitations under the License.
 -->
 
-<resources>
-
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    
 	<!--
 		Base application theme, dependent on API level. This theme is replaced
 		by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
@@ -33,28 +33,28 @@
 	<style name="SmallAppTheme" parent="AppBaseTheme">
 		<!-- All customizations that are NOT specific to a particular API-level can go here. -->
 	</style>
-
+    
 	<style name="AppTheme.Transparent" parent="AppBaseTheme">
 		<item name="android:windowIsTranslucent">true</item>
 		<item name="android:windowBackground">@android:color/transparent</item>
 		<item name="android:windowContentOverlay">@null</item>
 		<item name="android:windowNoTitle">true</item>
 	</style>
-
+	
 	<style name="TextAppearance">
 		<item name="android:textAppearance">@android:style/TextAppearance.DeviceDefault</item>
 	</style>
-
+	
 	<style name="TextAppearance.Medium" parent="TextAppearance">
 		<item name="android:textAppearance">@android:style/TextAppearance.DeviceDefault.Medium</item>
 		<item name="android:textSize">@dimen/sas_text_size_medium</item>
 	</style>
-
+	
 	<style name="TextAppearance.Small" parent="TextAppearance">
 		<item name="android:textAppearance">@android:style/TextAppearance.DeviceDefault.Small</item>
 		<item name="android:textSize">@dimen/sas_text_size_small</item>
 	</style>
-
+	
 	<style name="TextAppearance.Medium.Marquee" parent="TextAppearance.Medium">
 		<item name="android:ellipsize">marquee</item>
 		<item name="android:fadingEdge">horizontal</item>
@@ -62,7 +62,7 @@
 		<item name="android:fadingEdgeLength">@dimen/sas_general_medium_font_fading_width</item>
 		<item name="android:maxLines">1</item>
 	</style>
-
+	
 	<style name="TextAppearance.Small.Marquee" parent="TextAppearance.Small">
 		<item name="android:ellipsize">marquee</item>
 		<item name="android:fadingEdge">horizontal</item>
@@ -70,7 +70,7 @@
 		<item name="android:fadingEdgeLength">@dimen/sas_general_small_font_fading_width</item>
 		<item name="android:maxLines">1</item>
 	</style>
-
+	  
 	<style name="TextAppearance.Dialog" parent="TextAppearance.Medium">
 		<item name="android:layout_width">match_parent</item>
 		<item name="android:layout_height">wrap_content</item>
@@ -79,7 +79,7 @@
 		<item name="android:textSize">@dimen/sas_dialog_text_size</item>
 		<item name="backgroundAware">true</item>
 	</style>
-
+	  
 	<style name="TextAppearance.Dialog.Marquee" parent="TextAppearance.Dialog">
 		<item name="android:ellipsize">marquee</item>
 		<item name="android:fadingEdge">horizontal</item>
@@ -87,29 +87,29 @@
 		<item name="android:fadingEdgeLength">@dimen/sas_general_small_font_fading_width</item>
 		<item name="android:maxLines">1</item>
 	</style>
-
+	  
 	<style name="TextAppearance.Dialog.SettingsHeading" parent="TextAppearance.Dialog">
 		<item name="android:maxLines">@integer/sas_settings_heading_max_lines</item>
 		<item name="android:textSize">@dimen/sas_settings_heading_text_size</item>
 		<item name="colorType">primary</item>
 	</style>
-
+	  
 	<style name="TextAppearance.Dialog.SettingsSubHeading" parent="TextAppearance.Dialog.SettingsHeading">
 		<item name="android:textSize">@dimen/sas_settings_subheading_text_size</item>
 	</style>
-
-	<style name="TextAppearance.Dialog.ExtraInfo" parent="TextAppearance.Dialog">
-		<item name="android:textSize">@dimen/sas_dialog_extra_info_text_size</item>
+	  
+	<style name="TextAppearance.Dialog.ExtraInfo" parent="TextAppearance.Dialog">   
+		<item name="android:textSize">@dimen/sas_dialog_extra_info_text_size</item>       
 		<item name="android:maxLines">@integer/sas_extra_info_max_lines</item>
 		<item name="colorType">primary</item>
 	</style>
-
+	  
 	<style name="TextAppearance.Dialog.ActionItem" parent="TextAppearance.Dialog.ExtraInfo">
 		<item name="android:textSize">@dimen/sas_dialog_action_text_size</item>
 		<item name="android:maxLines">@integer/sas_action_item_max_lines</item>
 		<item name="colorType">none</item>
 	</style>
-
+	
 	<style name="InfoText" parent="TextAppearance.Medium">
 		<item name="android:layout_width">wrap_content</item>
 		<item name="android:layout_height">wrap_content</item>
@@ -120,12 +120,12 @@
 		<item name="colorType">primary</item>
 		<item name="backgroundAware">true</item>
 	</style>
-
+  
 	<style name="ListView">
 		<item name="android:layout_width">match_parent</item>
 		<item name="android:layout_height">wrap_content</item>
 		<item name="android:layout_marginBottom">-1dp</item>
-		<item name="android:scrollingCache">true</item>
+		<item name="android:scrollingCache">true</item> 
 		<item name="android:smoothScrollbar">true</item>
 		<item name="android:clipToPadding">false</item>
 		<item name="android:scrollbarStyle">outsideOverlay</item>
@@ -134,6 +134,10 @@
 		<item name="android:divider">@null</item>
 	</style>
 	
+	<style name="ListView.FAB">
+	    <item name="android:paddingBottom">@dimen/sas_fab_size</item>
+	</style>
+  
 	<style name="GridView" parent="ListView">
 		<item name="android:columnWidth">@dimen/sas_grid_min_width</item>
 		<item name="android:isScrollContainer">true</item>
@@ -142,7 +146,11 @@
 		<item name="android:clipChildren">true</item>
 		<item name="android:alwaysDrawnWithCache">true</item>
 	</style>
-
+	
+	<style name="GridView.FAB">
+	    <item name="android:paddingBottom">@dimen/sas_fab_size</item>
+	</style>
+  
 	<style name="SeekBar">
 		<item name="android:layout_width">match_parent</item>
 		<item name="android:layout_height">wrap_content</item>
@@ -152,7 +160,7 @@
 		<item name="android:paddingLeft">@dimen/sas_dialog_list_margin_start</item>
 		<item name="android:paddingRight">@dimen/sas_dialog_list_margin_end</item>
 	</style>
-
+  
 	<style name="SettingsValue" parent="TextAppearance.Dialog.SettingsHeading">
 		<item name="android:layout_width">wrap_content</item>
 		<item name="android:layout_height">wrap_content</item>
@@ -161,9 +169,9 @@
 		<item name="android:textColor">?android:textColorSecondary</item>
 		<item name="android:textAllCaps">true</item>
 	</style>
-
+    
 	<style name="AboutLinkImage">
-		<item name="android:layout_width">0dp</item>
+		<item name="android:layout_width">0dp</item> 
 		<item name="android:layout_height">wrap_content</item>
 		<item name="android:layout_weight">1</item>
 		<item name="android:layout_margin">1dp</item>
@@ -171,7 +179,7 @@
 		<item name="android:scaleType">centerInside</item>
 		<item name="android:layout_gravity">center_vertical</item>
 	</style>
-
+    
 	<style name="EditText">
 		<item name="android:layout_width">match_parent</item>
 		<item name="android:layout_height">wrap_content</item>
@@ -185,9 +193,20 @@
 		<item name="android:layout_gravity">center_vertical</item>
 		<item name="android:drawableLeft">@drawable/sas_ic_action_search</item>
 		<item name="android:drawableStart">@drawable/sas_ic_action_search</item>
-		<item name="android:inputType">textNoSuggestions</item>
+		<item name="android:inputType">text</item>
 		<item name="android:textCursorDrawable">@null</item>
 		<item name="android:textSize">@dimen/sas_text_size_medium</item>
 	</style>
-
+	
+	<style name="FAB">
+		<item name="android:layout_width">@dimen/sas_fab_size</item>
+	    <item name="android:layout_height">@dimen/sas_fab_size</item>
+	    <item name="android:padding">@dimen/sas_fab_padding</item>
+	    <item name="android:layout_margin">@dimen/sas_fab_margin</item>
+	    <item name="android:layout_gravity">center</item>
+	    <item name="android:clickable">true</item>
+	    <item name="colorType">accent</item>
+	    <item name="backgroundAware">true</item>
+    </style>
+    
 </resources>

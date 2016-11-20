@@ -18,7 +18,7 @@
 <resources>
     
 	<string name="sas_app_name">Small App Support</string>
-	<string name="sas_me">Pranav Pandey</string>
+	<string name="sas_me">&#169; Pranav Pandey</string>
 	<string name="sas_extension_desc">Small apps extension</string>
 	<string name="sas_welcome_text">Thanks for your support!</string>
 	<string name="sas_version">Version %1$s</string>
@@ -38,15 +38,37 @@
 	<string name="sas_copy_clipboard">Copied to clipboard</string>
 	
 	<string name="sas_format_blank_space">%1$s %2$s</string>
+	<string name="sas_format_separator">%1$s | %2$s</string>
 	<string name="sas_format_next_line" translatable="false">%1$s\n%2$s</string>
 	
 	<string name="sas_app_info">App info</string>
 	<string name="sas_developed_by">Written and designed by</string>
 	<string name="sas_made_in">Made in India</string>
+	<string name="sas_more_apps">More apps</string>
 	
 	<string name="sas_clear_defaults">Clear defaults</string>
 	<string name="sas_clear_defaults_desc">Clear the default app settings</string>
 	<string name="sas_clear_defaults_reset">Default app settings has been reset</string>
 	<string name="sas_app_not_found">Application not found</string>
+	
+	<string name="sas_perm_request_desc">The app requires the follwing permission(s) to perform this action.</string>
+	<string name="sas_perm_request_info">\nTo grant permissions, go to App info > Permissions. Tap Continue to go to App info.</string>
+	<string name="sas_perm_write_system_settings_info">\nTo grant permission, go to Apps > Advanced > Write system settings. Tap Continue to go to Write system settings > %1$s.</string>
+	<string name="sas_perm_write_system_settings">Write system settings</string>
+	<string name="sas_perm_write_system_settings_desc">write modify system settings</string>
+	<string name="sas_select_external_storage_request_desc">To modify files in the external storage or microSD card, please select the storage on the next screen.</string>
+	<string name="sas_select_external_storage_request_info">\nTo request storage selection again, go to %1$s > Menu > Select storage.</string>
+	<string name="sas_select_external_storage">Select external storage</string>
+	<string name="sas_select_external_storage_desc">modify files in the external storage</string>
+	<string name="sas_perm_request">Request</string>
+	<string name="sas_perm_continue">Continue</string>
+	
+	<string name="sas_contentDescription_app" translatable="false">App name</string>
+	<string name="sas_contentDescription_playstore" translatable="false">Google Play</string>
+	<string name="sas_contentDescription_facebook" translatable="false">Facebook</string>
+	<string name="sas_contentDescription_twitter" translatable="false">Twitter</string>
+	<string name="sas_contentDescription_google" translatable="false">Google+</string>
+	<string name="sas_contentDescription_linkedin" translatable="false">LinkedIn</string>
+	<string name="sas_contentDescription_github" translatable="false">Github</string>
 	
 </resources>

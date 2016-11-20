@@ -38,5 +38,14 @@
 	<string name="sas_app_info">Informações do app</string>
 	<string name="sas_developed_by">Escrito e desenhado por</string>
 	<string name="sas_made_in">Feito na Índia</string>
+	<string name="sas_more_apps">Mais aplicativos</string>
+	
+	<string name="sas_perm_request_desc">Este aplicativo requer a(s) seguinte(s) permissão(ões) para realizar esta ação.</string>
+	<string name="sas_perm_request_info">\nPara conceder permissões, acesse Informações do aplicativo > Permissões. Toque em Continuar para acessar as Informações do aplicativo.</string>
+	<string name="sas_perm_write_system_settings_info">\nPara conceder permissões, acesse Aplicativos > Avançadas > Gravar config. do sistema. Toque em Continuar para acessar as Gravar config. do sistema > %1$s.</string>
+	<string name="sas_perm_write_system_settings">Gravar config. do sistema</string>
+	<string name="sas_perm_write_system_settings_desc">gravar modificar configurações de modificação</string>
+	<string name="sas_perm_request">Pedido</string>
+	<string name="sas_perm_continue">Continuar</string>
 
 </resources>   
