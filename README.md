@@ -50,60 +50,60 @@ There is a base `SmallApp` class which you can extend to initialize the `SmallTh
 ```java
 public class SmallAppSample extends SmallApp {
 
-    @Override
-    protected int getLayoutId() {
-        return R.layout.main;
-    }
+  @Override
+  protected int getLayoutId() {
+    return R.layout.main;
+  }
 
-    @Override
-    protected void onCreate() {
-        super.onCreate();
-        // Set title for the small app
-        setTitle(R.string.title);
+  @Override
+  protected void onCreate() {
+    super.onCreate();
+    // Set title for the small app
+    setTitle(R.string.title);
 
-        // Set windows attributes
-        SmallAppWindow.Attributes attr = getWindow().getAttributes();
-        attr.minWidth = getResources().getDimensionPixelSize(R.dimen.min_width);
-        attr.minHeight = getResources().getDimensionPixelSize(R.dimen.min_height);
-        attr.width = getResources().getDimensionPixelSize(R.dimen.width);
-        attr.height = getResources().getDimensionPixelSize(R.dimen.height);
+    // Set windows attributes
+    SmallAppWindow.Attributes attr = getWindow().getAttributes();
+    attr.minWidth = getResources().getDimensionPixelSize(R.dimen.min_width);
+    attr.minHeight = getResources().getDimensionPixelSize(R.dimen.min_height);
+    attr.width = getResources().getDimensionPixelSize(R.dimen.width);
+    attr.height = getResources().getDimensionPixelSize(R.dimen.height);
 
-        attr.flags |= SmallAppWindow.Attributes.FLAG_RESIZABLE;
-        getWindow().setAttributes(attr);
+    attr.flags |= SmallAppWindow.Attributes.FLAG_RESIZABLE;
+    getWindow().setAttributes(attr);
 
-        // Get base colors
-        @ColorInt int primaryColor = SmallTheme.getInstance().getPrimaryColor();
-        @ColorInt int accentColor = SmallTheme.getInstance().getAccentColor();
+    // Get base colors
+    @ColorInt int primaryColor = SmallTheme.getInstance().getPrimaryColor();
+    @ColorInt int accentColor = SmallTheme.getInstance().getAccentColor();
 
-        // Get tint colors so that it will always be visible on the base color
-        @ColorInt int tintPrimaryColor = SmallTheme.getInstance().getTintPrimaryColor();
-        @ColorInt int tintAccentColor = SmallTheme.getInstance().getTintAccentColor();
+    // Get tint colors so that it will always be visible on the base color
+    @ColorInt int tintPrimaryColor = SmallTheme.getInstance().getTintPrimaryColor();
+    @ColorInt int tintAccentColor = SmallTheme.getInstance().getTintAccentColor();
 
-        // Use other SmallApp functions
+    // Use other SmallApp functions
 
-        // Minimize the small app window
-        windowMinimize();
+    // Minimize the small app window
+    windowMinimize();
 
-        // Set small app window fitted to the screen
-        windowFitted();
+    // Set small app window fitted to the screen
+    windowFitted();
 
-        // Set small app window to its general state
-        windowNormal();
+    // Set small app window to its general state
+    windowNormal();
 
-        // Setup header with option menu
-        View header = LayoutInflater.from(this).inflate(R.layout.header, new LinearLayout(this), false);
+    // Setup header with option menu
+    View header = LayoutInflater.from(this).inflate(R.layout.header, new LinearLayout(this), false);
 
-		final View optionMenu = header.findViewById(R.id.option_menu);
+    final View optionMenu = header.findViewById(R.id.option_menu);
 
-        // Show header hint
-		optionMenu.setOnLongClickListener(new View.OnLongClickListener() {
-			@Override
-			public boolean onLongClick(View v) {
-				SmallTheme.getInstance().showHeaderHint(v, R.string.sas_options);
-				return false;
-			}
-		});
-    }
+    // Show header hint
+    optionMenu.setOnLongClickListener(new View.OnLongClickListener() {
+      @Override
+      public boolean onLongClick(View v) {
+        SmallTheme.getInstance().showHeaderHint(v, R.string.sas_options);
+        return false;
+      }
+    });
+  }
 }
 ```
 
@@ -112,25 +112,25 @@ If you don't want to extend `SmallApp` class then, you have to do the following 
 ```java
 public class SmallAppSample extends SmallApplication {
 
-    @Override
-    protected void onCreate() {
-        super.onCreate();
+  @Override
+  protected void onCreate() {
+    super.onCreate();
 
-        // Initialize SmallTheme instance.
-        SmallTheme.initializeInstance(getApplicationContext());
+    // Initialize SmallTheme instance.
+    SmallTheme.initializeInstance(getApplicationContext());
 
-        ...
-    }
+    ...
+  }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
+  @Override
+  protected void onDestroy() {
+    super.onDestroy();
 
-        // To avoid memory leaks and to initialize it properly next time.
-        SmallTheme.getInstance().onDestroy();
+    // To avoid memory leaks and to initialize it properly next time.
+    SmallTheme.getInstance().onDestroy();
 
-        ...
-    }
+    ...
+  }
 }
 ```
 
@@ -142,19 +142,19 @@ In theme, there is another useful class `DynamicTheme`. It is mostly used intern
 // Calculate tint based on a given color for better readability
 DynamicTheme.getTintColor(color);
 
-/*
+/**
  * Calculate accent based on a given color for dynamic theme generation.
  * Still in beta so, sometimes may be inaccurate color.
  */
 DynamicTheme.getAccentColor(color);
 
-/*
+/**
  * Calculate contrast of a color based on the give base color so
  * that it will be visible always on top of the base color.
  */
 DynamicTheme.getContrastColor(color, contrastWith);
 
-/*
+/**
  * Colorize and return the mutated drawable so that, all other references
  * do not change.
  */
@@ -162,7 +162,7 @@ DynamicTheme.colorizeDrawable(drawable, color);
 // OR
 DynamicTheme.colorizeDrawableRes(context, drawable, color);
 
-/*
+/**
  * Highlight the query text within a TextView. Suitable for notifying user about the
  * searched query found in the adapter. TextView should not be empty. Please set your
  * default text first then, highlight the query text by using this function.
@@ -314,17 +314,17 @@ startActivity(intent);
 // Extend ShortcutLauncher to launch small app.
 public class ShortcutActivity extends ShortcutLauncher {
 
-    /*
-     * Override this function and pass a package name or
-     * start this activity with the intent.
-     */
-	@Override
-	protected String getShortcutPackage() {
-		return "com.pranavpandey.smallapp.sample";
+  /**
+   * Override this function and pass a package name or
+   * start this activity with the intent.
+   */
+  @Override
+  protected String getShortcutPackage() {
+    return "com.pranavpandey.smallapp.sample";
 
-		// OR
-        return getIntent().getStringExtra(ShortcutLauncher.PACKAGE_NAME);
-	}
+    // OR
+    return getIntent().getStringExtra(ShortcutLauncher.PACKAGE_NAME);
+  }
 }
 ```
 
@@ -340,7 +340,7 @@ AlertDialog.Builder builder = new AlertDialog.Builder(context);
 builder.setTitle(R.string.sas_about);
 builder.setPositiveButton(android.R.string.ok, null);
 
-/*
+/**
  * Use SmallUtils to display it from a small app.
  * Pass the window token of your root view. A parent view of which you
  * want to attach the dialog.
@@ -397,21 +397,23 @@ ActionDialog actionDialog = new ActionDialog(context, alertDialogBuilder, Type.G
 
 // Set actions adapter.
 actionDialog.setAdapter(new BaseActionItemAdapter(context, actionList, R.layout.sas_item_grid_action),
-    new OnActionItemClickListener() {
-        public void onActionItemClick(DialogInterface dialog, Adapter adapter, AdapterView<?> parent,
-                View view, int position, long id) {
-            int actionId =  ((BaseActionItem) adapter.getItem(position)).getActionId();
-            switch (actionId) {
-                // handle action item click events.
-            }
+  new OnActionItemClickListener() {
+    public void onActionItemClick(DialogInterface dialog, Adapter adapter,
+      AdapterView<?> parent, View view, int position, long id) {
+        int actionId =  ((BaseActionItem) adapter.getItem(position)).getActionId();
+
+        switch (actionId) {
+          // handle action item click events.
         }
+      }
     }
+  }
 )
 // Set extra info to be displayed in the header of list or grid.
 .setExtraInfo(drawableId, textString, new OnExtraInfoClickListener() {
-    public void onExtraInfoClick(View v) {
-        // handle click event.
-    }
+  public void onExtraInfoClick(View v) {
+    // handle click event.
+  }
 })
 // Show the action dialog.
 .show(getRootView());
@@ -438,17 +440,17 @@ AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context)
 // Show open intent dialog.
 new OpenIntentDialog(context, intent, alertDialogBuilder, Type.GRID)
 .setActivityOpenListener(new OnActivityOpenListener() {
-    @Override
-    public void onActivityOpen(ComponentName componentName) {
-        // handle activity open event.
-    }
+  @Override
+  public void onActivityOpen(ComponentName componentName) {
+    // handle activity open event.
+  }
 })
-/*
+/**
  * true if remember user selection to open same intent
  * with the same app next time.
  */
 .setRememberSelection(boolean)
-/*
+/**
  * Set extra info to be displayed in the header of list or grid.
  * Pass null to make header not clickable.
  */
@@ -461,11 +463,46 @@ It will show a list of all the apps that can handle this intent. Select one of t
 You can also clear the user selection and all the associated apps by using the `Associations` class.
 
 ```java
-/*
+/**
  * Clear all the associated apps.
  * Pass true to show a toast message and notify user.
  */
 new Associations(context).getHelper().clearAll(true);
+```
+
+---
+
+### Runtime permissions
+
+You can also ask to grant permissions at runtime which was introduced in [Android M](https://developer.android.com/training/permissions/requesting.html). This feature is still in `beta` but it works well with most of the [dangerous permissions](https://developer.android.com/guide/topics/security/permissions.html#normal-dangerous).
+
+To ask permissions at runtime, just override `getPermissions()` function of `SmallApp` class and pass all the permissions in an array. It will automatically asks user to grant all the permissions otherwise, app will not open. This is not a limitation as it is very difficult to make it more dynamic due to `SmallApplication` behavior. Still, you can do experiments to improve it according to your need.
+
+```java
+public class SmallAppSample extends SmallApp {
+
+  ...
+
+  /**
+   * Ask for all dangerous permissions here.
+   */
+  @Override
+  protected String[] getPermissions() {
+    return new String[] { Manifest.permission.CAMERA,
+      Manifest.permission.READ_EXTERNAL_STORAGE,
+      Manifest.permission.WRITE_EXTERNAL_STORAGE };
+  }
+
+  /**
+   * Separate function for special kind of permissions.
+   */
+  @Override
+  protected boolean writeSystemSettings() {
+    return true;
+  }
+
+  ...
+}
 ```
 
 ---
