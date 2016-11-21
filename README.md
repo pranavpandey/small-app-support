@@ -505,6 +505,42 @@ public class SmallAppSample extends SmallApp {
 }
 ```
 
+After that add these activities in your project `AndroidManifest.xml` so that they can request permissions.
+
+```xml
+<manifest
+  ...>
+
+  ...
+
+  <application
+    ...>
+
+    <activity
+      android:name="com.pranavpandey.smallapp.permission.PermissionDangerous"
+      android:exported="true"
+      android:theme="@style/AppTheme.Transparent"
+      android:configChanges="orientation|keyboardHidden|screenSize"
+      android:stateNotNeeded="true"
+      android:excludeFromRecents="true"
+      android:screenOrientation="behind" />
+
+      <activity
+        android:name="com.pranavpandey.smallapp.permission.PermissionWriteSystemSettings"
+        android:exported="true"
+        android:theme="@style/AppTheme.Transparent"
+        android:configChanges="orientation|keyboardHidden|screenSize"
+        android:stateNotNeeded="true"
+        android:excludeFromRecents="true"
+        android:screenOrientation="behind" />
+
+  </application>
+
+  ...
+
+</manifest>
+```
+
 ---
 
 ## Apps using Small App Support
