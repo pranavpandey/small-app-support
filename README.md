@@ -525,14 +525,14 @@ After that add these activities in your project `AndroidManifest.xml` so that th
       android:excludeFromRecents="true"
       android:screenOrientation="behind" />
 
-      <activity
-        android:name="com.pranavpandey.smallapp.permission.PermissionWriteSystemSettings"
-        android:exported="true"
-        android:theme="@style/AppTheme.Transparent"
-        android:configChanges="orientation|keyboardHidden|screenSize"
-        android:stateNotNeeded="true"
-        android:excludeFromRecents="true"
-        android:screenOrientation="behind" />
+    <activity
+      android:name="com.pranavpandey.smallapp.permission.PermissionWriteSystemSettings"
+      android:exported="true"
+      android:theme="@style/AppTheme.Transparent"
+      android:configChanges="orientation|keyboardHidden|screenSize"
+      android:stateNotNeeded="true"
+      android:excludeFromRecents="true"
+      android:screenOrientation="behind" />
 
   </application>
 
