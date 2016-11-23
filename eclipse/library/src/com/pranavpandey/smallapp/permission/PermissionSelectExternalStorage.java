@@ -38,80 +38,81 @@ import com.pranavpandey.smallapp.theme.DynamicTheme;
 @TargetApi(23)
 public class PermissionSelectExternalStorage extends PermissionBase {
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
-		buildPermissionsDialog();
-	}
+        buildPermissionsDialog();
+    }
 
-	@TargetApi(Build.VERSION_CODES.LOLLIPOP)
-	@Override
-	public final void onActivityResult(final int requestCode,
-			final int resultCode, final Intent resultData) {
-	    if (requestCode == REQUEST_CODE_STORAGE_ACCESS) {
-	        Uri treeUri = null;
-	        if (resultCode == Activity.RESULT_OK) {
-	            // Get Uri from Storage Access Framework.
-	            treeUri = resultData.getData();
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    @Override
+    public final void onActivityResult(final int requestCode,
+                                       final int resultCode, final Intent resultData) {
+        if (requestCode == REQUEST_CODE_STORAGE_ACCESS) {
+            Uri treeUri = null;
+            if (resultCode == Activity.RESULT_OK) {
+                // Get Uri from Storage Access Framework.
+                treeUri = resultData.getData();
 
-	            // Persist URI in shared preference so that you can use it later.
-	            // Use your own framework here instead of PreferenceUtil.
-	            SmallUtils.savePrefs(this, PREF_EXTERNAL_STORAGE_URI, treeUri.toString());
-	            Toast.makeText(this, treeUri.toString(), Toast.LENGTH_LONG).show();
+                // Persist URI in shared preference so that you can use it later.
+                // Use your own framework here instead of PreferenceUtil.
+                SmallUtils.savePrefs(this, PREF_EXTERNAL_STORAGE_URI, treeUri.toString());
+                Toast.makeText(this, treeUri.toString(), Toast.LENGTH_LONG).show();
 
-	            // Persist access permissions.
-	            final int takeFlags = resultData.getFlags()
-	                & (Intent.FLAG_GRANT_READ_URI_PERMISSION
-	                		| Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
-	            getContentResolver().takePersistableUriPermission(treeUri, takeFlags);
-	        }
-	    }
-	    finish();
-	}
-
-	private void buildPermissionsDialog() {
-		AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-		View view = getLayoutInflater().inflate(R.layout.sas_dialog_permission,
-				new LinearLayout(this), false);
-		ViewGroup frame = (ViewGroup) view.findViewById(R.id.permission_frame);
-
-		String label = getApplicationInfo().loadLabel(getPackageManager()).toString();
-		((TextView) view.findViewById(R.id.permission_message))
-    	.setText(String.format(getString(R.string.sas_format_next_line),
-    				getString(R.string.sas_select_external_storage_request_desc),
-    				String.format(getString(
-    						R.string.sas_select_external_storage_request_info), label)));
-
-		frame.addView(new PermissionItem(this,
-				ContextCompat.getDrawable(this, R.drawable.sas_ic_select_storage),
-				getString(R.string.sas_select_external_storage),
-				getString(R.string.sas_select_external_storage_desc)));
-
-	    try {
-			alertDialogBuilder.setIcon(DynamicTheme.createDialogIcon(this,
-					getPackageManager().getApplicationIcon(getPackageName())));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		alertDialogBuilder.setTitle(label)
-		.setPositiveButton(R.string.sas_perm_continue, new DialogInterface.OnClickListener() {
-			@Override
-    		public void onClick(DialogInterface dialog, int id) {
-				triggerStorageAccessFramework();
+                // Persist access permissions.
+                final int takeFlags = resultData.getFlags()
+                        & (Intent.FLAG_GRANT_READ_URI_PERMISSION
+                        | Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
+                getContentResolver().takePersistableUriPermission(treeUri, takeFlags);
             }
-        })
-    	.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
-    		@Override
-    		public void onClick(DialogInterface dialog, int id) {
-    			finish();
-            }
-        })
-    	.setCancelable(false);
+        }
+        finish();
+    }
 
-		final AlertDialog dialog = alertDialogBuilder.create();
-		dialog.setView(view, 0, SmallUtils.getDialogTopPadding(this), 0, 0);
+    private void buildPermissionsDialog() {
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        View view = getLayoutInflater().inflate(R.layout.sas_dialog_permission,
+                new LinearLayout(this), false);
+        ViewGroup frame = (ViewGroup) view.findViewById(R.id.permission_frame);
 
-		showPermissionDialog(dialog);
-	}
+        String label = getApplicationInfo().loadLabel(getPackageManager()).toString();
+        ((TextView) view.findViewById(R.id.permission_message))
+                .setText(String.format(getString(R.string.sas_format_next_line),
+                        getString(R.string.sas_select_external_storage_request_desc),
+                        String.format(getString(
+                                R.string.sas_select_external_storage_request_info), label)));
+
+        frame.addView(new PermissionItem(this,
+                ContextCompat.getDrawable(this, R.drawable.sas_ic_select_storage),
+                getString(R.string.sas_select_external_storage),
+                getString(R.string.sas_select_external_storage_desc)));
+
+        try {
+            alertDialogBuilder.setIcon(DynamicTheme.createDialogIcon(this,
+                    getPackageManager().getApplicationIcon(getPackageName())));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        alertDialogBuilder.setTitle(label)
+                .setPositiveButton(R.string.sas_perm_continue,
+                        new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int id) {
+                        triggerStorageAccessFramework();
+                    }
+                })
+                .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int id) {
+                        finish();
+                    }
+                })
+                .setCancelable(false);
+
+        final AlertDialog dialog = alertDialogBuilder.create();
+        dialog.setView(view, 0, SmallUtils.getDialogTopPadding(this), 0, 0);
+
+        showPermissionDialog(dialog);
+    }
 }

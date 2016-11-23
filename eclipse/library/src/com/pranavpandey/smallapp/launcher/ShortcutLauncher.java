@@ -20,50 +20,50 @@ import android.app.Activity;
 import android.os.Bundle;
 
 /**
- * An abstract activity to launch small app shortcuts form anywhere. 
+ * An abstract activity to launch small app shortcuts form anywhere.
  * Extend it in your project and override {@link #getShortcutPackage()}
  * method to pass a package name. Rest of the things will be handle by
  * the {@link com.pranavpandey.smallapp.launcher.SmallLauncher}.
  */
 public abstract class ShortcutLauncher extends Activity {
-	
-	/**
-	 * Key to get the package name from the intent.
-	 */
-	public static final String PACKAGE_NAME = "package_name";
-	
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		
-		launchShortcut(getShortcutPackage());
-	}
-	
-	/**
-	 * Override this function to pass a package name of small app.
-	 */
-	protected abstract String getShortcutPackage();
-	
-	/**
-	 * Launch the small app according to the passed package by using
-	 * {@link com.pranavpandey.smallapp.launcher.SmallLauncher}.
-	 */
-	private void launchShortcut(String packageName) {
-		if (packageName != null) {
-			SmallLauncher.launchSmallApp(this, getPackageManager(), packageName);
-		}
-		
-		finish();
-	}
-	
-	@Override
-	protected void onStop() {
-		super.onStop();
-		onDestroy();
-	}
-	
-	@Override
-	protected void onDestroy() {
-		super.onDestroy();
-	}
+
+    /**
+     * Key to get the package name from the intent.
+     */
+    public static final String PACKAGE_NAME = "package_name";
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        launchShortcut(getShortcutPackage());
+    }
+
+    /**
+     * Override this function to pass a package name of small app.
+     */
+    protected abstract String getShortcutPackage();
+
+    /**
+     * Launch the small app according to the passed package by using
+     * {@link com.pranavpandey.smallapp.launcher.SmallLauncher}.
+     */
+    private void launchShortcut(String packageName) {
+        if (packageName != null) {
+            SmallLauncher.launchSmallApp(this, getPackageManager(), packageName);
+        }
+
+        finish();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        onDestroy();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
 }

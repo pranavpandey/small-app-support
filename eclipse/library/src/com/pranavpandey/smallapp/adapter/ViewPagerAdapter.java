@@ -22,39 +22,39 @@ import android.support.v4.view.PagerAdapter;
 import android.view.View;
 import android.view.ViewGroup;
 
-/** 
+/**
  * PagerAdapter to show different views as pages.
  */
 public class ViewPagerAdapter extends PagerAdapter {
-	 
-	/** 
-	 * A list to hold all the pages of ViewPager.
-	 */
-	List<View> pages = null;
 
-	public ViewPagerAdapter(List<View> pages) {
-		this.pages = pages;
-	}
+    /**
+     * A list to hold all the pages of ViewPager.
+     */
+    List<View> pages = null;
 
-	@Override
-	public Object instantiateItem(ViewGroup container, int position) {
-		View page = pages.get(position);
-		container.addView(page);
-		return page;
-	}
+    public ViewPagerAdapter(List<View> pages) {
+        this.pages = pages;
+    }
 
-	@Override
-	public int getCount() {
-		return pages.size();
-	}
+    @Override
+    public Object instantiateItem(ViewGroup container, int position) {
+        View page = pages.get(position);
+        container.addView(page);
+        return page;
+    }
 
-	@Override
-	public boolean isViewFromObject(View view, Object object) {
-		return view.equals(object);
-	}
+    @Override
+    public int getCount() {
+        return pages.size();
+    }
 
-	@Override
-	public void destroyItem(ViewGroup container, int position, Object object) {
-		container.removeView((View) object);
-	}
+    @Override
+    public boolean isViewFromObject(View view, Object object) {
+        return view.equals(object);
+    }
+
+    @Override
+    public void destroyItem(ViewGroup container, int position, Object object) {
+        container.removeView((View) object);
+    }
 }

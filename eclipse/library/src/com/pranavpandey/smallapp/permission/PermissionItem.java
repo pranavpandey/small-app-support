@@ -26,26 +26,26 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class PermissionItem extends LinearLayout {
-	
-	private ImageView mIcon;
-	
-	private TextView mName;
 
-	public PermissionItem(Context context, Drawable icon, String permission, String description) {
-		super(context);	
-		init();
-		
-		this.mName.setText(String.format(getContext().getString(R.string.sas_format_next_line), 
-				permission, description));
-		this.mIcon.setImageDrawable(icon);
-	}
-	
-	private void init() {		 
-	    LayoutInflater inflater = (LayoutInflater) 
-	    		getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-	    inflater.inflate(R.layout.sas_dialog_perm_info, this, true);   
-	    
-		mIcon = (ImageView) findViewById(R.id.perm_info_icon);
-		mName = (TextView) findViewById(R.id.perm_info_desc);
-	}
+    private ImageView mIcon;
+
+    private TextView mName;
+
+    public PermissionItem(Context context, Drawable icon, String permission, String description) {
+        super(context);
+        init();
+
+        this.mName.setText(String.format(getContext().getString(R.string.sas_format_next_line),
+                permission, description));
+        this.mIcon.setImageDrawable(icon);
+    }
+
+    private void init() {
+        LayoutInflater inflater = (LayoutInflater)
+                getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        inflater.inflate(R.layout.sas_dialog_perm_info, this, true);
+
+        mIcon = (ImageView) findViewById(R.id.perm_info_icon);
+        mName = (TextView) findViewById(R.id.perm_info_desc);
+    }
 }

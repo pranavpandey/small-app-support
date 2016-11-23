@@ -27,38 +27,38 @@ import android.os.RemoteException;
  * Interface for monitoring the state of an small application service.
  */
 public class StartSmallAppConnection implements ServiceConnection {
-	
-	/**
-	 * Component of the small app.
-	 */
-	private ComponentName mCompName;
-	
-	/**
-	 * Context to start service.
-	 */
-	private Context mContext;
 
-	public StartSmallAppConnection(Context context, ComponentName componentName) {
-	  this.mCompName = componentName;
-	  this.mContext = context;
-	}
+    /**
+     * Component of the small app.
+     */
+    private ComponentName mCompName;
 
-	public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
-		ISmallAppManager iSmallAppManager = ISmallAppManager.Stub.asInterface(iBinder);
-		
-		try {
-	        Intent localIntent = new Intent("com.sony.smallapp.intent.action.MAIN");
-	        localIntent.setComponent(this.mCompName);
-	        
-	        if (iSmallAppManager != null) {
-	        	iSmallAppManager.startApplication(localIntent);
-	        } 
-	        mContext.unbindService(this);      
-	        return;
-		} catch (RemoteException remoteException) {
-			remoteException.printStackTrace();
-		}
-	}
-    
-	public void onServiceDisconnected(ComponentName componentName) { }
+    /**
+     * Context to start service.
+     */
+    private Context mContext;
+
+    public StartSmallAppConnection(Context context, ComponentName componentName) {
+        this.mCompName = componentName;
+        this.mContext = context;
+    }
+
+    public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
+        ISmallAppManager iSmallAppManager = ISmallAppManager.Stub.asInterface(iBinder);
+
+        try {
+            Intent localIntent = new Intent("com.sony.smallapp.intent.action.MAIN");
+            localIntent.setComponent(this.mCompName);
+
+            if (iSmallAppManager != null) {
+                iSmallAppManager.startApplication(localIntent);
+            }
+            mContext.unbindService(this);
+            return;
+        } catch (RemoteException remoteException) {
+            remoteException.printStackTrace();
+        }
+    }
+
+    public void onServiceDisconnected(ComponentName componentName) { }
 }

@@ -47,154 +47,154 @@ import android.view.ViewGroup;
 @TargetApi(23)
 public abstract class SmallApp extends SmallApplication {
 
-	/**
-	 * Context to retrieve resources.
-	 */
-	private Context mContext;
+    /**
+     * Context to retrieve resources.
+     */
+    private Context mContext;
 
-	/**
-	 * Configuration to maintain orientation changes.
-	 */
-	private Configuration mConfig;
+    /**
+     * Configuration to maintain orientation changes.
+     */
+    private Configuration mConfig;
 
-	/**
-	 * Root view to show dialogs.
-	 */
-	private ViewGroup mRootView;
-	
-	private static final int PERMISSIONS_CHECK_DELAY = 150;
-	private static final int PERMISSIONS_CHECK_DELAY_NO_UI = 200;
+    /**
+     * Root view to show dialogs.
+     */
+    private ViewGroup mRootView;
 
-	@Override
-	protected void onCreate() {
-		super.onCreate();
-		
-		mContext = getApplicationContext();
-		SmallTheme.initializeInstance(getContext());
-		mConfig = new Configuration(getResources().getConfiguration());
-		
-		// Request runtime permissions if available.
-		if (SmallUtils.isMarshmallow()) {
-			final ArrayList<String> permissionsToGrant = new ArrayList<String>();
-			if (getPermissions() != null) {
-				for (int i = 0; i < getPermissions().length; i++) {
-					if (ContextCompat.checkSelfPermission(mContext, 
-							getPermissions()[i]) != PackageManager.PERMISSION_GRANTED) {
-						permissionsToGrant.add(getPermissions()[i]);
-					}
-				}
-			}
-				
-			if (!permissionsToGrant.isEmpty()) {
-				Intent intent = new Intent(mContext, PermissionDangerous.class);
-				intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-				intent.putExtra(PermissionDangerous.PERMISSIONS, 
-						permissionsToGrant.toArray(new String[permissionsToGrant.size()]));			
-				openDelayedActivity(intent);
-			} else if (writeSystemSettings() && 
-					!Settings.System.canWrite(getContext())) {
-				Intent intent = new Intent(mContext, PermissionWriteSystemSettings.class);
-				intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);					
-				openDelayedActivity(intent);
-			}
-		}
-		
-		setContentView(R.layout.sas_main);
-		mRootView = (ViewGroup) findViewById(R.id.frame_container);
+    private static final int PERMISSIONS_CHECK_DELAY = 150;
+    private static final int PERMISSIONS_CHECK_DELAY_NO_UI = 200;
 
-		if (getLayoutId() != 0) {
-		    View layoutView = LayoutInflater.from(SmallApp.this).inflate(getLayoutId(), null);
-		    mRootView.addView(layoutView);
-		}
-	}
-	
-	private void openDelayedActivity(final Intent intent) {
-		(new Handler()).postDelayed(new Runnable() {
-			@Override
-			public void run() {					
-				finish();
-				startActivity(intent);
-			}
-		}, getLayoutId() != 0 ? PERMISSIONS_CHECK_DELAY 
-				: PERMISSIONS_CHECK_DELAY_NO_UI);
-		
-		return;
-	}
+    @Override
+    protected void onCreate() {
+        super.onCreate();
 
-	/**
-	 * Override this function in the extended class to provide a layout
-	 * which will be added to the root view.
-	 *
-	 * @see {@link #mRootView}.
-	 */
-	protected abstract @LayoutRes int getLayoutId();
+        mContext = getApplicationContext();
+        SmallTheme.initializeInstance(getContext());
+        mConfig = new Configuration(getResources().getConfiguration());
 
-	@Override
-	protected boolean onSmallAppConfigurationChanged(Configuration newConfig) {
-		int diff = newConfig.diff(mConfig);
-		mConfig = new Configuration(getResources().getConfiguration());
+        // Request runtime permissions if available.
+        if (SmallUtils.isMarshmallow()) {
+            final ArrayList<String> permissionsToGrant = new ArrayList<String>();
+            if (getPermissions() != null) {
+                for (int i = 0; i < getPermissions().length; i++) {
+                    if (ContextCompat.checkSelfPermission(mContext,
+                            getPermissions()[i]) != PackageManager.PERMISSION_GRANTED) {
+                        permissionsToGrant.add(getPermissions()[i]);
+                    }
+                }
+            }
 
-		if ((diff & ActivityInfo.CONFIG_ORIENTATION | ActivityInfo.CONFIG_FONT_SCALE |
-		    ActivityInfo.CONFIG_SCREEN_SIZE | ActivityInfo.CONFIG_KEYBOARD) != 0) {
-		    return true;
-		}
-		return super.onSmallAppConfigurationChanged(newConfig);
-	}
+            if (!permissionsToGrant.isEmpty()) {
+                Intent intent = new Intent(mContext, PermissionDangerous.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.putExtra(PermissionDangerous.PERMISSIONS,
+                        permissionsToGrant.toArray(new String[permissionsToGrant.size()]));
+                openDelayedActivity(intent);
+            } else if (writeSystemSettings() &&
+                    !Settings.System.canWrite(getContext())) {
+                Intent intent = new Intent(mContext, PermissionWriteSystemSettings.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                openDelayedActivity(intent);
+            }
+        }
 
-	/**
-	 * Minimize the small app window.
-	 */
-	public void windowMinimize() {
-		getWindow().setWindowState(SmallAppWindow.WindowState.MINIMIZED);
-	}
+        setContentView(R.layout.sas_main);
+        mRootView = (ViewGroup) findViewById(R.id.frame_container);
 
-	/**
-	 * Set small app window to its general state.
-	 */
-	public void windowNormal() {
-		getWindow().setWindowState(SmallAppWindow.WindowState.NORMAL);
-	}
+        if (getLayoutId() != 0) {
+            View layoutView = LayoutInflater.from(SmallApp.this).inflate(getLayoutId(), null);
+            mRootView.addView(layoutView);
+        }
+    }
 
-	/**
-	 * Set small app window fitted to the screen.
-	 */
-	public void windowFitted() {
-		getWindow().setWindowState(SmallAppWindow.WindowState.FITTED);
-	}
+    private void openDelayedActivity(final Intent intent) {
+        (new Handler()).postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                finish();
+                startActivity(intent);
+            }
+        }, getLayoutId() != 0 ? PERMISSIONS_CHECK_DELAY
+                : PERMISSIONS_CHECK_DELAY_NO_UI);
 
-	@Override
-	public void onDestroy() {
-		super.onDestroy();
+        return;
+    }
 
-		SmallTheme.getInstance().onDestroy();
-	}
+    /**
+     * Override this function in the extended class to provide a layout
+     * which will be added to the root view.
+     *
+     * @see {@link #mRootView}.
+     */
+    protected abstract @LayoutRes int getLayoutId();
 
-	/**
-	 * @return {@link #mContext}.
-	 */
-	public Context getContext() {
-		return mContext;
-	}
+    @Override
+    protected boolean onSmallAppConfigurationChanged(Configuration newConfig) {
+        int diff = newConfig.diff(mConfig);
+        mConfig = new Configuration(getResources().getConfiguration());
 
-	/**
-	 * @return {@link #mRootView}.
-	 */
-	public View getRootView() {
-		return mRootView;
-	}
-	
-	protected String[] getPermissions() {
-		return null;
-	}
-	
-	protected boolean writeSystemSettings() {
-		return false;
-	}
-	
-	protected void requestSelectExternalStorage() {
-		Intent intent = new Intent(getContext(), PermissionSelectExternalStorage.class);
-		intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);					
-		getContext().startActivity(intent);
-		windowMinimize();
-	}
+        if ((diff & ActivityInfo.CONFIG_ORIENTATION | ActivityInfo.CONFIG_FONT_SCALE |
+                ActivityInfo.CONFIG_SCREEN_SIZE | ActivityInfo.CONFIG_KEYBOARD) != 0) {
+            return true;
+        }
+        return super.onSmallAppConfigurationChanged(newConfig);
+    }
+
+    /**
+     * Minimize the small app window.
+     */
+    public void windowMinimize() {
+        getWindow().setWindowState(SmallAppWindow.WindowState.MINIMIZED);
+    }
+
+    /**
+     * Set small app window to its general state.
+     */
+    public void windowNormal() {
+        getWindow().setWindowState(SmallAppWindow.WindowState.NORMAL);
+    }
+
+    /**
+     * Set small app window fitted to the screen.
+     */
+    public void windowFitted() {
+        getWindow().setWindowState(SmallAppWindow.WindowState.FITTED);
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+
+        SmallTheme.getInstance().onDestroy();
+    }
+
+    /**
+     * @return {@link #mContext}.
+     */
+    public Context getContext() {
+        return mContext;
+    }
+
+    /**
+     * @return {@link #mRootView}.
+     */
+    public View getRootView() {
+        return mRootView;
+    }
+
+    protected String[] getPermissions() {
+        return null;
+    }
+
+    protected boolean writeSystemSettings() {
+        return false;
+    }
+
+    protected void requestSelectExternalStorage() {
+        Intent intent = new Intent(getContext(), PermissionSelectExternalStorage.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        getContext().startActivity(intent);
+        windowMinimize();
+    }
 }

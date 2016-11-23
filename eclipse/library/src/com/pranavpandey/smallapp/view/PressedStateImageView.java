@@ -31,53 +31,54 @@ import android.view.View;
  */
 public class PressedStateImageView extends ColoredImageView {
 
-	public PressedStateImageView(Context context) {
-		super(context);
-	}
+    public PressedStateImageView(Context context) {
+        super(context);
+    }
 
-	public PressedStateImageView(Context context, AttributeSet attrs) {
-		super(context, attrs);
-	}
+    public PressedStateImageView(Context context, AttributeSet attrs) {
+        super(context, attrs);
+    }
 
-	public PressedStateImageView(Context context, AttributeSet attrs, int defStyle) {
-		super(context, attrs, defStyle);
-	}
+    public PressedStateImageView(Context context, AttributeSet attrs, int defStyle) {
+        super(context, attrs, defStyle);
+    }
 
-	@TargetApi(Build.VERSION_CODES.LOLLIPOP)
-	public PressedStateImageView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-		super(context, attrs, defStyleAttr, defStyleRes);
-	}
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    public PressedStateImageView(Context context, AttributeSet attrs, int defStyleAttr,
+                                 int defStyleRes) {
+        super(context, attrs, defStyleAttr, defStyleRes);
+    }
 
-	@Override
-	public boolean onTouchEvent(@NonNull MotionEvent event) {
-		if (getVisibility() == View.GONE) {
-			return false;
-		}
+    @Override
+    public boolean onTouchEvent(@NonNull MotionEvent event) {
+        if (getVisibility() == View.GONE) {
+            return false;
+        }
 
-		if (isEnabled() && isClickable()) {
-		    if (event.getAction() == MotionEvent.ACTION_DOWN) {
-		    	setAlpha(0.7f);
-		    } else if (event.getAction() == MotionEvent.ACTION_CANCEL
-		    		|| event.getAction() == MotionEvent.ACTION_UP) {
-		    	setAlpha(1.0f);
-		    } else if (event.getAction() == MotionEvent.ACTION_UP) {
-		    	performClick();
-		    }
-		}
-		return super.onTouchEvent(event);
-	}
+        if (isEnabled() && isClickable()) {
+            if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                setAlpha(0.7f);
+            } else if (event.getAction() == MotionEvent.ACTION_CANCEL
+                    || event.getAction() == MotionEvent.ACTION_UP) {
+                setAlpha(1.0f);
+            } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                performClick();
+            }
+        }
+        return super.onTouchEvent(event);
+    }
 
-	@Override
-	public boolean performClick() {
-		super.performClick();
+    @Override
+    public boolean performClick() {
+        super.performClick();
 
-		return true;
-	}
+        return true;
+    }
 
-	@Override
-	public void setEnabled(boolean enabled) {
-		super.setEnabled(enabled);
+    @Override
+    public void setEnabled(boolean enabled) {
+        super.setEnabled(enabled);
 
-		setAlpha(enabled ? 1.0f : 0.7f);
-	}
+        setAlpha(enabled ? 1.0f : 0.7f);
+    }
 }
