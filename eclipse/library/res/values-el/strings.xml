@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- 
+<!--
 	Copyright (C) 2016 Pranav Pandey
-	
+
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
 	You may obtain a copy of the License at
-	
+
 	   http://www.apache.org/licenses/LICENSE-2.0
-	
+
 	Unless required by applicable law or agreed to in writing, software
 	distributed under the License is distributed on an "AS IS" BASIS,
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -16,36 +16,36 @@
 -->
 
 <resources>
-    
-	<string name="sas_version">εκδοχή</string>
-	<string name="sas_extension_desc">Μικρές εφαρμογές επέκταση</string>
-	<string name="sas_welcome_text">Σας ευχαριστούμε για την υποστήριξή σας!</string>
-	<string name="sas_settings">Ρυθμίσεις</string>
-	<string name="sas_rate">Aξιολογούν</string>
-	<string name="sas_buy">Αγορά</string>
-	<string name="sas_about">À propos</string>
-	<string name="sas_options">επιλογές</string>
-	<string name="sas_keep_awake">κρατήσει ξύπνιο</string>
-	<string name="sas_reset">Επαναφορά</string>
-	
-	<string name="sas_share">Κοινή χρήση</string>
-	<string name="sas_open">Άνοιγμα</string>
-	<string name="sas_error">Σφάλμα</string>
-	<string name="sas_error_no_apps">Δεν υπάρχουν εφαρμογές, οι οποίες μπορούν να εκτελέσουν αυτήν την ενέργεια.</string>
-	<string name="sas_always_use">Χρήση από προεπιλογή για αυτήν την ενέργεια.</string>
-	<string name="sas_copy_clipboard">Αντιγράφηκε στο πρόχειρο</string>
-	
-	<string name="sas_app_info">Πληροφορίες εφαρμογής</string>
-	<string name="sas_developed_by">Γράφει και σχεδιάστηκε από τον</string>
-	<string name="sas_made_in">Φτιαγμένο στην Ινδία</string>
-	<string name="sas_more_apps">Περισσότερες εφαρμογές</string>
-	
-	<string name="sas_perm_request_desc">Η εφαρμογή απαιτεί τις ακόλουθες άδειες για την εκτέλεση αυτής της ενέργειας.</string>
-	<string name="sas_perm_request_info">\nΓια την εκχώρηση των δικαιωμάτων, μεταβείτε στη διαδρομή Πληροφορίες εφαρμογής > Δικαιώματα. Πατήστε \"Συνέχεια\" για να μεταβείτε στις πληροφορίες της εφαρμογής.</string>
-	<string name="sas_perm_write_system_settings_info">\nΓια την εκχώρηση των δικαιωμάτων, go to Εφαρμογές > Σύνθετες ρυθμίσεις > Εγγραφή ρυθμίσεων συστήματος. Δικαιώματα. Πατήστε \"Συνέχεια\" για να μεταβείτε στις πληροφορίες της Εγγραφή ρυθμίσεων συστήματος > %1$s.</string>
-	<string name="sas_perm_write_system_settings">Εγγραφή ρυθμίσεων συστήματος</string>
-	<string name="sas_perm_write_system_settings_desc">εγγραφή ρυθμίσεων τροποποίησης συστήματος</string>
-	<string name="sas_perm_request">Αίτημα</string>
-	<string name="sas_perm_continue">Συνέχεια</string>
-    
-</resources>   
+
+    <string name="sas_version">εκδοχή</string>
+    <string name="sas_extension_desc">Μικρές εφαρμογές επέκταση</string>
+    <string name="sas_welcome_text">Σας ευχαριστούμε για την υποστήριξή σας!</string>
+    <string name="sas_settings">Ρυθμίσεις</string>
+    <string name="sas_rate">Aξιολογούν</string>
+    <string name="sas_buy">Αγορά</string>
+    <string name="sas_about">À propos</string>
+    <string name="sas_options">επιλογές</string>
+    <string name="sas_keep_awake">κρατήσει ξύπνιο</string>
+    <string name="sas_reset">Επαναφορά</string>
+
+    <string name="sas_share">Κοινή χρήση</string>
+    <string name="sas_open">Άνοιγμα</string>
+    <string name="sas_error">Σφάλμα</string>
+    <string name="sas_error_no_apps">Δεν υπάρχουν εφαρμογές, οι οποίες μπορούν να εκτελέσουν αυτήν την ενέργεια.</string>
+    <string name="sas_always_use">Χρήση από προεπιλογή για αυτήν την ενέργεια.</string>
+    <string name="sas_copy_clipboard">Αντιγράφηκε στο πρόχειρο</string>
+
+    <string name="sas_app_info">Πληροφορίες εφαρμογής</string>
+    <string name="sas_developed_by">Γράφει και σχεδιάστηκε από τον</string>
+    <string name="sas_made_in">Φτιαγμένο στην Ινδία</string>
+    <string name="sas_more_apps">Περισσότερες εφαρμογές</string>
+
+    <string name="sas_perm_request_desc">Η εφαρμογή απαιτεί τις ακόλουθες άδειες για την εκτέλεση αυτής της ενέργειας.</string>
+    <string name="sas_perm_request_info">\nΓια την εκχώρηση των δικαιωμάτων, μεταβείτε στη διαδρομή Πληροφορίες εφαρμογής > Δικαιώματα. Πατήστε \"Συνέχεια\" για να μεταβείτε στις πληροφορίες της εφαρμογής.</string>
+    <string name="sas_perm_write_system_settings_info">\nΓια την εκχώρηση των δικαιωμάτων, go to Εφαρμογές > Σύνθετες ρυθμίσεις > Εγγραφή ρυθμίσεων συστήματος. Δικαιώματα. Πατήστε \"Συνέχεια\" για να μεταβείτε στις πληροφορίες της Εγγραφή ρυθμίσεων συστήματος > %1$s.</string>
+    <string name="sas_perm_write_system_settings">Εγγραφή ρυθμίσεων συστήματος</string>
+    <string name="sas_perm_write_system_settings_desc">εγγραφή ρυθμίσεων τροποποίησης συστήματος</string>
+    <string name="sas_perm_request">Αίτημα</string>
+    <string name="sas_perm_continue">Συνέχεια</string>
+
+</resources>

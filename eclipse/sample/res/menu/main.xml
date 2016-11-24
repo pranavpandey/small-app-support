@@ -16,20 +16,20 @@
 -->
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    
-	<item 
-		android:id="@+id/menu_settings"
-		android:title="@string/sas_settings"
-		android:icon="@drawable/sas_ic_menu_settings" />
-	
-	<item 
-		android:id="@+id/menu_about"
-		android:title="@string/sas_about"
-		android:icon="@drawable/sas_ic_menu_about" />
-	
-	<item 
-		android:id="@+id/menu_sources"
-		android:title="@string/sources"
-		android:icon="@drawable/sas_ic_menu_rate" />
-    
+
+    <item
+        android:id="@+id/menu_settings"
+        android:title="@string/sas_settings"
+        android:icon="@drawable/sas_ic_menu_settings" />
+
+    <item
+        android:id="@+id/menu_about"
+        android:title="@string/sas_about"
+        android:icon="@drawable/sas_ic_menu_about" />
+
+    <item
+        android:id="@+id/menu_sources"
+        android:title="@string/sources"
+        android:icon="@drawable/sas_ic_menu_rate" />
+
 </menu>

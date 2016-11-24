@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- 
+<!--
 	Copyright (C) 2016 Pranav Pandey
-	
+
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
 	You may obtain a copy of the License at
-	
+
 	   http://www.apache.org/licenses/LICENSE-2.0
-	
+
 	Unless required by applicable law or agreed to in writing, software
 	distributed under the License is distributed on an "AS IS" BASIS,
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -16,36 +16,36 @@
 -->
 
 <resources>
-    
-	<string name="sas_version">Versión</string>
-	<string name="sas_extension_desc">Extensión aplicaciones pequeñas</string>
-	<string name="sas_welcome_text">Gracias por su apoyo!</string>
-	<string name="sas_settings">Configuración</string>
-	<string name="sas_rate">Evaluar</string>
-	<string name="sas_buy">Comprar</string>
-	<string name="sas_about">Acerca de</string>
-	<string name="sas_options">Opciones</string>
-	<string name="sas_keep_awake">Mantenerse despierto</string>
-	<string name="sas_reset">Borrar</string>
-	
-	<string name="sas_share">Compartir</string>
-	<string name="sas_open">Abrir</string>
-	<string name="sas_error">Error</string>
-	<string name="sas_error_no_apps">Ninguna aplicación puede realizar esta acción.</string>
-	<string name="sas_always_use">Usar esta acción como predeterminada.</string>
-	<string name="sas_copy_clipboard">Copiado al portapapeles</string>
-	
-	<string name="sas_app_info">Información de la aplicación</string>
-	<string name="sas_developed_by">Escrito y diseñado por</string>
-	<string name="sas_made_in">Hecho en India</string>
-	<string name="sas_more_apps">Más aplicaciones</string>
-	
-	<string name="sas_perm_request_desc">La aplicación requiere los siguientes permisos para realizar esta acción.</string>
-	<string name="sas_perm_request_info">\nPara otorgar permisos, vaya a Información de la aplicación > Permisos. Toque suavemente en Continuar para ir a la Información de la aplicación.</string>
-	<string name="sas_perm_write_system_settings_info">\nPara otorgar permisos, vaya a Aplicaciones > Avanzada > Editar configuración sistema. Toque suavemente en Continuar para ir a la Editar configuración sistema > %1$s.</string>
-	<string name="sas_perm_write_system_settings">Editar configuración sistema</string>
-	<string name="sas_perm_write_system_settings_desc">editar, modificar, sistema, configuración</string>
-	<string name="sas_perm_request">Solicitud</string>
-	<string name="sas_perm_continue">Continuar</string>
-    
-</resources>   
+
+    <string name="sas_version">Versión</string>
+    <string name="sas_extension_desc">Extensión aplicaciones pequeñas</string>
+    <string name="sas_welcome_text">Gracias por su apoyo!</string>
+    <string name="sas_settings">Configuración</string>
+    <string name="sas_rate">Evaluar</string>
+    <string name="sas_buy">Comprar</string>
+    <string name="sas_about">Acerca de</string>
+    <string name="sas_options">Opciones</string>
+    <string name="sas_keep_awake">Mantenerse despierto</string>
+    <string name="sas_reset">Borrar</string>
+
+    <string name="sas_share">Compartir</string>
+    <string name="sas_open">Abrir</string>
+    <string name="sas_error">Error</string>
+    <string name="sas_error_no_apps">Ninguna aplicación puede realizar esta acción.</string>
+    <string name="sas_always_use">Usar esta acción como predeterminada.</string>
+    <string name="sas_copy_clipboard">Copiado al portapapeles</string>
+
+    <string name="sas_app_info">Información de la aplicación</string>
+    <string name="sas_developed_by">Escrito y diseñado por</string>
+    <string name="sas_made_in">Hecho en India</string>
+    <string name="sas_more_apps">Más aplicaciones</string>
+
+    <string name="sas_perm_request_desc">La aplicación requiere los siguientes permisos para realizar esta acción.</string>
+    <string name="sas_perm_request_info">\nPara otorgar permisos, vaya a Información de la aplicación > Permisos. Toque suavemente en Continuar para ir a la Información de la aplicación.</string>
+    <string name="sas_perm_write_system_settings_info">\nPara otorgar permisos, vaya a Aplicaciones > Avanzada > Editar configuración sistema. Toque suavemente en Continuar para ir a la Editar configuración sistema > %1$s.</string>
+    <string name="sas_perm_write_system_settings">Editar configuración sistema</string>
+    <string name="sas_perm_write_system_settings_desc">editar, modificar, sistema, configuración</string>
+    <string name="sas_perm_request">Solicitud</string>
+    <string name="sas_perm_continue">Continuar</string>
+
+</resources>

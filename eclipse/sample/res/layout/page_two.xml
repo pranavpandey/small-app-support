@@ -15,48 +15,48 @@
 	limitations under the License.
 -->
 
-<RelativeLayout 
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:app="http://schemas.android.com/apk/res-auto" 
-	android:layout_width="match_parent"
-	android:layout_height="match_parent">  
-	
-	<ScrollView
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"> 
-			
-		<RelativeLayout 
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"> 
-			 
-			<include android:id="@+id/search_include"
-				layout="@layout/sas_include_search" />
-		    
-		</RelativeLayout>
-			    
-	</ScrollView>
-	
-	<com.pranavpandey.smallapp.view.ColoredLinearLayout
-		android:id="@+id/footer"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:orientation="horizontal" 
-		app:colorType="primary"
-		app:colorAlpha="200"
-		android:layout_alignParentBottom="true">
-		       
-		<Button
-			android:id="@+id/btn_share"
-			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
-			android:layout_weight="1.0"
-			android:gravity="center"
-			android:singleLine="true"
-			android:text="@string/sas_share"
-			android:textAllCaps="true"
-			android:textStyle="bold"
-			style="@android:style/Widget.DeviceDefault.Button.Borderless" />	
-	       
-	</com.pranavpandey.smallapp.view.ColoredLinearLayout>
-	
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include android:id="@+id/search_include"
+                layout="@layout/sas_include_search" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <com.pranavpandey.smallapp.view.ColoredLinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:colorType="primary"
+        app:colorAlpha="200"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/btn_share"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/sas_share"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            style="@android:style/Widget.DeviceDefault.Button.Borderless" />
+
+    </com.pranavpandey.smallapp.view.ColoredLinearLayout>
+
 </RelativeLayout>

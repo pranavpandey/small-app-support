@@ -17,16 +17,16 @@
 
 <resources>
 
-	<string name="app_name">Small App Support</string>
-	<string name="title">Small App</string>
-	<string name="sources">Sources</string>
-	   
-	<string name="sas_contentDescription_app" translatable="false">App name</string>
-	<string name="sas_contentDescription_playstore" translatable="false">Google Play</string>
-	<string name="sas_contentDescription_facebook" translatable="false">Facebook</string>
-	<string name="sas_contentDescription_twitter" translatable="false">Twitter</string>
-	<string name="sas_contentDescription_google" translatable="false">Google+</string>
-	<string name="sas_contentDescription_linkedin" translatable="false">LinkedIn</string>
-	<string name="sas_contentDescription_github" translatable="false">Github</string>
+    <string name="app_name">Small App Support</string>
+    <string name="title">Small App</string>
+    <string name="sources">Sources</string>
+
+    <string name="sas_contentDescription_app" translatable="false">App name</string>
+    <string name="sas_contentDescription_playstore" translatable="false">Google Play</string>
+    <string name="sas_contentDescription_facebook" translatable="false">Facebook</string>
+    <string name="sas_contentDescription_twitter" translatable="false">Twitter</string>
+    <string name="sas_contentDescription_google" translatable="false">Google+</string>
+    <string name="sas_contentDescription_linkedin" translatable="false">LinkedIn</string>
+    <string name="sas_contentDescription_github" translatable="false">Github</string>
 
 </resources>

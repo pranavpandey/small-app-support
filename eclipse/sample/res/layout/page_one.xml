@@ -16,69 +16,69 @@
 -->
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-	xmlns:app="http://schemas.android.com/apk/res-auto"
-	android:layout_width="match_parent"
-	android:layout_height="wrap_content"> 
-	
-	<LinearLayout 
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:orientation="vertical"
-		android:layout_margin="@dimen/sas_main_margin">
-		 
-		<com.pranavpandey.smallapp.view.ColoredTextView
-			android:text="Colors"
-			style="@style/TextAppearance.Dialog.SettingsHeading"
-			android:textSize="16sp"
-			android:textStyle="bold"
-			app:colorType="primary" />
-		    
-		<com.pranavpandey.smallapp.view.ColoredTextView
-			android:text="Primary"
-			style="@style/TextAppearance.Dialog.SettingsHeading"
-			android:layout_marginTop="@dimen/sas_dialog_settings_margin"
-			app:colorType="primary"
-			app:backgroundAware="false" />
-		    
-		<com.pranavpandey.smallapp.view.ColoredTextView
-			android:text="Tint Primary"
-			style="@style/TextAppearance.Dialog.SettingsHeading"
-			app:colorType="tint_primary"
-			app:backgroundAware="false" />
-		    
-		<com.pranavpandey.smallapp.view.ColoredTextView
-			android:text="Accent"
-			style="@style/TextAppearance.Dialog.SettingsHeading"
-			app:colorType="accent"
-			app:backgroundAware="false" />
-		    
-		<com.pranavpandey.smallapp.view.ColoredTextView
-			android:text="Tint Accent"
-			style="@style/TextAppearance.Dialog.SettingsHeading"
-			app:colorType="tint_accent"
-			app:backgroundAware="false" />
-		    
-		<com.pranavpandey.smallapp.view.ColoredTextView
-			android:text="Primary (Background Aware)"
-			style="@style/TextAppearance.Dialog.SettingsHeading"
-			android:layout_marginTop="@dimen/sas_dialog_settings_margin"
-			app:colorType="primary" />
-		    
-		<com.pranavpandey.smallapp.view.ColoredTextView
-			android:text="Tint Primary (Background Aware)"
-			style="@style/TextAppearance.Dialog.SettingsHeading"
-			app:colorType="tint_primary" />
-		    
-		<com.pranavpandey.smallapp.view.ColoredTextView
-			android:text="Accent (Background Aware)"
-			style="@style/TextAppearance.Dialog.SettingsHeading"
-			app:colorType="accent" />
-		    
-		<com.pranavpandey.smallapp.view.ColoredTextView
-			android:text="Tint Accent (Background Aware)"
-			style="@style/TextAppearance.Dialog.SettingsHeading"
-			app:colorType="tint_accent" />
-	    
-	</LinearLayout>
-		    
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/sas_main_margin">
+
+        <com.pranavpandey.smallapp.view.ColoredTextView
+            android:text="Colors"
+            style="@style/TextAppearance.Dialog.SettingsHeading"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:colorType="primary" />
+
+        <com.pranavpandey.smallapp.view.ColoredTextView
+            android:text="Primary"
+            style="@style/TextAppearance.Dialog.SettingsHeading"
+            android:layout_marginTop="@dimen/sas_dialog_settings_margin"
+            app:colorType="primary"
+            app:backgroundAware="false" />
+
+        <com.pranavpandey.smallapp.view.ColoredTextView
+            android:text="Tint Primary"
+            style="@style/TextAppearance.Dialog.SettingsHeading"
+            app:colorType="tint_primary"
+            app:backgroundAware="false" />
+
+        <com.pranavpandey.smallapp.view.ColoredTextView
+            android:text="Accent"
+            style="@style/TextAppearance.Dialog.SettingsHeading"
+            app:colorType="accent"
+            app:backgroundAware="false" />
+
+        <com.pranavpandey.smallapp.view.ColoredTextView
+            android:text="Tint Accent"
+            style="@style/TextAppearance.Dialog.SettingsHeading"
+            app:colorType="tint_accent"
+            app:backgroundAware="false" />
+
+        <com.pranavpandey.smallapp.view.ColoredTextView
+            android:text="Primary (Background Aware)"
+            style="@style/TextAppearance.Dialog.SettingsHeading"
+            android:layout_marginTop="@dimen/sas_dialog_settings_margin"
+            app:colorType="primary" />
+
+        <com.pranavpandey.smallapp.view.ColoredTextView
+            android:text="Tint Primary (Background Aware)"
+            style="@style/TextAppearance.Dialog.SettingsHeading"
+            app:colorType="tint_primary" />
+
+        <com.pranavpandey.smallapp.view.ColoredTextView
+            android:text="Accent (Background Aware)"
+            style="@style/TextAppearance.Dialog.SettingsHeading"
+            app:colorType="accent" />
+
+        <com.pranavpandey.smallapp.view.ColoredTextView
+            android:text="Tint Accent (Background Aware)"
+            style="@style/TextAppearance.Dialog.SettingsHeading"
+            app:colorType="tint_accent" />
+
+    </LinearLayout>
+
 </ScrollView>

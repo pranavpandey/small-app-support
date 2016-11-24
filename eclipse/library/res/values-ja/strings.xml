@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- 
+<!--
 	Copyright (C) 2016 Pranav Pandey
-	
+
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
 	You may obtain a copy of the License at
-	
+
 	   http://www.apache.org/licenses/LICENSE-2.0
-	
+
 	Unless required by applicable law or agreed to in writing, software
 	distributed under the License is distributed on an "AS IS" BASIS,
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -16,36 +16,36 @@
 -->
 
 <resources>
-    
-	<string name="sas_version">バージョン</string>
-	<string name="sas_extension_desc">小さなアプリの拡張機能</string>
-	<string name="sas_welcome_text">あなたのサポートをありがとう！</string>
-	<string name="sas_settings">設定</string>
-	<string name="sas_rate">評価する</string>
-	<string name="sas_buy">買う</string>
-	<string name="sas_about">約</string>
-	<string name="sas_options">オプション</string>
-	<string name="sas_keep_awake">明かします</string>
-	<string name="sas_reset">リセット</string>
-	
-	<string name="sas_share">共有</string>
-	<string name="sas_open">開く</string>
-	<string name="sas_error">エラー</string>
-	<string name="sas_error_no_apps">この操作を実行できるアプリケーションはありません。</string>
-	<string name="sas_always_use">常にこの操作で使用する</string>
-	<string name="sas_copy_clipboard">クリップボードにコピーしました。</string>
-	
-	<string name="sas_app_info">アプリ情報</string>
-	<string name="sas_developed_by">書かれによって設計</string>
-	<string name="sas_made_in">インド製</string>
-	<string name="sas_more_apps">より多くのアプリケーション</string>
 
-	<string name="sas_perm_request_desc">アプリがこの操作を実行するには、次の権限が必要です。</string>
-	<string name="sas_perm_request_info">\n権限を付与するには、[アプリ情報]>[許可]に移動してください。[アプリ情報]に移動するには[続行]をタップしてください。</string>
-	<string name="sas_perm_write_system_settings_info">\n権限を付与するには、[アプリ]>[詳細設定]>[システム設定の書き込み]に移動してください。[システム設定の書き込み]>[%1$s]に移動するには[続行]をタップしてください。</string>
-	<string name="sas_perm_write_system_settings">システム設定の書き込み</string>
-	<string name="sas_perm_write_system_settings_desc">書き込み 変更 システム設定</string>
-	<string name="sas_perm_request">要求</string>
-	<string name="sas_perm_continue">続行</string>
-	
-</resources>   
+    <string name="sas_version">バージョン</string>
+    <string name="sas_extension_desc">小さなアプリの拡張機能</string>
+    <string name="sas_welcome_text">あなたのサポートをありがとう！</string>
+    <string name="sas_settings">設定</string>
+    <string name="sas_rate">評価する</string>
+    <string name="sas_buy">買う</string>
+    <string name="sas_about">約</string>
+    <string name="sas_options">オプション</string>
+    <string name="sas_keep_awake">明かします</string>
+    <string name="sas_reset">リセット</string>
+
+    <string name="sas_share">共有</string>
+    <string name="sas_open">開く</string>
+    <string name="sas_error">エラー</string>
+    <string name="sas_error_no_apps">この操作を実行できるアプリケーションはありません。</string>
+    <string name="sas_always_use">常にこの操作で使用する</string>
+    <string name="sas_copy_clipboard">クリップボードにコピーしました。</string>
+
+    <string name="sas_app_info">アプリ情報</string>
+    <string name="sas_developed_by">書かれによって設計</string>
+    <string name="sas_made_in">インド製</string>
+    <string name="sas_more_apps">より多くのアプリケーション</string>
+
+    <string name="sas_perm_request_desc">アプリがこの操作を実行するには、次の権限が必要です。</string>
+    <string name="sas_perm_request_info">\n権限を付与するには、[アプリ情報]>[許可]に移動してください。[アプリ情報]に移動するには[続行]をタップしてください。</string>
+    <string name="sas_perm_write_system_settings_info">\n権限を付与するには、[アプリ]>[詳細設定]>[システム設定の書き込み]に移動してください。[システム設定の書き込み]>[%1$s]に移動するには[続行]をタップしてください。</string>
+    <string name="sas_perm_write_system_settings">システム設定の書き込み</string>
+    <string name="sas_perm_write_system_settings_desc">書き込み 変更 システム設定</string>
+    <string name="sas_perm_request">要求</string>
+    <string name="sas_perm_continue">続行</string>
+
+</resources>

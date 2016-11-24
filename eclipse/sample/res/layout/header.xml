@@ -16,18 +16,18 @@
 -->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:layout_width="wrap_content"
-	android:layout_height="match_parent"
-	android:gravity="center"
-	android:orientation="horizontal">
-	
-	<ImageView
-		android:id="@+id/option_menu"
-		style="@android:style/Widget.DeviceDefault.Button.Borderless.Small"
-		android:layout_width="48dp"
-		android:layout_height="match_parent"
-		android:scaleType="centerInside"
-		android:src="@drawable/sas_ic_menu_more" 
-		android:contentDescription="@string/sas_options" />
-    
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/option_menu"
+        style="@android:style/Widget.DeviceDefault.Button.Borderless.Small"
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        android:scaleType="centerInside"
+        android:src="@drawable/sas_ic_menu_more"
+        android:contentDescription="@string/sas_options" />
+
 </LinearLayout>

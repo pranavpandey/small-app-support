@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- 
+<!--
 	Copyright (C) 2016 Pranav Pandey
-	
+
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
 	You may obtain a copy of the License at
-	
+
 	   http://www.apache.org/licenses/LICENSE-2.0
-	
+
 	Unless required by applicable law or agreed to in writing, software
 	distributed under the License is distributed on an "AS IS" BASIS,
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -16,36 +16,36 @@
 -->
 
 <resources>
-    
-	<string name="sas_version">Versão</string>
-	<string name="sas_extension_desc">Extensão pequenas aplicações</string>
-	<string name="sas_welcome_text">Obrigado por seu apoio!</string>
-	<string name="sas_settings">Configurações</string>
-	<string name="sas_rate">Avaliar</string>
-	<string name="sas_buy">Comprar</string>
-	<string name="sas_about">Sobre</string>
-	<string name="sas_options">Opções</string>
-	<string name="sas_keep_awake">Vigiai</string>
-	<string name="sas_reset">Zerar</string>
-	
-	<string name="sas_share">Compartilhar</string>
-	<string name="sas_open">Abrir</string>
-	<string name="sas_error">Erro</string>
-	<string name="sas_error_no_apps">Nenhum aplicativo pode realizar esta ação.</string>
-	<string name="sas_always_use">Usar como padrão para esta ação.</string>
-	<string name="sas_copy_clipboard">Copiado para a área de transferência</string>
-	
-	<string name="sas_app_info">Informações do app</string>
-	<string name="sas_developed_by">Escrito e desenhado por</string>
-	<string name="sas_made_in">Feito na Índia</string>
-	<string name="sas_more_apps">Mais aplicativos</string>
-	
-	<string name="sas_perm_request_desc">Este aplicativo requer a(s) seguinte(s) permissão(ões) para realizar esta ação.</string>
-	<string name="sas_perm_request_info">\nPara conceder permissões, acesse Informações do aplicativo > Permissões. Toque em Continuar para acessar as Informações do aplicativo.</string>
-	<string name="sas_perm_write_system_settings_info">\nPara conceder permissões, acesse Aplicativos > Avançadas > Gravar config. do sistema. Toque em Continuar para acessar as Gravar config. do sistema > %1$s.</string>
-	<string name="sas_perm_write_system_settings">Gravar config. do sistema</string>
-	<string name="sas_perm_write_system_settings_desc">gravar modificar configurações de modificação</string>
-	<string name="sas_perm_request">Pedido</string>
-	<string name="sas_perm_continue">Continuar</string>
 
-</resources>   
+    <string name="sas_version">Versão</string>
+    <string name="sas_extension_desc">Extensão pequenas aplicações</string>
+    <string name="sas_welcome_text">Obrigado por seu apoio!</string>
+    <string name="sas_settings">Configurações</string>
+    <string name="sas_rate">Avaliar</string>
+    <string name="sas_buy">Comprar</string>
+    <string name="sas_about">Sobre</string>
+    <string name="sas_options">Opções</string>
+    <string name="sas_keep_awake">Vigiai</string>
+    <string name="sas_reset">Zerar</string>
+
+    <string name="sas_share">Compartilhar</string>
+    <string name="sas_open">Abrir</string>
+    <string name="sas_error">Erro</string>
+    <string name="sas_error_no_apps">Nenhum aplicativo pode realizar esta ação.</string>
+    <string name="sas_always_use">Usar como padrão para esta ação.</string>
+    <string name="sas_copy_clipboard">Copiado para a área de transferência</string>
+
+    <string name="sas_app_info">Informações do app</string>
+    <string name="sas_developed_by">Escrito e desenhado por</string>
+    <string name="sas_made_in">Feito na Índia</string>
+    <string name="sas_more_apps">Mais aplicativos</string>
+
+    <string name="sas_perm_request_desc">Este aplicativo requer a(s) seguinte(s) permissão(ões) para realizar esta ação.</string>
+    <string name="sas_perm_request_info">\nPara conceder permissões, acesse Informações do aplicativo > Permissões. Toque em Continuar para acessar as Informações do aplicativo.</string>
+    <string name="sas_perm_write_system_settings_info">\nPara conceder permissões, acesse Aplicativos > Avançadas > Gravar config. do sistema. Toque em Continuar para acessar as Gravar config. do sistema > %1$s.</string>
+    <string name="sas_perm_write_system_settings">Gravar config. do sistema</string>
+    <string name="sas_perm_write_system_settings_desc">gravar modificar configurações de modificação</string>
+    <string name="sas_perm_request">Pedido</string>
+    <string name="sas_perm_continue">Continuar</string>
+
+</resources>

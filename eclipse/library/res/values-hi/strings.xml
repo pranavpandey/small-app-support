@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- 
+<!--
 	Copyright (C) 2016 Pranav Pandey
-	
+
 	Licensed under the Apache License, Version 2.0 (the "License");
 	you may not use this file except in compliance with the License.
 	You may obtain a copy of the License at
-	
+
 	   http://www.apache.org/licenses/LICENSE-2.0
-	
+
 	Unless required by applicable law or agreed to in writing, software
 	distributed under the License is distributed on an "AS IS" BASIS,
 	WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -16,37 +16,37 @@
 -->
 
 <resources>
-    
-	<string name="sas_me">&#169; प्रणव पाण्डे</string>
-	<string name="sas_version">संस्करण</string>
-	<string name="sas_extension_desc">स्मॉल एप्स विस्तार</string>
-	<string name="sas_welcome_text">आपके समर्थन के लिए धन्यवाद!</string>
-	<string name="sas_rate">मूल्यांकन करें</string>
-	<string name="sas_settings">सेटिंग</string>
-	<string name="sas_buy">खरीदें</string>
-	<string name="sas_about">बारे में</string>
-	<string name="sas_options">विकल्प</string>
-	<string name="sas_keep_awake">जागते रहना</string>
-	<string name="sas_reset">रीसेट करें</string>
-	
-	<string name="sas_share">साझा करें</string>
-	<string name="sas_open">खोलें</string>
-	<string name="sas_error">त्रुटि</string>
-	<string name="sas_error_no_apps">इस क्रिया को कोई भी अनुप्रयोग निष्पादित नहीं कर सकते।</string>
-	<string name="sas_always_use">इस क्रिया के लिए डिफ़ॉल्‍ट रूप से उपयोग करें.</string>
-	<string name="sas_copy_clipboard">क्लिपबोर्ड पर नकल</string>
-	
-	<string name="sas_app_info">ऐप की जानकारी</string>
-	<string name="sas_developed_by">लिखित और डिजाइन द्वारा</string>
-	<string name="sas_made_in">भारत में निर्मित</string>
-	<string name="sas_more_apps">और ऐप्स</string>
-	
-	<string name="sas_perm_request_desc">ऐप को यह कार्रवाई करने के लिए निम्न अनुमति(यों) की आवश्यकता है।</string>
-	<string name="sas_perm_request_info">\nअनुमतियां देने के लिए, अनुप्रयोग जानकारी > अनुमतियां पर जाएं। अनुप्रयोग जानकारी पर जाने के लिए जारी रखें टैप करें।</string>
-	<string name="sas_perm_write_system_settings_info">\nअनुमतियां देने के लिए, एप्लिकेशन > अतिरिक्‍त सेटिंग > सिस्‍टम सेटिंग लिखे पर जाएं। सिस्‍टम सेटिंग लिखे > %1$s पर जाने के लिए जारी रखें टैप करें।</string>
-	<string name="sas_perm_write_system_settings">सिस्‍टम सेटिंग लिखे</string>
-	<string name="sas_perm_write_system_settings_desc">सिस्‍टम सेटिंग में बदलाव करें लिखें</string>
-	<string name="sas_perm_request">अनुरोध करें</string>
-	<string name="sas_perm_continue">जारी रखें</string>
 
-</resources>   
+    <string name="sas_me">&#169; प्रणव पाण्डे</string>
+    <string name="sas_version">संस्करण</string>
+    <string name="sas_extension_desc">स्मॉल एप्स विस्तार</string>
+    <string name="sas_welcome_text">आपके समर्थन के लिए धन्यवाद!</string>
+    <string name="sas_rate">मूल्यांकन करें</string>
+    <string name="sas_settings">सेटिंग</string>
+    <string name="sas_buy">खरीदें</string>
+    <string name="sas_about">बारे में</string>
+    <string name="sas_options">विकल्प</string>
+    <string name="sas_keep_awake">जागते रहना</string>
+    <string name="sas_reset">रीसेट करें</string>
+
+    <string name="sas_share">साझा करें</string>
+    <string name="sas_open">खोलें</string>
+    <string name="sas_error">त्रुटि</string>
+    <string name="sas_error_no_apps">इस क्रिया को कोई भी अनुप्रयोग निष्पादित नहीं कर सकते।</string>
+    <string name="sas_always_use">इस क्रिया के लिए डिफ़ॉल्‍ट रूप से उपयोग करें.</string>
+    <string name="sas_copy_clipboard">क्लिपबोर्ड पर नकल</string>
+
+    <string name="sas_app_info">ऐप की जानकारी</string>
+    <string name="sas_developed_by">लिखित और डिजाइन द्वारा</string>
+    <string name="sas_made_in">भारत में निर्मित</string>
+    <string name="sas_more_apps">और ऐप्स</string>
+
+    <string name="sas_perm_request_desc">ऐप को यह कार्रवाई करने के लिए निम्न अनुमति(यों) की आवश्यकता है।</string>
+    <string name="sas_perm_request_info">\nअनुमतियां देने के लिए, अनुप्रयोग जानकारी > अनुमतियां पर जाएं। अनुप्रयोग जानकारी पर जाने के लिए जारी रखें टैप करें।</string>
+    <string name="sas_perm_write_system_settings_info">\nअनुमतियां देने के लिए, एप्लिकेशन > अतिरिक्‍त सेटिंग > सिस्‍टम सेटिंग लिखे पर जाएं। सिस्‍टम सेटिंग लिखे > %1$s पर जाने के लिए जारी रखें टैप करें।</string>
+    <string name="sas_perm_write_system_settings">सिस्‍टम सेटिंग लिखे</string>
+    <string name="sas_perm_write_system_settings_desc">सिस्‍टम सेटिंग में बदलाव करें लिखें</string>
+    <string name="sas_perm_request">अनुरोध करें</string>
+    <string name="sas_perm_continue">जारी रखें</string>
+
+</resources>
