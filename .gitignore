@@ -20,7 +20,8 @@ RemoteSystemsTempFiles/
 #*.project
 
 # Generated files
-#bin/
+bin/
+!bin/library.jar
 #gen/
 
 # Gradle files

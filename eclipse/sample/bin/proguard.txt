@@ -24,8 +24,8 @@
 # view res/layout/page_one.xml #generated:67
 # view res/layout/page_one.xml #generated:72
 # view res/layout/page_one.xml #generated:77
-# view res/layout/sas_dialog_about.xml #generated:39
-# view res/layout/sas_dialog_about.xml #generated:96
+# view res/layout/sas_dialog_about.xml #generated:38
+# view res/layout/sas_dialog_about.xml #generated:95
 # view res/layout/sas_dialog_extra_info.xml #generated:49
 # view res/layout/sas_dialog_extra_info_grid.xml #generated:49
 # view res/layout/sas_dialog_extra_info_list.xml #generated:48
@@ -36,17 +36,17 @@
 # view res/layout/sas_row_list_action.xml #generated:47
 -keep class com.pranavpandey.smallapp.view.ColoredTextView { <init>(...); }
 
-# view res/layout/sas_dialog_action_grid.xml #generated:40
+# view res/layout/sas_dialog_action_grid.xml #generated:39
 -keep class com.pranavpandey.smallapp.view.HeaderGridView { <init>(...); }
 
 # view res/layout/main.xml #generated:24
 -keep class com.pranavpandey.smallapp.view.PagerSlidingTabStrip { <init>(...); }
 
-# view res/layout/sas_dialog_about.xml #generated:113
-# view res/layout/sas_dialog_about.xml #generated:119
-# view res/layout/sas_dialog_about.xml #generated:125
-# view res/layout/sas_dialog_about.xml #generated:131
-# view res/layout/sas_dialog_about.xml #generated:137
-# view res/layout/sas_dialog_about.xml #generated:143
+# view res/layout/sas_dialog_about.xml #generated:112
+# view res/layout/sas_dialog_about.xml #generated:118
+# view res/layout/sas_dialog_about.xml #generated:124
+# view res/layout/sas_dialog_about.xml #generated:130
+# view res/layout/sas_dialog_about.xml #generated:136
+# view res/layout/sas_dialog_about.xml #generated:142
 -keep class com.pranavpandey.smallapp.view.PressedStateImageView { <init>(...); }
 

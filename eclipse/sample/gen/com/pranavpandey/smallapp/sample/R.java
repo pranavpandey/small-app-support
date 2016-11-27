@@ -567,14 +567,14 @@ containing a value of this type.
     public static final class style {
         public static final int AboutLinkImage=0x7f090015;
         /** 
-		Base application theme, dependent on API level. This theme is replaced
-		by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-	
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    
 
-		    Theme customizations available in newer API levels can go in
-		    res/values-vXX/styles.xml, while customizations related to
-		    backward-compatibility can go here.
-		
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        
          */
         public static final int AppBaseTheme=0x7f090000;
         public static final int AppTheme_Transparent=0x7f090002;
