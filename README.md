@@ -19,6 +19,30 @@ Small App Support is an easy to use library to build attractive small apps with 
 
 ---
 
+## Table of Contents
+1. [Setup](https://github.com/pranavpandey/small-app-support#setup)
+2. [Usage](https://github.com/pranavpandey/small-app-support#usage)
+  1. [Theme](https://github.com/pranavpandey/small-app-support#theme)
+    1. [SmallTheme](https://github.com/pranavpandey/small-app-support#smalltheme)
+    2. [DynamicTheme](https://github.com/pranavpandey/small-app-support#dynamictheme)
+  2. [View](https://github.com/pranavpandey/small-app-support#view)
+    1. [ColorAttributes](https://github.com/pranavpandey/small-app-support#colorattributes)
+    2. [ColoredImageView](https://github.com/pranavpandey/small-app-support#coloredimageview)
+    3. [PressedStateImageView](https://github.com/pranavpandey/small-app-support#pressedstateimageview)
+    4. [ColoredTextView](https://github.com/pranavpandey/small-app-support#coloredtextview)
+    5. [ColoredLinearLayout](https://github.com/pranavpandey/small-app-support#coloredlinearlayout)
+  3. [Launcher](https://github.com/pranavpandey/small-app-support#launcher)
+    1. [ShortcutLauncher](https://github.com/pranavpandey/small-app-support#shortcutlauncher)
+  4. [SmallUtils](https://github.com/pranavpandey/small-app-support#smallutils)
+  5. [Dialog](https://github.com/pranavpandey/small-app-support#dialog)
+    1. [ActionDialog](https://github.com/pranavpandey/small-app-support#actiondialog)
+    2. [OpenIntentDialog](https://github.com/pranavpandey/small-app-support#openintentdialog)
+  6. [Runtime Permissions](https://github.com/pranavpandey/small-app-support#runtime-permissions)
+3. [Apps using Small App Support](https://github.com/pranavpandey/small-app-support#apps-using-small-app-support)
+4. [License](https://github.com/pranavpandey/small-app-support#license)
+
+---
+
 ## Setup
 
 ### Eclipse with ADT
@@ -35,7 +59,7 @@ Run the sample to see it in action.
 
 ## Usage
 
-Read the documentation below to know how you can make attractive small apps by using this library. It will also simplify the development process and please don't rely only on this, keep exploring the different classes to find some hidden functions. If there is any mistake or some important features are missing then, feel free to update it and send me the pull request so that I can update it.
+Read the documentation below to know how you can make attractive small apps by using this library. It will also simplify the development process and please don't rely only on this guide, keep exploring the different classes to find some hidden functions. If there is any mistake or some important features are missing then, feel free to update it and send me the pull request so that I can update it.
 
 I have divided it into different parts for easy understanding. First we have to initialize the `SmallTheme` to make things working properly.
 
@@ -371,7 +395,7 @@ SmallUtils.loadPrefs(context, "Key", defaultString);
 
 ### Dialog
 
-There are some in-built `Dialogs` so you don't have to write your own. You can use them to show options on long press or if you want to open some links, files, etc. It has an intent app picker which can also remember the user's choices so they don't need to choose the app next time. Read below to know about their usage.
+There are some in-built `Dialogs` so you don't have to write your own. You can use them to show options on long press or if you want to open some links, files, etc. It has an intent app picker which can also remember the user choices so they don't need to choose the app next time. Read below to know about their usage.
 
 #### ActionDialog
 
@@ -467,12 +491,12 @@ You can also clear the user selection and all the associated apps by using the `
  * Clear all the associated apps.
  * Pass true to show a toast message and notify user.
  */
-new Associations(context).getHelper().clearAll(true);
+(new Associations(context)).getHelper().clearAll(true);
 ```
 
 ---
 
-### Runtime permissions
+### Runtime Permissions
 
 You can also ask to grant permissions at runtime which was introduced in [Android M](https://developer.android.com/training/permissions/requesting.html). This feature is still in `beta` but it works well with most of the [dangerous permissions](https://developer.android.com/guide/topics/security/permissions.html#normal-dangerous).
 
@@ -555,7 +579,11 @@ All of my small apps are built with this library. You can download them from Goo
 
 **[Phone](https://play.google.com/store/apps/details?id=com.pranavpandey.smallapp.phone)**
 
+**[Rotation](https://play.google.com/store/apps/details?id=pranavpandey.smallapp.rotation)**
+
 **[Files](https://play.google.com/store/apps/details?id=com.pranavpandey.smallapp.files.lite)**
+
+**[Lock](https://play.google.com/store/apps/details?id=com.pranavpandey.smallapp.lock)**
 
 ---
 
