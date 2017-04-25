@@ -93,7 +93,7 @@ public class SmallUtils {
      * @return Modified AlertDialog and is ready to call
      * {@link android.app.AlertDialog#show()} from a {@link android.view.View}.
      *
-     * @see {@link android.content.ContextWrapper}.
+     * @see android.content.ContextWrapper
      */
     public static AlertDialog createDialog(@NonNull AlertDialog alertDialog,
                                            @NonNull IBinder windowToken) {
@@ -118,7 +118,7 @@ public class SmallUtils {
      * @return Modified AlertDialog and is ready to call
      * {@link android.app.AlertDialog#show()} from a {@link android.view.View}.
      *
-     * @see {@link android.content.ContextWrapper}.
+     * @see android.content.ContextWrapper
      */
     public static AlertDialog createDialog(@NonNull AlertDialog alertDialog,
                                            @NonNull IBinder windowToken, View view) {
@@ -137,7 +137,7 @@ public class SmallUtils {
      * @param key The name of the preference to modify.
      * @param value The new value for the preference.
      *
-     * @see {@link android.preference.PreferenceManager#getDefaultSharedPreferences(Context)}.
+     * @see android.preference.PreferenceManager#getDefaultSharedPreferences(Context)
      */
     public static void savePrefs(Context context, String key, boolean value) {
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
@@ -155,7 +155,7 @@ public class SmallUtils {
      * @param key The name of the preference to modify.
      * @param value The new value for the preference.
      *
-     * @see {@link android.preference.PreferenceManager#getDefaultSharedPreferences(Context)}.
+     * @see android.preference.PreferenceManager#getDefaultSharedPreferences(Context)
      */
     public static void savePrefs(Context context, String key, int value) {
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
@@ -173,7 +173,7 @@ public class SmallUtils {
      * @param key The name of the preference to modify.
      * @param value The new value for the preference.
      *
-     * @see {@link android.preference.PreferenceManager#getDefaultSharedPreferences(Context)}.
+     * @see android.preference.PreferenceManager#getDefaultSharedPreferences(Context)
      */
     public static void savePrefs(Context context, String key, String value) {
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
@@ -195,7 +195,7 @@ public class SmallUtils {
      *
      * @throws ClassCastException
      *
-     * @see {@link android.preference.PreferenceManager#getDefaultSharedPreferences(Context)}.
+     * @see android.preference.PreferenceManager#getDefaultSharedPreferences(Context)
      */
     public static boolean loadPrefs(Context context, String key, boolean value) {
         SharedPreferences getPrefs = PreferenceManager.getDefaultSharedPreferences(context);
@@ -215,7 +215,7 @@ public class SmallUtils {
      *
      * @throws ClassCastException
      *
-     * @see {@link android.preference.PreferenceManager#getDefaultSharedPreferences(Context)}.
+     * @see android.preference.PreferenceManager#getDefaultSharedPreferences(Context)
      */
     public static int loadPrefs(Context context, String key, int value) {
         SharedPreferences getPrefs = PreferenceManager.getDefaultSharedPreferences(context);
@@ -235,7 +235,7 @@ public class SmallUtils {
      *
      * @throws ClassCastException
      *
-     * @see {@link android.preference.PreferenceManager#getDefaultSharedPreferences(Context)}.
+     * @see android.preference.PreferenceManager#getDefaultSharedPreferences(Context)
      */
     public static String loadPrefs(Context context, String key, String value) {
         SharedPreferences getPrefs = PreferenceManager.getDefaultSharedPreferences(context);
@@ -251,7 +251,7 @@ public class SmallUtils {
      *
      * @return Formated date according to system settings.
      *
-     * @see {@link java.util.Date}.
+     * @see java.util.Date
      */
     public static String getDate(Context context, long milliSeconds) {
         DateFormat df = android.text.format.DateFormat.getDateFormat(context);
@@ -340,7 +340,7 @@ public class SmallUtils {
      * @param type The type of ActionDialog. Either <code>List</code> or
      * <code>Grid</code> (if there is more than one app to open the link).
      *
-     * @see {@link com.pranavpandey.smallapp.dialog.ActionDialog}.
+     * @see com.pranavpandey.smallapp.dialog.ActionDialog
      */
     public static void openLink(final Context context, @NonNull final View rootView,
                                 @NonNull final String link, @Nullable

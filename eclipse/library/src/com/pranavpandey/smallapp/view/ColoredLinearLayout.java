@@ -39,7 +39,7 @@ public class ColoredLinearLayout extends LinearLayout {
     /**
      * Color type applied to this view.
      *
-     * @see {@link com.pranavpandey.smallapp.theme.SmallTheme.ColorType}.
+     * @see com.pranavpandey.smallapp.theme.SmallTheme.ColorType
      */
     private int mColorType;
 
@@ -86,7 +86,8 @@ public class ColoredLinearLayout extends LinearLayout {
      * Initialize this view by setting color type and
      * background alpha.
      *
-     * @see {@link #mColorType}, {@link #mColorAlpha}.
+     * @see #mColorType
+     * @see #mColorAlpha
      */
     private void init() {
         if (mColorType != 0) {

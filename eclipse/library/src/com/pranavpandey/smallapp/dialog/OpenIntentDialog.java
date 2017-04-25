@@ -54,7 +54,8 @@ import android.widget.TextView;
  * occurs. It extends the {@link ActionDialog} class so that you can use its
  * functions also.
  *
- * @see {@link android.app.AlertDialog}, {@link android.content.Intent}.
+ * @see android.app.AlertDialog
+ * @see android.content.Intent
  */
 public class OpenIntentDialog extends ActionDialog {
 
@@ -149,7 +150,7 @@ public class OpenIntentDialog extends ActionDialog {
      *
      * @param rootView Root view to which the dialog should attach.
      *
-     * @see {@link ActivityAdapter}.
+     * @see ActivityAdapter
      */
     @Override
     public void createDialog(@NonNull View rootView) {
@@ -249,7 +250,7 @@ public class OpenIntentDialog extends ActionDialog {
      *
      * @param resolveInfo ResolveInfo to set the component name.
      *
-     * @see {@link android.content.ComponentName}.
+     * @see android.content.ComponentName
      */
     private void launchActivity(ResolveInfo resolveInfo) {
         ActivityInfo activity = resolveInfo.activityInfo;
@@ -387,7 +388,7 @@ public class OpenIntentDialog extends ActionDialog {
      * Adapter to display activity item in <code>List</code>. It extends the
      * ArrayAdapter and the list must contain {@link android.content.pm.ResolveInfo}.
      *
-     * @see {@link android.widget.ArrayAdapter}.
+     * @see android.widget.ArrayAdapter
      */
     static class ActivityAdapter extends ArrayAdapter<ResolveInfo> {
 
@@ -449,7 +450,8 @@ public class OpenIntentDialog extends ActionDialog {
              * Constructor using activity view to create {@link ViewHolder}.
              * We will use this to access image and text view of the activity item.
              *
-             * @see {@link #icon}, {@link #name}.
+             * @see #icon
+             * @see #name
              */
             public ViewHolder(View view) {
                 icon = (ImageView) view.findViewById(R.id.action_icon);

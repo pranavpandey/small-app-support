@@ -38,7 +38,7 @@ public class ColoredImageView extends ImageView {
     /**
      * Color type applied to this view.
      *
-     * @see {@link com.pranavpandey.smallapp.theme.SmallTheme.ColorType}.
+     * @see com.pranavpandey.smallapp.theme.SmallTheme.ColorType
      */
     private int mColorType;
 
@@ -52,7 +52,7 @@ public class ColoredImageView extends ImageView {
      * always be visible on that background. If no contrast color is found then,
      * it will take default background color.</p>
      *
-     * @see {@link #mContrastWith}.
+     * @see #mContrastWith
      */
     private boolean mBackgroundAware;
 
@@ -107,7 +107,8 @@ public class ColoredImageView extends ImageView {
      * aware then, background color will also taken into account while
      * setting the color filter.
      *
-     * @see {@link #mColorType}, {@link #mBackgroundAware}.
+     * @see #mColorType 
+     * @see #mBackgroundAware
      */
     private void init() {
         if (mColorType != 0) {

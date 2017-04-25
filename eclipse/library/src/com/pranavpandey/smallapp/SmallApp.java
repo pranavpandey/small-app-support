@@ -125,7 +125,7 @@ public abstract class SmallApp extends SmallApplication {
      * Override this function in the extended class to provide a layout
      * which will be added to the root view.
      *
-     * @see {@link #mRootView}.
+     * @see #mRootView
      */
     protected abstract @LayoutRes int getLayoutId();
 

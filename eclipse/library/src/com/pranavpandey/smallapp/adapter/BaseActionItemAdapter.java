@@ -37,8 +37,8 @@ import android.widget.ArrayAdapter;
  * ArrayAdapter and the list must contain {@link com.pranavpandey.smallapp.model.BaseActionItem}.
  * You can modify this class according to your item.
  *
- * @see {@link com.pranavpandey.smallapp.dialog.ActionDialog.Type},
- * {@link android.widget.ArrayAdapter}.
+ * @see com.pranavpandey.smallapp.dialog.ActionDialog.Type
+ * @see android.widget.ArrayAdapter
  */
 public class BaseActionItemAdapter extends ArrayAdapter<BaseActionItem> {
 
@@ -68,7 +68,7 @@ public class BaseActionItemAdapter extends ArrayAdapter<BaseActionItem> {
      * {@link BaseActionItemAdapter}. It will work with both <code>LIST</code>
      * and <code>GRID</code> types.
      *
-     * @see {@link com.pranavpandey.smallapp.dialog.ActionDialog.Type}.
+     * @see com.pranavpandey.smallapp.dialog.ActionDialog.Type
      */
     public BaseActionItemAdapter(Context context, List<BaseActionItem> list,
                                  @LayoutRes int layoutId) {
@@ -125,7 +125,8 @@ public class BaseActionItemAdapter extends ArrayAdapter<BaseActionItem> {
          * Constructor using item view to create {@link ViewHolder}.
          * We will use this to access image and text view of the action item.
          *
-         * @see {@link #icon}, {@link #name}.
+         * @see #icon
+         * @see #name
          */
         ViewHolder(View v) {
             icon = (ColoredImageView) v.findViewById(R.id.action_icon);

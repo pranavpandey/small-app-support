@@ -223,8 +223,10 @@ public class SmallTheme {
      * @param defaultPrimaryColorDark Dark Default Primary color.
      * @param defaultAccentColorDark Dark Default Accent color.
      *
-     * @see {@link #defaultPrimaryColor}, {@link #defaultAccentColor},
-     * {@link #defaultPrimaryColorDark}, {@link #defaultAccentColorDark}.
+     * @see #defaultPrimaryColor
+     * @see #defaultAccentColor
+     * @see #defaultPrimaryColorDark
+     * @see #defaultAccentColorDark
      */
     public static synchronized void initializeInstance(Context context,
                                                        @ColorInt int defaultPrimaryColor,
@@ -252,8 +254,10 @@ public class SmallTheme {
      * @param defaultPrimaryColorDarkId Dark Default Primary color resource.
      * @param defaultAccentColorDarkId Dark Default Accent color resource.
      *
-     * @see {@link #defaultPrimaryColor}, {@link #defaultAccentColor},
-     * {@link #defaultPrimaryColorDark}, {@link #defaultAccentColorDark}.
+     * @see #defaultPrimaryColor
+     * @see #defaultAccentColor
+     * @see #defaultPrimaryColorDark
+     * @see #defaultAccentColorDark
      */
     public static synchronized void initializeInstanceRes(Context context,
                                                           @ColorRes int defaultPrimaryColorId,

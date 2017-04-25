@@ -55,7 +55,10 @@ public class BaseActionItem {
      * Constructor using Action Id, Name Id, Icon ID to create a {@link BaseActionItem}.
      * You can also make it colored by passing colorizable boolean.
      *
-     * @see {@link #mActionId}, {@link #mNameId}, {@link #mIconId} and {@link #isColorizable}.
+     * @see #mActionId
+     * @see #mNameId
+     * @see #mIconId
+     * @see #isColorizable
      */
     public BaseActionItem(int actionId, @StringRes int nameId,
                           @DrawableRes int iconId, boolean colorizable) {

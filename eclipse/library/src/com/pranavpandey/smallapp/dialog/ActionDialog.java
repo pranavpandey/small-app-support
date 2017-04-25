@@ -56,10 +56,11 @@ import android.widget.WrapperListAdapter;
  * <p>You can also set extra info to display as header of <code>List</code> or <code>Grid</code>
  * which is also clickable.</p>
  *
- * @see {@link android.app.AlertDialog},
- * {@link com.pranavpandey.smallapp.adapter.BaseActionItemAdapter},
- * {@link OnActionItemClickListener}, {@link #setExtraInfo(int, int, OnExtraInfoClickListener)},
- * {@link OnExtraInfoClickListener}.
+ * @see android.app.AlertDialog
+ * @see com.pranavpandey.smallapp.adapter.BaseActionItemAdapter
+ * @see OnActionItemClickListener
+ * @see #setExtraInfo(int, int, OnExtraInfoClickListener)
+ * @see OnExtraInfoClickListener
  */
 public class ActionDialog {
 
@@ -122,21 +123,22 @@ public class ActionDialog {
      * Enum to define the type of this dialog. Either a
      * <code>List</code> or <code>Grid</code>.
      *
-     * @see {@link Type#LIST} or {@link Type#GRID}.
+     * @see Type#LIST
+     * @see Type#GRID
      */
     public static enum Type {
 
         /**
          * Actions will be displayed in the vertical list.
          *
-         * @see {@link android.widget.ListView}.
+         * @see android.widget.ListView
          */
         LIST,
 
         /**
          * Actions will be displayed in the vertical Grid.
          *
-         * @see {@link android.widget.GridView}.
+         * @see android.widget.GridView
          */
         GRID
     }
@@ -231,7 +233,7 @@ public class ActionDialog {
      * the extended class. It extends the functionality of this
      * dialog. It is well implemented in {@link OpenIntentDialog}.
      *
-     * @see {@link OpenIntentDialog#createDialog(View)}.
+     * @see OpenIntentDialog#createDialog(View)
      */
     private boolean mCustomDialog = false;
 
@@ -240,7 +242,7 @@ public class ActionDialog {
      * remember user selection for later use. It is well implemented in
      * {@link OpenIntentDialog}.
      *
-     * @see {@link OpenIntentDialog#createDialog(View)}.
+     * @see OpenIntentDialog#createDialog(View)
      */
     private boolean mCheckButtonLayout = false;
 
@@ -260,7 +262,8 @@ public class ActionDialog {
      * display an Action dialog which shows a set of actions to perform different
      * operations.
      *
-     * @see {@link android.app.AlertDialog.Builder}, {@link Type}.
+     * @see android.app.AlertDialog.Builder
+     * @see Type
      */
     public ActionDialog(Context context, AlertDialog.Builder dialogBuilder, Type type) {
         this.mContext = context;
@@ -406,8 +409,8 @@ public class ActionDialog {
      * @return ActionDialog object to allow for chaining of calls to set
      * methods.
      *
-     * @see {@link com.pranavpandey.smallapp.adapter.BaseActionItemAdapter},
-     * {@link #getAdapter()}.
+     * @see com.pranavpandey.smallapp.adapter.BaseActionItemAdapter
+     * @see #getAdapter()
      */
     public ActionDialog setAdapter(@NonNull ListAdapter adapter,
                                    OnActionItemClickListener actionItemListener) {
@@ -425,8 +428,8 @@ public class ActionDialog {
      * @return ActionDialog object to allow for chaining of calls to set
      * methods.
      *
-     * @see {@link com.pranavpandey.smallapp.adapter.BaseActionItemAdapter},
-     * {@link #getAdapter()}.
+     * @see com.pranavpandey.smallapp.adapter.BaseActionItemAdapter
+     * @see #getAdapter()
      */
     public ActionDialog setAdapter(@NonNull ListAdapter adapter) {
         this.mAdapter = adapter;

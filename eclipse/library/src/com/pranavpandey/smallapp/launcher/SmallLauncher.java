@@ -64,8 +64,8 @@ public class SmallLauncher {
      * @param packageManager to get package info.
      * @param packageName of the small app.
      *
-     * @see {@link #getSmallAppIntent(Context, PackageManager, String)},
-     * {@link #getSmallAppClassName(PackageManager, String)}.
+     * @see #getSmallAppIntent(Context, PackageManager, String)
+     * @see #getSmallAppClassName(PackageManager, String)
      */
     public static boolean launchSmallApp(Context context, PackageManager packageManager,
                                          String packageName) {

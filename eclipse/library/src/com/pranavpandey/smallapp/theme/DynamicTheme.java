@@ -190,7 +190,7 @@ public class DynamicTheme {
      *
      * @return color contrast between the two colors.
      *
-     * @see {@link #calculateXyzLuma(int)}
+     * @see #calculateXyzLuma(int)
      */
     public static float calculateContrast(int color1, int color2) {
         return Math.abs(calculateXyzLuma(color1) - calculateXyzLuma(color2));
@@ -235,7 +235,7 @@ public class DynamicTheme {
      * @param textView to set the highlighted text.
      * @param color of the highlighted text.
      *
-     * @see {@link android.text.Spannable}.
+     * @see android.text.Spannable
      */
     public static void highlightQueryTextColor(@NonNull String query,
                                                @NonNull TextView textView, @ColorInt int color) {
@@ -261,7 +261,7 @@ public class DynamicTheme {
      * @param textView to set the highlighted text.
      * @param colorId Color id of the highlighted text.
      *
-     * @see {@link android.text.Spannable}.
+     * @see android.text.Spannable
      */
     public static void highlightQueryTextColorRes(@NonNull String query,
                                                   @NonNull TextView textView,
