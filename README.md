@@ -9,35 +9,31 @@
 
 Small App Support is an easy to use library to build attractive small apps with native apps like functionality. I have divided it into different parts for easy understanding. As small app is a service, there were issues while displaying dialog from the small app. So, I have wrote a function to easily display dialog from a small app. This library is a collection of such type of functions and classes to provide a better interface.
 
-<img src="https://raw.githubusercontent.com/pranavpandey/small-app-support/master/graphics/sas_screen_1.png" width="280" height="486">
-<img src="https://raw.githubusercontent.com/pranavpandey/small-app-support/master/graphics/sas_screen_2.png" width="280" height="486">
-<img src="https://raw.githubusercontent.com/pranavpandey/small-app-support/master/graphics/sas_screen_3.png" width="280" height="486">
+<img src="https://raw.githubusercontent.com/pranavpandey/small-app-support/master/graphics/sas_screen_1.png" width="280" height="486"><img src="https://raw.githubusercontent.com/pranavpandey/small-app-support/master/graphics/sas_screen_2.png" width="280" height="486"><img src="https://raw.githubusercontent.com/pranavpandey/small-app-support/master/graphics/sas_screen_3.png" width="280" height="486">
 
-<img src="https://raw.githubusercontent.com/pranavpandey/small-app-support/master/graphics/sas_screen_4.png" width="280" height="486">
-<img src="https://raw.githubusercontent.com/pranavpandey/small-app-support/master/graphics/sas_screen_5.png" width="280" height="486">
-<img src="https://raw.githubusercontent.com/pranavpandey/small-app-support/master/graphics/sas_screen_6.png" width="280" height="486">
+<img src="https://raw.githubusercontent.com/pranavpandey/small-app-support/master/graphics/sas_screen_4.png" width="280" height="486"><img src="https://raw.githubusercontent.com/pranavpandey/small-app-support/master/graphics/sas_screen_5.png" width="280" height="486"><img src="https://raw.githubusercontent.com/pranavpandey/small-app-support/master/graphics/sas_screen_6.png" width="280" height="486">
 
 ---
 
 ## Table of Contents
 1. [Setup](https://github.com/pranavpandey/small-app-support#setup)
 2. [Usage](https://github.com/pranavpandey/small-app-support#usage)
-  1. [Theme](https://github.com/pranavpandey/small-app-support#theme)
-    1. [SmallTheme](https://github.com/pranavpandey/small-app-support#smalltheme)
-    2. [DynamicTheme](https://github.com/pranavpandey/small-app-support#dynamictheme)
-  2. [View](https://github.com/pranavpandey/small-app-support#view)
-    1. [ColorAttributes](https://github.com/pranavpandey/small-app-support#colorattributes)
-    2. [ColoredImageView](https://github.com/pranavpandey/small-app-support#coloredimageview)
-    3. [PressedStateImageView](https://github.com/pranavpandey/small-app-support#pressedstateimageview)
-    4. [ColoredTextView](https://github.com/pranavpandey/small-app-support#coloredtextview)
-    5. [ColoredLinearLayout](https://github.com/pranavpandey/small-app-support#coloredlinearlayout)
-  3. [Launcher](https://github.com/pranavpandey/small-app-support#launcher)
-    1. [ShortcutLauncher](https://github.com/pranavpandey/small-app-support#shortcutlauncher)
-  4. [SmallUtils](https://github.com/pranavpandey/small-app-support#smallutils)
-  5. [Dialog](https://github.com/pranavpandey/small-app-support#dialog)
-    1. [ActionDialog](https://github.com/pranavpandey/small-app-support#actiondialog)
-    2. [OpenIntentDialog](https://github.com/pranavpandey/small-app-support#openintentdialog)
-  6. [Runtime Permissions](https://github.com/pranavpandey/small-app-support#runtime-permissions)
+    1. [Theme](https://github.com/pranavpandey/small-app-support#theme)
+        1. [SmallTheme](https://github.com/pranavpandey/small-app-support#smalltheme)
+        2. [DynamicTheme](https://github.com/pranavpandey/small-app-support#dynamictheme)
+    2. [View](https://github.com/pranavpandey/small-app-support#view)
+        1. [ColorAttributes](https://github.com/pranavpandey/small-app-support#colorattributes)
+        2. [ColoredImageView](https://github.com/pranavpandey/small-app-support#coloredimageview)
+        3. [PressedStateImageView](https://github.com/pranavpandey/small-app-support#pressedstateimageview)
+        4. [ColoredTextView](https://github.com/pranavpandey/small-app-support#coloredtextview)
+        5. [ColoredLinearLayout](https://github.com/pranavpandey/small-app-support#coloredlinearlayout)
+    3. [Launcher](https://github.com/pranavpandey/small-app-support#launcher)
+        1. [ShortcutLauncher](https://github.com/pranavpandey/small-app-support#shortcutlauncher)
+    4. [SmallUtils](https://github.com/pranavpandey/small-app-support#smallutils)
+    5. [Dialog](https://github.com/pranavpandey/small-app-support#dialog)
+        1. [ActionDialog](https://github.com/pranavpandey/small-app-support#actiondialog)
+        2. [OpenIntentDialog](https://github.com/pranavpandey/small-app-support#openintentdialog)
+    6. [Runtime Permissions](https://github.com/pranavpandey/small-app-support#runtime-permissions)
 3. [Apps using Small App Support](https://github.com/pranavpandey/small-app-support#apps-using-small-app-support)
 4. [License](https://github.com/pranavpandey/small-app-support#license)
 
@@ -47,7 +43,7 @@ Small App Support is an easy to use library to build attractive small apps with 
 
 ### Eclipse with ADT
 
-It is an Eclipse project, import both `library` and `sample` in eclipse. After that, follow the steps below: -
+It is an Eclipse project, import both `library` and `sample` in eclipse. After that, follow the steps below.
 
 1. Project > Clean > Clean all projects.
 2. Right-click on `sample` > Run As > Android Application.
