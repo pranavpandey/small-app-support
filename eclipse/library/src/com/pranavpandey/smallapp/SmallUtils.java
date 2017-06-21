@@ -193,8 +193,6 @@ public class SmallUtils {
      * ClassCastException if there is a preference with this name that is not
      * a boolean.
      *
-     * @throws ClassCastException
-     *
      * @see android.preference.PreferenceManager#getDefaultSharedPreferences(Context)
      */
     public static boolean loadPrefs(Context context, String key, boolean value) {
@@ -211,9 +209,7 @@ public class SmallUtils {
      *
      * @return Returns the preference value if it exists, or defValue. Throws
      * ClassCastException if there is a preference with this name that is not
-     * a boolean.
-     *
-     * @throws ClassCastException
+     * a integer.
      *
      * @see android.preference.PreferenceManager#getDefaultSharedPreferences(Context)
      */
@@ -231,9 +227,7 @@ public class SmallUtils {
      *
      * @return Returns the preference value if it exists, or defValue. Throws
      * ClassCastException if there is a preference with this name that is not
-     * a boolean.
-     *
-     * @throws ClassCastException
+     * a string.
      *
      * @see android.preference.PreferenceManager#getDefaultSharedPreferences(Context)
      */
