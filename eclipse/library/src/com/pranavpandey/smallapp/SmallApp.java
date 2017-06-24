@@ -41,7 +41,7 @@ import android.view.ViewGroup;
 
 /**
  * Base small app class to make things easier. It extends the Sony
- * SmallApplication to inherit all of its features. FOr now, it has
+ * SmallApplication to inherit all of its features. For now, it has
  * very basic functionality but we can add more features later.
  */
 @TargetApi(23)
