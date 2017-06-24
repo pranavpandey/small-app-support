@@ -1,9 +1,9 @@
+<img src="https://raw.githubusercontent.com/pranavpandey/small-app-support/master/graphics/sas_512x512.png" width="160" height="160" align="right" hspace="20">
+
 # Small App Support
 
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg?)](https://www.apache.org/licenses/LICENSE-2.0.html)
 [![Build Status](https://travis-ci.org/pranavpandey/small-app-support.svg?branch=master)](https://travis-ci.org/pranavpandey/small-app-support)
-
-<img src="https://raw.githubusercontent.com/pranavpandey/small-app-support/master/graphics/sas_512x512.png" width="160" height="160" align="right" hspace="20">
 
 *A simple library to build apps for Sony Small Apps Extension.*
 
