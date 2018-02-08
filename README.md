@@ -16,6 +16,7 @@ Small App Support is an easy to use library to build attractive small apps with 
 ---
 
 ## Contents
+
 - [Setup](https://github.com/pranavpandey/small-app-support#setup)
 - [Usage](https://github.com/pranavpandey/small-app-support#usage)
     - [Theme](https://github.com/pranavpandey/small-app-support#theme)
@@ -371,7 +372,7 @@ SmallUtils.createDialog(builder.create(), getRootView().getWindowToken());
 
 // Save integer value
 SmallUtils.savePrefs(context, "Key", int);
-// Save booelan value
+// Save boolean value
 SmallUtils.savePrefs(context, "Key", boolean);
 // Save String value
 SmallUtils.savePrefs(context, "Key", string);
@@ -567,19 +568,13 @@ After that add these activities in your project `AndroidManifest.xml` so that th
 
 All of my small apps are built with this library. You can download them from Google Play. Please email me if you are using this library and  want to feature your small app here.
 
-**[Stopwatch](https://play.google.com/store/apps/details?id=com.pranavpandey.smallapp.stopwatch)**
-
-**[Torch](https://play.google.com/store/apps/details?id=com.pranavpandey.smallapp.torch.lite)**
-
-**[Launcher](https://play.google.com/store/apps/details?id=com.pranavpandey.smallapp.launcher)**
-
-**[Phone](https://play.google.com/store/apps/details?id=com.pranavpandey.smallapp.phone)**
-
-**[Rotation](https://play.google.com/store/apps/details?id=pranavpandey.smallapp.rotation)**
-
-**[Files](https://play.google.com/store/apps/details?id=com.pranavpandey.smallapp.files.lite)**
-
-**[Lock](https://play.google.com/store/apps/details?id=com.pranavpandey.smallapp.lock)**
+- [Stopwatch](https://play.google.com/store/apps/details?id=com.pranavpandey.smallapp.stopwatch)
+- [Torch](https://play.google.com/store/apps/details?id=com.pranavpandey.smallapp.torch.lite)
+- [Launcher](https://play.google.com/store/apps/details?id=com.pranavpandey.smallapp.launcher)
+- [Phone](https://play.google.com/store/apps/details?id=com.pranavpandey.smallapp.phone)
+- [Rotation](https://play.google.com/store/apps/details?id=pranavpandey.smallapp.rotation)
+- [Files](https://play.google.com/store/apps/details?id=com.pranavpandey.smallapp.files.lite)
+- [Lock](https://play.google.com/store/apps/details?id=com.pranavpandey.smallapp.lock)
 
 ---
 
