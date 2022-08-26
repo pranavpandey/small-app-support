@@ -1,17 +1,25 @@
-<img src="https://raw.githubusercontent.com/pranavpandey/small-app-support/master/graphics/sas_512x512.png" width="160" height="160" align="right" hspace="20">
+<img src="./graphics/icon.png" width="160" height="160" align="right" hspace="20">
 
 # Small App Support
 
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg?)](https://www.apache.org/licenses/LICENSE-2.0.html)
 [![Build Status](https://travis-ci.org/pranavpandey/small-app-support.svg?branch=master)](https://travis-ci.org/pranavpandey/small-app-support)
 
-*A simple library to build apps for Sony Small Apps Extension.*
+A library to build apps for Sony Small Apps extension with native apps like functionality. I have divided it into different parts for easy understanding. As small app is a service, there were issues while displaying dialog from the small app. So, I have wrote a method to easily display dialog from a small app.
 
-Small App Support is an easy to use library to build attractive small apps with native apps like functionality. I have divided it into different parts for easy understanding. As small app is a service, there were issues while displaying dialog from the small app. So, I have wrote a function to easily display dialog from a small app. This library is a collection of such type of functions and classes to provide a better interface.
+> This library is a collection of such type of methods and classes to provide a better interface and development experience.
 
-<img src="https://raw.githubusercontent.com/pranavpandey/small-app-support/master/graphics/sas_screen_1.png" width="280" height="486"><img src="https://raw.githubusercontent.com/pranavpandey/small-app-support/master/graphics/sas_screen_2.png" width="280" height="486"><img src="https://raw.githubusercontent.com/pranavpandey/small-app-support/master/graphics/sas_screen_3.png" width="280" height="486">
+<p align="left">
+  <img src="./graphics/screenshots/1.png" width="280" height="486" hspace="2">
+  <img src="./graphics/screenshots/2.png" width="280" height="486" hspace="2">
+  <img src="./graphics/screenshots/3.png" width="280" height="486" hspace="2">
+</p>
 
-<img src="https://raw.githubusercontent.com/pranavpandey/small-app-support/master/graphics/sas_screen_4.png" width="280" height="486"><img src="https://raw.githubusercontent.com/pranavpandey/small-app-support/master/graphics/sas_screen_5.png" width="280" height="486"><img src="https://raw.githubusercontent.com/pranavpandey/small-app-support/master/graphics/sas_screen_6.png" width="280" height="486">
+<p align="left">
+  <img src="./graphics/screenshots/4.png" width="280" height="486" hspace="2">
+  <img src="./graphics/screenshots/5.png" width="280" height="486" hspace="2">
+  <img src="./graphics/screenshots/6.png" width="280" height="486" hspace="2">
+</p>
 
 ---
 
@@ -44,7 +52,7 @@ Small App Support is an easy to use library to build attractive small apps with 
 
 ### Eclipse with ADT
 
-It is an Eclipse project, import both `library` and `sample` in eclipse. After that, follow the steps below.
+It is an ADT project, import both `library` and `sample` in Eclipse. After that, follow the steps below.
 
 1. Project > Clean > Clean all projects.
 2. Right-click on `sample` > Run As > Android Application.
@@ -58,7 +66,7 @@ Run the sample to see it in action.
 
 Read the documentation below to know how you can make attractive small apps by using this library. It will also simplify the development process and please don't rely only on this guide, keep exploring the different classes to find some hidden functions. If there is any mistake or some important features are missing then, feel free to update it and send me the pull request so that I can update it.
 
-I have divided it into different parts for easy understanding. First we have to initialize the `SmallTheme` to make things working properly.
+> I have divided it into different parts for easy understanding. First we have to initialize the `SmallTheme` to make things working properly.
 
 ### Theme
 
@@ -66,7 +74,7 @@ There is a base `SmallApp` class which you can extend to initialize the `SmallTh
 
 #### SmallTheme
 
-`SmallTheme` is a class to detect Primary and Accent colors from the theme. In ICS, it will return the Theme accent color. It also has some other functions like `showHint(view, string)`, `showHeaderHint(view, string)` to show hints for footer and header menu items respectively.
+`SmallTheme` is a class to detect Primary and Accent colors from the theme. In ICS, it will return the theme accent color. It also has some other methods like `showHint(view, string)`, `showHeaderHint(view, string)` to show hints for footer and header menu items respectively.
 
 ```java
 public class SmallAppSample extends SmallApp {
@@ -100,7 +108,7 @@ public class SmallAppSample extends SmallApp {
     @ColorInt int tintPrimaryColor = SmallTheme.getInstance().getTintPrimaryColor();
     @ColorInt int tintAccentColor = SmallTheme.getInstance().getTintAccentColor();
 
-    // Use other SmallApp functions
+    // Use other SmallApp methods
 
     // Minimize the small app window
     windowMinimize();
@@ -157,7 +165,7 @@ public class SmallAppSample extends SmallApplication {
 
 #### DynamicTheme
 
-In theme, there is another useful class `DynamicTheme`. It is mostly used internally but you can also use its `static` functions to generate colors dynamically.
+In theme, there is another useful class `DynamicTheme`. It is mostly used internally but you can also use its `static` methods to generate colors dynamically.
 
 ```java
 // Calculate tint based on a given color for better readability
@@ -277,7 +285,7 @@ A LinearLayout to change background according to the supplied `colorType`.
 
 In the above example, it will automatically set the background color to `colorPrimary`. As `colorAlpha` is set to 200 so, it will also change the `argb` color alpha component to 200.
 
-All the views has getters and setters for these attributes to change them at runtime.
+> All the views has getters and setters for these attributes to change them at runtime.
 
 ```java
 // Setters
@@ -353,7 +361,7 @@ public class ShortcutActivity extends ShortcutLauncher {
 
 ### SmallUtils
 
-There were always be a problem while displaying dialog from a small app as it is derived from the `Service`. But by doing some modifications we can do it easily. `SmallUtils` is a collection of such useful functions. It also has other functions to save settings in `SharedPreferences`.
+There were always be a problem while displaying dialog from a small app as it is derived from the `Service`. But by doing some modifications we can do it easily. `SmallUtils` is a collection of such useful functions. It also has other methods to save settings in `SharedPreferences`.
 
 ```java
 // Create simple alert dialog .
@@ -398,7 +406,7 @@ There are some in-built `Dialogs` so you don't have to write your own. You can u
 
 A class which creates a dialog to show different actions to perform various operations by using an adapter containing all the actions which will be displayed either in a `List`or `Grid`. You can use `BaseActionItemAdapter` or any other custom adapter according to your need. Set a click listener to dispatch click events so that you can perform actions.
 
-You can also set extra info to display as header of `List` or `Grid` which is also clickable.
+> You can set extra info to display as header of `List` or `Grid` which is also clickable.
 
 ```java
 // Initialize list
@@ -442,7 +450,7 @@ actionDialog.setAdapter(new BaseActionItemAdapter(context, actionList, R.layout.
 
 #### OpenIntentDialog
 
-A class which creates a dialog to show all the activities available to handle the supplied intent. It is a solution to handle no activity found exception and you can also do some other work if this exception occurs. It extends the `ActionDialog` class so that you can use its functions also.
+A class which creates a dialog to show all the activities available to handle the supplied intent. It is a solution to handle no activity found exception and you can do some other work if this exception occurs. It extends the `ActionDialog` class so that you can use its functions also.
 
 ```java
 // Create intent.
@@ -481,7 +489,7 @@ new OpenIntentDialog(context, intent, alertDialogBuilder, Type.GRID)
 
 It will show a list of all the apps that can handle this intent. Select one of them, to open the intent. If `setRememberSelection(true)` then, it will show a checkbox to the users so that they can remember their selection for this intent.
 
-You can also clear the user selection and all the associated apps by using the `Associations` class.
+> You can clear the user selection and all the associated apps by using the `Associations` class.
 
 ```java
 /**
@@ -495,7 +503,7 @@ You can also clear the user selection and all the associated apps by using the `
 
 ### Runtime Permissions
 
-You can also ask to grant permissions at runtime which was introduced in [Android M](https://developer.android.com/training/permissions/requesting.html). This feature is still in `beta` but it works well with most of the [dangerous permissions](https://developer.android.com/guide/topics/security/permissions.html#normal-dangerous).
+You can ask to grant permissions at runtime which was introduced in [Android M](https://developer.android.com/training/permissions/requesting.html). This feature is still in `beta` but it works well with most of the [dangerous permissions](https://developer.android.com/guide/topics/security/permissions.html#normal-dangerous).
 
 To ask permissions at runtime, just override `getPermissions()` function of `SmallApp` class and pass all the permissions in an array. It will automatically asks user to grant all the permissions otherwise, app will not open. This is not a limitation as it is very difficult to make it more dynamic due to `SmallApplication` behavior. Still, you can do experiments to improve it according to your need.
 
@@ -566,7 +574,17 @@ After that add these activities in your project `AndroidManifest.xml` so that th
 
 ## Apps using Small App Support
 
-All of my small apps are built with this library. You can download them from Google Play. Please email me if you are using this library and  want to feature your small app here.
+All of my small apps are built with this library. You can download them via Google Play. Please email me if you are using this library and want to feature your small app here.
+
+<p align="left">
+  <img src="./graphics/apps/pranavpandey-stopwatch.png" width="140" hspace="2">
+  <img src="./graphics/apps/pranavpandey-torch.png" width="140" hspace="2">
+  <img src="./graphics/apps/pranavpandey-launcher.png" width="140" hspace="2">
+  <img src="./graphics/apps/pranavpandey-phone.png" width="140" hspace="2">
+  <img src="./graphics/apps/pranavpandey-rotation.png" width="140" hspace="2">
+  <img src="./graphics/apps/pranavpandey-files.png" width="140" hspace="2">
+  <img src="./graphics/apps/pranavpandey-lock.png" width="140" hspace="2">
+</p>
 
 - [Stopwatch](https://play.google.com/store/apps/details?id=com.pranavpandey.smallapp.stopwatch)
 - [Torch](https://play.google.com/store/apps/details?id=com.pranavpandey.smallapp.torch.lite)
