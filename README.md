@@ -1,22 +1,28 @@
-<img src="./graphics/icon.png" width="160" height="160" align="right" hspace="20">
+<img src="./graphics/icon.png" height="160">
 
 # Small App Support
 
 [![License](https://img.shields.io/badge/license-Apache%202-4EB1BA.svg?)](https://www.apache.org/licenses/LICENSE-2.0.html)
-[![Build Status](https://travis-ci.org/pranavpandey/small-app-support.svg?branch=master)](https://travis-ci.org/pranavpandey/small-app-support)
 
-A library to build apps for Sony Small Apps extension with native apps like functionality. I have divided it into different parts for easy understanding. As small app is a service, there were issues while displaying dialog from the small app. So, I have wrote a method to easily display dialog from a small app.
+> [!WARNING]
+> This is marked as `deprecated` as Sony no longer supports them.
 
+**A library to build apps for Sony Small Apps extension with native apps like functionality. I have divided it into different parts for easy understanding. As small app is a service, there were issues while displaying dialog from the small app. So, I have wrote a method to easily display dialog from a small app.**
+
+> [!IMPORTANT]
 > This library is a collection of such type of methods and classes to provide a better interface and development experience.
 
 <p align="left">
   <img src="./graphics/screenshots/1.png" width="280" height="486" hspace="2">
   <img src="./graphics/screenshots/2.png" width="280" height="486" hspace="2">
-  <img src="./graphics/screenshots/3.png" width="280" height="486" hspace="2">
 </p>
 
 <p align="left">
+  <img src="./graphics/screenshots/3.png" width="280" height="486" hspace="2">
   <img src="./graphics/screenshots/4.png" width="280" height="486" hspace="2">
+</p>
+
+<p align="left">
   <img src="./graphics/screenshots/5.png" width="280" height="486" hspace="2">
   <img src="./graphics/screenshots/6.png" width="280" height="486" hspace="2">
 </p>
